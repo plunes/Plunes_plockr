@@ -1,0 +1,84 @@
+/* .rowpdiv{
+    background-color: aliceblue;    
+} */
+.imgAvatar{
+    height: 50px;
+    width: 50px;
+    border-radius:40px; 
+    /* margin : 15px; */
+}
+.profileImageDiv{
+    margin-top: 25px;
+    /* left: 10px; */
+    /* position: relative; */
+    /* top: 20px; */
+    /* right:5px; */
+    margin-left: 45px;
+    margin-bottom: 7px;
+    
+}
+
+
+.nameDiv{
+padding-top: 20px;
+padding-left: 50px !important;
+}
+.profileContainer{
+    width: 100%;
+    
+    /* border-bottom: 2px solid #e8e8e8; */
+    
+}
+.name{
+    color: #262626;
+    font-weight: 600 !important;
+    font-size: 24px;
+}
+.clinicName{
+    color: #8a8a8a;
+    font-size: 15px;
+}
+.rowpdiv{
+margin : 20px;
+}
+.rightSideContent{
+    padding-top: 20px;
+}
+.saveClass{
+    position: relative;
+    left: 194px;
+    margin-bottom: 15px;
+    color : '#01D35A'
+
+}
+.locationClass{
+   color: #666666;
+   font-size: 15px;
+   left: 16px;
+   position: relative;
+}
+.priceName{
+    position: relative;
+    left: 160px;
+}
+
+i{
+    border: 0px;
+}
+.buttonClass{
+    position: relative;
+    left: 50px;
+    margin-top: 10px;
+}
+button{
+    width: 100px;
+    border-radius: 10px !important;
+}
+.bottomBorder{
+    margin-top: 10px;
+    position: relative;
+    height: 0.5px;
+    width: 586px;
+    background-color: #e6e6e6;
+    right: 81px;
+}

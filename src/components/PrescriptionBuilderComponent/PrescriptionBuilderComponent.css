@@ -1,0 +1,389 @@
+.btn-link {
+    color: #01D35A !important;}
+.sidebar-prescription {
+    border: 1px solid #C9C8C8;
+    border-radius: 10px;
+    opacity: 1;
+    width: 250px !important;
+    height: 276px;
+    margin-right: 1%;
+}
+.textLogo{
+    width : 30%;
+}
+
+.searchFile{
+    width :  50%;
+}
+.docTemplates {
+    width: 100%
+}
+.address{
+    font-size: 13px !important;
+    color: #333333;
+
+}
+.send-box{
+    width: 165px;
+    height: auto;
+}
+.fileContainer2{
+    margin-left: 11% !important;
+    list-style: none;
+    padding-left: 0%;
+        margin-top: 5%;
+    height: 400px;
+    overflow-y: scroll;
+    width : 100%;
+}
+.file-report-img{
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #D1D1D1;
+    border-radius: 11px;
+    opacity: 1;}
+    
+.add-field{
+    width: 32%;
+    font-size: 12px;
+    background-color: white;
+    outline: none;
+    border: 1px solid white;
+    color: #333333;
+    margin-top: 5%;
+    position: relative;
+}
+.showElementModal-form{
+    margin-left: 33px;
+}
+.showElementModal-input{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #DFDFDF;
+    opacity: 1;
+}
+.showElementModal-input:focus{
+    border: 1px solid #01D35A;
+}
+.showElementModal-btn{
+    background-color: white;
+    border: none;
+    margin-left: 20px;
+    width: fit-content;
+}
+.addfield-modal{position: absolute;}
+.add-png{
+    width: 42px;
+    padding: 6%;
+}
+.name{
+    line-height: 70px;
+    font-weight: 400 !important;
+    font-size: 16px;
+}
+.saveButton {
+    box-shadow: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    background: #01D35A 0% 0% no-repeat padding-box;
+    border-radius: 40px !important;
+    border: 1px solid ;
+    width: 40%;
+    height: 38px;
+    margin-bottom: 8px;
+    margin-top: 31px;
+}
+.bottom-address{
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+}
+
+.show-prescription-input{
+    background-color: white !important;
+}
+.imageClass {
+    height: 60px;
+    width: auto;
+}
+.enter-patient-no{
+    margin-top: 25px;
+}
+.inputLogo {
+    visibility: hidden;
+}
+textarea {
+    resize: none !important;
+  }
+.uploadBtn {
+    border-radius: 35px !important;
+    font-size: 14px;
+    color: white !important;
+    width: 44%;
+    background-color: #01D35A !important;
+    margin-left: 14%;
+    border: 1px solid white !important;
+}
+.age{
+    margin-left: 27px !important; margin-top: 45px;
+}
+.editage{margin-top: 10px;}
+.editrow1col2{margin-top: 24px;}
+.edit{
+    color: #01d35a !important;
+}
+.send-prescription{
+    margin-top: 15%;
+    font-size: 24px;
+    color: #474747;
+    margin-bottom: 40px;
+}
+.send-prescription-logo{font-size: 30px;
+    text-align: left;
+    letter-spacing: 0;
+    font-weight: bolder;}
+.create-builder-logo , .show-edit-prescription-logo{font-size: 30px;
+    text-align: left;
+    letter-spacing: 0; margin-left: 23px;
+    font-weight: bolder;}
+.create-builder-experience{margin-top: -30px;}
+
+.add-upload-logo{margin-left: 15px;}
+.breadcrumb-style{
+    margin-top: 6px !important;
+}
+.uploadBtn1 {
+    border: 1px solid  #818181 !important ;
+    border-radius: 35px !important;
+    font-size: 14px;
+    color: #818181 !important;
+    width: 38%;
+    margin-left: 27px;
+}
+.view-plockr-builder{
+    text-align: center;
+    width: 100%;     margin-left: 19px;
+    margin-top: 5px;
+}
+.line-height{
+    line-height: 50px;
+}
+.builder-button{
+    color: #FFFFFF !important;
+    width: 100%;
+    border-radius: 33px !important ;
+    outline: none;
+    background-color: #01d35a !important;
+}
+.doctorname {
+    font-size: 20px !important;
+    color:#333333 !important;
+
+}
+
+.addField {
+    width: 50%;
+    margin-left: 10px
+}
+
+.createBuilder {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #C9C8C8;
+    opacity: 1;
+}
+.prescriptionField:focus{
+outline: none;
+}
+.send-prescription-div{
+    margin-top: 40px;
+}
+.form-control{
+    border: none !important;
+    border-bottom: 1px solid #C9C8C8 !important;
+}
+.logoButton {
+    border: 1px solid #818181 !important;
+    border-radius: 35px !important;
+    opacity: 1 !important;
+}
+
+.doclist {
+    list-style-type: none;
+    column-count: 3;
+    column-gap: 18%;
+    margin-top: 6%;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+.prescriptionField {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #C9C8C8;
+    
+}
+
+.userAge {
+    padding-left: 9% !important; margin-top: 45px;
+}
+.edituserAge{margin-top: 0px;}
+
+.signatureUpload {
+    padding-left: 9% !important;
+}
+
+/* .prescriptionList{
+
+} */
+
+.PLSearchBar{
+    background-color: white !important;
+    border-bottom: 1px solid #B2B2B2;
+    background-image: url(/public/PLsearchbar.png);
+    position: relative;
+    background-repeat: no-repeat;
+    max-width: 67%;
+}
+.PLsearchicon{height: fit-content;
+    position: relative;
+    margin-left: -25px;
+    margin-top: 12px;    width: fit-content;
+}
+.headTabimg{box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #D1D1D1;
+    border-radius: 11px;
+    margin-right: 30px;
+    margin-left: 30px;}
+
+.prescriptionField {
+    list-style-type: none;
+    padding-left: 2%;
+}
+
+.createBuilder {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #C9C8C8;
+    opacity: 1;
+    padding-top: 2%;
+}
+
+.noBorder {
+    border: 0 !important;
+    background-color: white;
+    outline: none; font-size: 15px;
+    padding: 0px 22px ;
+}
+.noBorderLogoText {
+    border: 0 !important;
+    background-color: white;
+    outline: none; font-weight: bolder;
+    font-size: 25px;
+    /* padding: 0px 22px ; */
+}
+.noBorder2 {
+    border: 0 !important;
+    outline: none;
+    background-color: white;
+    width: 12%;
+}
+
+
+.main-prescription {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #C9C8C8;
+    opacity: 1;
+}
+
+.createBuilder {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #C9C8C8;
+    opacity: 1;
+}
+
+ul.example {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 0;
+}
+
+li.example {
+    list-style: none;
+    display: inline-block;
+    width: calc(100% / 3);
+    height: 120px;
+    text-align: center;
+}
+
+.example {
+    width: 50%;
+    border: 1px solid #000;
+    margin: 1em 0;
+}
+
+.text-center {
+    color: #474747;
+    font-size: 20px;
+}
+
+/* new design css */
+
+/* alka.css */
+/* .login{padding: 4px 22px 7px 22px !important;margin-left: 44px;}
+.login:hover {
+    color: #fff;
+    background: #01D35A;
+    /* border: 1px solid #fff; */
+/* } */ 
+.chose_dr{text-align: center;margin-bottom: 50px;}
+.Drlist{margin-top: 10%;}
+.dr_report img {
+    width: 98px;
+    /* margin-left: 30px; */
+    border-radius: 50%;
+}
+    .dr_report {
+        display: flex;
+        border: 1px solid #E3E3E3;
+    padding: 15px;
+    }
+    .dr_content h4 {
+        font-size: 20px;
+        padding-top: 20px;
+        color: #474747;
+        font-weight: 500;
+        opacity: 1;
+    }
+    .dr_content {
+        padding-left: 15px;
+    }
+    .dr_content h5 {
+        font-size: 17px;
+        color: #474747;
+        opacity: 0.7;
+        font-weight: 500;
+    }
+    .dr_mr{margin-top: 20px;}
+    .dr_report:hover{box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
+        -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
+        -moz-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
+        -ms-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);}
+        .dr_content a:hover{text-decoration: none;}
+
+        @media only screen and (max-width: 600px) {
+            .mobile_pd{margin-bottom: 10px;}
+        }
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+            .dr_report img {
+                width: 60px;
+                margin-left: 0px;
+                height: 60px;
+            }
+            .dr_content h4 {
+                font-size: 13px;padding-top: 10px;}
+                .dr_content {
+                    padding-left: 8px;
+                }
+         .dr_content h5 { font-size: 12px;}
+         .dr_lis_mobile{}
+        }

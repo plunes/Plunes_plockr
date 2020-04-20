@@ -1,0 +1,328 @@
+@media only screen and (max-width: 768px) and (min-width: 320px){
+
+    .career-img{
+        width: 300px !important;
+    }
+    .softwareeng{
+        margin-left: 37px !important;
+    }
+    .business {
+        margin-left: 3% !important;
+        width: 117% !important;
+    }
+    .markwareeng{
+        margin-left: 30% !important;
+    }
+    .bus-int {
+        margin-left: 6% !important;
+        width:109% !important}
+    .grid-box-align{
+        margin-left: 10% !important;
+    }
+    .full-life-alin{
+        margin-left: 8% !important;
+    }
+    .lable{
+        margin-left: 4% !important;
+    }
+    .box-content{
+        margin-left: 17% !important;
+    }
+.career-pera{
+    margin-left: 15px;
+    margin-top: 1px !important;
+}
+.img-width1{
+    margin-left: 26% !important;
+}
+.img-width{
+    margin-left: 16% !important;
+}
+.table{
+    width: 99% !important;
+}
+.career-button{
+    margin-left:13% !important;
+}
+.carers-button{
+    margin-left: 30% !important;
+}
+.box{
+    width: 90% !important;
+    margin-top: 20px !important;
+}
+.box2{
+    width: 130% !important;
+}
+.img-font{
+    margin-left: 15% !important;
+}
+.img-font2{
+    margin-left: -4% !important;
+}
+.grid-box-3{
+    margin-top: 0px !important;
+}
+.we-believe{
+    margin-left: 15px;
+    margin-top: 50px !important;
+}
+.we-believe-in{
+    margin-left: 15px;
+}
+.what-we-have{
+    margin-top: -10px !important;
+}
+.careers-grid2{
+    margin-left: -40px !important;
+}
+.ploker-header{
+    font-size: 25px !important;
+}
+.if-u{
+    margin-left: 15px !important;
+}
+.table{
+    margin-left: 0px !important;
+    
+   
+}
+.career-header{
+    font-size: 22px !important;
+}
+
+}
+
+
+.career-img{
+    width: 600px;
+}
+.we-believe{
+    font-size: 25px;
+    margin-top:95px;
+}
+.we-believe-in{
+    font-size: 18px;
+    
+}
+.career-pera{
+    font-size: 15px;
+    color: #717171;
+    margin-top: 32px;
+}
+.img-width{
+    width:70px;
+    margin-left: 35%;
+}
+.img-width1{
+    width:70px;
+    margin-left: 35%;
+}
+.img-font{
+
+    
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+}
+.img-font2{
+
+    
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+}
+.what-we-have {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+.lable{
+    margin-left: 15%;
+}
+.career-grid{
+    margin-top: 40px;
+}
+.careers-grid2{
+    margin-top: 40px;
+}
+.careers-content{
+    color: #717171;
+    text-align: center;
+    font-size: 14px;
+}
+.img-width2{
+    width:70px;
+    margin-left: 80px;
+   
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #C1C1C1;
+  }
+  .box2{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #C1C1C1;
+  }
+  .career-button{
+    background-color: #01d35a !important;
+    border-color: #01d35a !important;
+    border-radius: 40px !important;
+    width: 140px;
+    height: 37px;
+    color:white !important;
+   position: absolute;
+   top: 71%;
+   left: 13%;
+  }
+  .carers-button{
+    background-color: #01d35a !important;
+    border-color: #01d35a !important;
+    border-radius: 40px !important;
+    width: 140px;
+    height: 37px;
+    color:white !important;
+    margin-left: 43%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .box-text{
+      font-size: 18px;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 3%;
+  }
+  .career-table-align{
+      margin-top: 40px;
+  }
+  .career-td{
+      background-color: #f8f8f8;
+      font-weight: 100;
+  }
+  .box-content{
+      font-size: 16px ;
+      color: #717171;
+      text-align: center;
+      margin-left: 3%;
+      position: absolute;
+    top: 99px;
+    left: 32px;
+
+  }
+  .careers-grid3{
+    margin-top:40px;
+    margin-left: 8% !important;
+}
+.box-align{
+    margin-top: 30px;
+}
+.if-u{
+    color: #717171;
+    font-size: 15px;
+    margin-top: 20px;
+   
+}
+.full-life-alin{
+    margin-left: 0px;
+}
+.modal-title {
+    text-align: center !important;
+    margin-top: 7%;
+    line-height: 40px !important;
+}
+.modal-body {
+    overflow: auto;
+    height: 450px;
+}
+.bus-int{
+    font-size: 30px;
+text-align: center;
+    margin-left: 20%;
+}
+.markwareeng{
+    font-size: 30px;
+
+    margin-left: 55%;
+    width: 100%;
+}
+.business{
+    font-size: 30px;
+text-align: center;
+    margin-left: 21%;
+}
+.softwareeng{
+    font-size: 30px;
+
+    margin-left: 45%;
+    width: 100%;
+}
+.close
+{
+    font-size: 35px !important;
+    padding-left: 40px !important;
+
+}
+.modal-header{
+    border: 0px solid white !important;
+}
+.ablity{
+    color: grey;
+    font-size: 20px;
+}
+.table-button{
+    background-color: #01d35a !important;
+    border-color: #01d35a !important;
+    border-radius: 25px !important;
+    width: 140px;
+    height: 37px;
+    color:white !important;
+    margin-left: 28px;
+    margin-top: 3px;
+}
+.table-career{
+    width: 25%;
+    background-color: #f7f7f7;
+    
+}
+
+.career-header{
+    font-size: 27px;
+    margin-top: 40px;
+    margin-bottom: -10px;
+}
+.flex-container{
+    display:flex;
+    flex-direction: column;
+    height: 600px;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.grid-box-3{
+    margin-top: 25px;
+}
+.grid-box-align{
+    margin-left: 5%;
+}
+.career-align{
+    margin-top: 45px;
+    margin-bottom: 5%;
+}
+.form-model-align{
+    font-size: 24px;
+    color: #717171;
+    text-align: center;
+}
+.modle-button{
+    background-color: #01d35a;
+    margin-left: 60%;
+    width: 40%;
+    outline: none !important;
+    margin-top: 8%;
+    color: white;
+}
+#fileinput{
+    background-color: white !important;
+}

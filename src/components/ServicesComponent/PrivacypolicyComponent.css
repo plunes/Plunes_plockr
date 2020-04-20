@@ -1,0 +1,23 @@
+@media only screen and (max-width: 768px) and (min-width: 320px){
+    .terms-of{
+        margin-left: 15px;
+    }
+    .collection{
+        margin-left: 15px;
+    }
+    
+    }
+    .terms-of{
+        color: #717171;
+        font-size: 15px;
+       
+    }
+    .collection{
+        font-size: 22px;
+    }
+    .attime-align{
+        margin-left: 15px;
+    }
+    .ul-privacy-align{
+        margin-top: 9px;
+    }

@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.color-white{
+  color:#fff !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+.background-black {
+  background-color: #000;
+}
+.mr-5 {
+  margin-right: 5px;;
+}
+.display-inline{
+  display: inline;
+}
+
+.hme{color:#474747;margin-top: 9%;font-weight: 400;padding-left: 33px;cursor: pointer;}
+.plo{color:#06DF86 !important;}
+.plo:hover{color:#06DF86;}
+
+.loader-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -8%;
+  margin-bottom: -8%;
+}
+
+span.active-green {
+   color: #01d35a !important;
+   transform: scaleX(1.4) scaleY(1.6) ;
+   box-shadow: 0 1rem 2rem rgba($color-black,.2);
+}
+
+.b-relative-5 {
+  position: relative;
+  bottom: 5px;
+}
+
+.b-relative-3 {
+  position: relative;
+  bottom: 3px;
+}
+
+
+/* span.active-green:hover{
+  transform: translateY(-.3rem);
+  box-shadow: 0 1rem 2rem rgba($color-black,.2);
+} */
+/* span.pan:active{
+  transform: translateY(-1px);
+  box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+} */

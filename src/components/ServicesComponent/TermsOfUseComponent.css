@@ -1,0 +1,26 @@
+@media only screen and (max-width: 768px) and (min-width: 320px){
+.terms-of{
+    margin-left: 15px;
+}
+.collection{
+    margin-left: 15px;
+}
+
+}
+.terms-of{
+    color: #717171;
+    font-size: 15px !important;
+   
+}
+.collection{
+    font-size: 24px;
+}
+.medical-text{
+    color: #717171;
+    font-size: 15px !important;
+    margin-left: 15px;
+
+}
+.pharma-align{
+    margin-top: -12px;
+}

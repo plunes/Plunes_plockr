@@ -1,0 +1,118 @@
+.rowHeading{
+    position: relative;
+    left: 120px;
+    top:30px;
+    margin-bottom: 50px;   
+
+}
+.imgAvatar{
+    height: 80px;
+    width: 80px;
+    border-radius:40px;
+    position: relative;
+    top: 10px;
+}
+.bookingContainer{
+     border : 1px solid #e6e6e6;
+     width: 100%;
+      
+}
+.confirmBookingContainer{
+    margin-top: 30px;
+}
+.borderBottom{
+    margin-top: 10px;
+    position: relative;
+    height: 0.5px;
+    width: 458px;
+    background-color: #e6e6e6;
+    left: 107px;
+}
+.slotsHeading{
+    margin-top: 12px;
+    padding-left: 18px;
+}
+.menu-item {
+    padding: 0 40px;
+    margin: 5px 10px;
+    user-select: none;
+    cursor: pointer;
+    border: none;
+  }
+  .menu-item-wrapper.active {
+    border: 1px blue solid;
+  }
+  .menu-item.active {
+    border: 1px green solid;
+  }
+  .dateRow{
+    position: fixed;     
+  }
+  ::-webkit-scrollbar { 
+    display: none; 
+}
+ 
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  display: flex;
+   
+  }
+  .card {
+    display: inline-block;
+    width: 400px;
+  }
+
+  div.scrollmenu {
+    background-color: #ffffff;
+    overflow: auto;
+    white-space: nowrap;
+    /* color : black; */
+  }
+  
+  div.scrollmenu li {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  div.scrollmenu li:hover {
+    background-color: #777;
+  }
+
+  .docTime{
+      margin-top: 20px;
+  }
+  .docTimeSlot{
+      border: 0.5px solid #e6e6e6;
+      border-radius : 25px;
+  }
+  .time{
+    position: relative;
+    left: 45px;
+    top: 7px;
+  }
+  .appointmentTimeSlot{
+    border: 0.5px solid #e6e6e6;
+    border-radius : 25px;
+    width: 50%;
+  }
+  .appointmentClass{
+      margin-top: 30px;
+  }
+  .finalAmount{
+    padding-left: 90px;
+    padding-top: 20px;
+}  
+
+.payNow{
+    padding-left: 200px;
+}
+
+.refundClass{
+    padding-left: 125px;
+    margin-top: 10px;
+}

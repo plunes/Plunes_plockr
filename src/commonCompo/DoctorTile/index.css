@@ -1,0 +1,49 @@
+.chose_dr{text-align: center;margin-bottom: 50px;}
+.Drlist{margin-top: 10%;}
+.dr_report img {
+    width: 98px;margin-left: 30px;}
+    .dr_report {
+        display: flex;
+        border: 1px solid #E3E3E3;
+    padding: 15px;
+    }
+    .dr_content h4 {
+        font-size: 20px;
+        padding-top: 20px;
+        color: #474747;
+        font-weight: 500;
+        opacity: 1;
+    }
+    .dr_content {
+        padding-left: 15px;
+    }
+    .dr_content h5 {
+        font-size: 17px;
+        color: #474747;
+        opacity: 0.7;
+        font-weight: 500;
+    }
+    .dr_mr{margin-top: 20px;}
+    .dr_report:hover{box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
+        -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
+        -moz-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
+        -ms-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);}
+        .dr_content a:hover{text-decoration: none;}
+
+        @media only screen and (max-width: 600px) {
+            .mobile_pd{margin-bottom: 10px;}
+        }
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+            .dr_report img {
+                width: 60px;
+                margin-left: 0px;
+                height: 60px;
+            }
+            .dr_content h4 {
+                font-size: 13px;padding-top: 10px;}
+                .dr_content {
+                    padding-left: 8px;
+                }
+         .dr_content h5 { font-size: 12px;}
+         .dr_lis_mobile{}
+        }

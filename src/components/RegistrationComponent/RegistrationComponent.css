@@ -1,0 +1,106 @@
+.signUpText{
+    font-size: 1.5rem;
+    margin-top: 130px;
+    
+    margin-bottom: 20px;
+}
+.buttonSignUp{
+    padding-top: 10px;
+    /* height: 10px !important; */
+    /* height: 40px !important; */
+}
+.form-text-location{
+
+height: 88px  !important;
+
+
+}
+.form-control2{
+    width: 282px;
+    outline: none;
+    background-color: #ffffff;
+   border:  1px solid #ced4da;
+}
+.btn-block{
+    border-radius: 44px !important;
+   
+    height: 40px !important;
+    width: 123% !important;
+    
+}
+.btn-lg{
+    font-size: 18px !important;
+}
+.last-text{
+    text-align: center;
+width: 92%;
+    margin-left: 39px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.form-check-label {
+    margin-top: 13px;
+    margin-bottom: 13px !important;
+    margin-left: 11px;
+}
+.address-input{
+     height:90px !important;
+   
+}
+textarea{
+    padding: 10px;
+}
+.hospital-text{
+     text-align: center;
+    font-size: 14px;
+    margin-left: 52px;
+    margin-bottom: 0px;
+
+}
+.signup-add-doctor{
+    text-align: center;
+    font-size: 15px;
+}
+.signup-add-doctor2{
+    text-align: center;
+    font-size: 12px;
+}
+.signup-add-doctor3{
+    text-align: right;
+    font-size: 11px;
+}
+.add-doctors{
+    margin-left: 11px;
+}
+.add-button{
+    background-color: white;
+    outline: none !important;
+    border: none;
+}
+.option-signup{
+    height: 45px;
+}
+.signImage{
+    margin-top: 80px;
+}
+
+@media(max-width: 576px){
+
+    .signImage{
+    
+      width:295px !important;
+    }
+    .form-control2{
+
+
+        width: 100% !important;
+    }
+    .btn-block
+    {
+        width: 100% !important;
+    }
+    .last-text{
+        padding-left: 0px !important;
+        margin-left: 0px;
+    }
+}

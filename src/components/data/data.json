@@ -1,0 +1,170 @@
+[
+    {
+        "id":0,
+        "img":"/blog8.png",
+        "month": "September",
+        "name":"Introductory Blog",
+        "desc":"What is the first question that pops on your mind when you try to book a medical procedure? Well, lets Google It Sounds familiar?",
+        "url": "/an-era-of-a-new-healthcare"
+    },
+    {
+        "id":1,
+        "month": "September",
+        "img":"/blog3.png",
+        "name":"A Complete Guide To Teeth Whitening",
+        "desc":"Are you conscious about your teeth before you can laugh freely? Though you are flossing twice a day but no improvement with your yellow teeth?",
+        "url":"/teeth-whitening-complete-guide"
+    },
+
+    {
+        "id":2,
+        "month": "September",
+        "img":"/blog1.png",
+        "name":"Touch-up Your Dental Health with Root Canal Treatment",
+        "desc":"Despite of how scary it feels to undergo Root Canal Treatment, it is ensured that the procedure helps to remove the infected tissue or canal successfully and gives you much relief from the teeth pain...",   
+        "url":"/dental-care-root-canal-treatment"
+    },
+    {
+        "id":3,
+        "month": "November",
+        "img":"blog5.png",
+        "name":"Healthy Suggestions to Avoid Dental Complications",
+        "desc":"Dental problems are very common these days and can't be ignored. Almost everyone at some stage of life would face dental problems in different forms...",     
+        "url":"/dental-complications-and-healthy-suggestions"
+    }, 
+
+    {
+        "id":4,
+        "month": "October",
+        "img":"blog6.png",
+        "name":"Seeking Mental Health?: Quick Counselling",
+        "desc":"Mental health is often neglected and hidden for reasons like fear of rejection from society or lack of understanding...",
+        "url":"/mental-health-quick-counselling"
+        
+    }, {
+        "id":5,
+        "month": "October",
+        "img":"blog7.png",
+        "name":"Save your Tooth with Best Dentist In Gurgaon",
+        "desc":"Any pain or dirt in the tooth can simply affect your smile and overall well-being. For all your dental and oral health you need to consult a dentist...",
+        "url":"/save-your-tooth-best-dentist"
+        
+    }, {
+        "id":6,
+        "img":"blog02.png",
+        "name":"Key Benefits of Daily Yoga",
+        "desc":"How many times people around have recommended you practice yoga? We are surely many times..."
+        
+    }, {
+        "id":7,
+        "img":"blog10.png",
+        "name":"Touch-up Your Dental Health with Root Canal Treatment",
+        "desc":"A good home remedy is safe & very effective for cold in infants. Coughs & cold are the most common detected illness among infants..       "
+        
+    }, {
+        "id":8,
+        "img":"blog07.png",
+        "name":"Arthritis: Lifestyle tips for managing symptoms",
+        "desc":"Can lifestyle changes help you manage your rheumatoid arthritis (RA) symptoms?"
+        
+    }, {
+        "id":9,
+        "img":"blog06.png",
+        "name":"Home Remedies For: Anti Aging",
+        "desc":"We all have an irresistible desire to look pretty and young forever. But as we continue ageing, avoiding the effects of aging on our skin is difficult..."
+        
+    }, {
+        "id":10,
+        "img":"blog12.png",
+        "name":"Fungal Ear Infection: Symptoms, Prevention & Treatment ",
+        "desc":"Fungal infections sound terrifying, aren't they? Any normal person will be scared by the word fungus and that in ear too..."
+        
+    }, {
+        "id":11,
+        "img":"blog19.png",
+        "name":"What does smoking do to the health of a woman?",
+        "desc":"It's an established fact that smokers are more likely than those who don't smoke to have several health issues and illnesses..."
+        
+    }, 
+    {
+        "id":12,
+        "img":"blog03.png",
+        "name":"Allergies: Types, Causes & Healthy Tips",
+        "desc":"An allergy is an exaggerated reaction by the immune system in response to exposure to certain foreign materials..."
+        
+    },
+    {
+        "id":13,
+        "img":"blog20.png",
+        "name":"How To Get Rid Of Snoring In Effective Ways ",
+        "desc":"Snoring happens due to vibration of air in the upper respiratory tract. It can be sometimes more than just a personal trouble..."
+        
+    },
+    {
+        "img":"blog19.png",
+        "name":"What does smoking do to the health of a woman?",
+        "desc":"It's an established fact that smokers are more likely than those who don't smoke to have several health issues and illnesses. "
+        
+    },
+    {   "month":"October",
+        "img":"blog17.png",
+        "name":"Love Pets? Secretly it's beneficial to your health!",
+        "desc":" Isn't it adorable when a pup comes running your way? Do you prefer to take a long walk with your pet rather than a human?",
+        "url":"/pet-love-benefits"
+    },
+    {   "month":"January",
+        "img":"blog23.png",
+        "name":"How Electronic Gadgets Have Outcomes on Pregnancy",
+        "desc":"We are trying to thrive at a world where our homes, institutions, work-spaces are dependent on technology for seamless functioning.",
+        "url":"/how-electronic-gadgets-effects-pregnancy"
+    },
+    {   "month":"January",
+        "img":"PCOS.png",
+        "name":"Myths & Reality of PCOS: Polycystic Ovary Syndrome",
+        "desc":"How many times have you come across this term of PCOS? We are sure many times you must have asked yourself what does it means to be diagnosed with this hormonal syndrome..",
+        "url":"/myths-and-reality-of-pcos"
+    },
+    {   "month":"January",
+        "img":"blo25.png",
+        "name":"Hypothyroidism: The connection between your Stress & Thyroid",
+        "desc":"How many times you have comes across this term ‘Stress’? We are sure, you in your daily life have used these words quite a lot of times..",
+        "url":"/hyperthyroidism"
+    },
+    {   "month":"October",
+        "img":"blog26.png",
+        "name":"Hair Loss Treatment: No Products Way",
+        "desc":"Are you tired of trying all the best products? Or getting tired of different dermatologist’s advice?",
+        "url":"/hair-loss-treatment"
+    },
+    {   "month":"December",
+        "img":"blog27.png",
+        "name":"Why Vitamin C is Important for Your Skin",
+        "desc":"Vitamin C is one of the best skin care nutrient. It is the key nutrient for glowing, healthy-looking skin. If you don’t know all the reasons why Vitamin C is effective",
+        "url":"/vitamin-c-benefits"
+    },
+    {   "month":"December",
+        "img":"blog28.png",
+        "name":"Home Remedies: How to get rid of Acne",
+        "desc":"Acne is one of the most common skin problems among people. Sometimes the reason can be genetic & the other times because of rash treatment to your skin..",
+        "url":"/how-to-get-rid-of-acne"
+    },
+    {   "month":"February",
+        "img":"blog29.png",
+        "name":"High Blood Pressure: Symptoms & Treatments        ",
+        "desc":"Do you have an issue of high blood pressure? Does your pressure get in the way of your day to day life? Hypertension occurs when your blood pressure increases to high & unhealthy levels.",
+        "url":"/symptoms-and-treatments-high-blood-pressure"
+    },
+    {   "month":"February",
+        "img":"blog02.png",
+        "name":"Key Benefits of Daily Yoga ",
+        "desc":"How many times people around have recommended you practice yoga? We are surely many times. In our busy work life, we tend to avoid paying attention to our health.",
+        "url":"/key-benefits-of-daily-yoga"
+    },
+    {   "month":"February",
+        "img":"PMS.png",
+        "name":"Premenstrual Syndrome (PMS): Symptoms and Prevention Guide        ",
+        "desc":"Premenstrual syndrome (PMS) has a wide range of signs and symptoms, including mood swings, tender breasts, food cravings, tiredness, irritability, and depression",
+        "url":"/prementrual-syndrome-preventionsand-guide"
+    }
+    
+]

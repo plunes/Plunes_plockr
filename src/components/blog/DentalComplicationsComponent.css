@@ -1,0 +1,57 @@
+.key-benefits{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32px;
+}
+.dentalcompli-img{
+    height:300px;
+    margin: 4% auto 4% auto;
+}
+.dental-problem{
+    font-size: 16px;
+    margin-top: 3%;
+    color: #717171;
+}
+.tooth-font{
+    font-size:22px;
+    margin-top:30px !important;
+}
+.tooth-decay-font{
+    font-size: 16px;
+   
+    color: #717171;
+   
+    
+}
+
+.dental-margin{
+    margin: 10% 10% 10% 10%;
+}
+.tag-color{
+    color:blue !important;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px){
+    .dental-margin{
+        margin: 25% 10% 10% 10%;
+    }
+    .tooth-font{
+        font-size:22px;
+        margin-top:30px !important;
+        margin-left: 0px !important;
+    }
+    .dentalcompli-img{
+       width: 91%;
+       height: auto;
+       margin-left: 5%;
+
+    }
+    .key-benefits{
+        font-size: 24px !important;
+    }
+    .dental-problem{
+        margin-left: 15px !important;
+    }
+    .tooth-decay-font{
+        margin-left: 0px !important;
+    }
+}

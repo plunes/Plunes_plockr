@@ -69,7 +69,7 @@ body {
     padding-right: 1.5rem !important;
     padding-left: 1.5rem !important;
 }
-.custom-toggler.navbar-toggler {border-color: rgb(5, 185, 110);}
+
 
 .custom-toggler .navbar-toggler-icon{width: 18px!important;}
 .custom-toggler .fa-bars{color:#06DF86;}
@@ -147,7 +147,7 @@ a:hover{text-decoration: none;}
         right: 30px;
     }
     /* video-section */
-    .video_sec video{width: 100%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+    .video_sec video{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
      /* video-section -end*/
      .refund_pay {
         margin-bottom: 30px;
@@ -230,7 +230,7 @@ a:hover{text-decoration: none;}
 .owl-theme .owl-dots .owl-dot span{display: none;}
 
 
-.overlay {
+/* .overlay {
     position: absolute;
     bottom: 0;
     left: 10px !important;
@@ -254,9 +254,9 @@ a:hover{text-decoration: none;}
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
-}
+} */
 
-
+.video_fone{width:750px;}
 .effect_new{width: 375px !important;}
 h2.card-title2 {
     font-size: 22px;
@@ -330,11 +330,19 @@ p.card-text2 {
 .footerlast {font-size: 20px;}
 .card{    background-color: transparent !important;}
 .card_a{text-decoration: underline;color: #3B3B3B;font-size: 14px;}
+.aero_pre{width: 30px;height: 30px;}
 /* mobile-css-start */
 
 @media (max-width: 767px) and (min-width: 281px) {
+    .bg_sect_pro {margin-top: 10px;}
+    .aero_pre{width: 20px;height: 20px;}
+    .col-sm-6.col-9.col-lg-6.covid_mar {
+        padding-left: 0px;
+    }
+    .video_fone{width:100%;}
     .covid_mar{margin-left: 0px;}
-    .kno_more h3 {font-size: 17px;
+    .kno_more h3 {font-size: 17px;padding-top: 35px;
+        padding-bottom: 40px;
     }
     .covid_bnr{ background: #d7f4f7;}
     .logo_size img {
@@ -355,8 +363,11 @@ p.card-text2 {
     }
  .Three_butn { padding-left: 10px;padding-top: 13px;
   padding-bottom: 10px;}
-.login {padding: 4px 8px;font-size: 14px;
+.login {padding: 4px 8px !important;font-size: 12px !important;
 }
+.btn{font-size: 12px !important;
+    width: 135px !important;}
+    .mobile_hs
     .search-query{width: 100%;}
     .effect_new {
         width: 100% !important;
@@ -370,19 +381,25 @@ p.card-text2 {
   
     .utility_network{line-height: 32px;font-size: 15px;}
 .Unique_avail {font-size: 11px;}
-.book_madical p{font-size: 13px;}
+.book_madical p{font-size: 12px;}
 .book_madical {
     margin-top: 10%;
 }
 .book_madical h4 {
     font-size: 25px;margin-bottom: 33px;}
-.plunes_brd h2 {font-size: 26px;margin-bottom: 0px;}
-.we_content h2{padding-left: 0%;
+.plunes_brd h2 {font-size: 20px;margin-bottom: 0px;}
+.black_bordr{width: 114px;}
+.we_content h2{padding-left: 0%;font-size: 20px;
     text-align: center;}
-    .we_content p{padding-left: 0;text-align: center;}
+    .we_content {
+        padding-top: 15px;
+    }
+    .we_content p{padding-left: 0;text-align: center;font-size: 12px;}
+    .main-content .owl-theme .custom-nav .owl-prev{width:37px !important}
+    .main-content .owl-theme .custom-nav .owl-next{width:37px !important}
     .we_hsection img {
         width: 100%;
-        height: 120px;
+        height: 83px;
     }
 .position_mobile{position: relative;}
     .ftr_pd{padding-left: 0px;}
@@ -394,8 +411,8 @@ p.card-text2 {
     }
     .refund_im img {
         width: 80%;
-        height: 115px;}
-        .mobile_re{margin-top: 40px;}
+        height: 60px;}
+        .mobile_re{margin-top: 0px;}
         .refund_pay h2{font-size: 12px;}
         .main-content .owl-theme .custom-nav .owl-prev {
             left: 14px !important;}

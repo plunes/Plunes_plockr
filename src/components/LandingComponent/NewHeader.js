@@ -19,7 +19,7 @@ class NewHeader extends Component {
                    <ul className="navbar-nav ml-auto Three_butn dr_lis_mobile">
                      <li className="nav-item">
                       <div className="dropdown drp_part">
-                <button type="button" className="btn dropdown-toggle " data-toggle="dropdown" >
+                <button type="button" className="btn dropdown-toggle cus_bu" data-toggle="dropdown" >
                   Download the App
                     </button>
                   <ul className="dropdown-menu" role="tree" aria-expanded="true" aria-hidden="false">
@@ -37,7 +37,7 @@ class NewHeader extends Component {
               </div>
                     </li>
                      <li className="nav-item">
-                       <a className="nav-link login" href="/login">Login Hospitals / Doctors</a>
+                       <a className="nav-link login mobile_hs" href="/login">Login Hospitals / Doctors</a>
                      </li>  
                    </ul>
                </div>  

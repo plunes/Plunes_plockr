@@ -163,7 +163,7 @@ class LandingContainer extends React.Component {
                     <div className="container">
                         <div className="row">
                         <div className="col-lg-12 video_sec">
-                        <video controls id="video-container">
+                        <video controls id="video-container" class="video_fone">
                          <source src="./video/cvid.webm" type='video/webm;codecs="vp8, opus"'/>
                          <source src="./video/cvid.mp4" type='video/mp4;codecs="avc1.4D401E, mp4a.40.2"'/>   
                         </video>
@@ -381,7 +381,7 @@ class LandingContainer extends React.Component {
                                 <a href="/ent" title='ENT Procedures'>
                                     <div className="card" >
                                     <div class="trendingBox">
-                                        <img className=" card-align" src="/ENT.png" alt=".." />
+                                        <img className=" card-align" src="/entproc.png" alt=".." />
                                         <div class="overlay">
                                            </div>
                                         </div>

@@ -29,15 +29,15 @@
   <script>
     $(document).ready(function () {
       $("#owl-demo").owlCarousel({
-        stagePadding: 10,
+        stagePadding: 0,
         loop: true,
-        margin: 10,
+        margin: 20,
         nav: true,
       
         dots: false,
         navText: [
-          '<img src="./arrow_left.png" alt="..."  height="30" width="30"/>',
-          '<img src="./arrow_right.png" alt="..." height="30" width="30"/>'],
+          '<img src="./arrow_left.png" alt="..."  class="aero_pre"/>',
+          '<img src="./arrow_right.png" alt="..."class="aero_pre" />'],
         navContainer: '.main-content .custom-nav',
         autoplay: true,
         autoplayTimeout: 6000,

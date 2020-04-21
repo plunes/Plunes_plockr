@@ -5,9 +5,9 @@ import axios from 'axios';
 import { Redirect } from 'react-router'
 import { Helmet } from "react-helmet";
 import Modal from 'react-modal';
-import comp_2 from "../../images/comp_2.mp4"
-import comp_1 from "../../images/comp_1.mp4"
-import comp_3 from "../../images/cvid.webm"
+// import comp_2 from "../../images/comp_2.mp4"
+// import comp_1 from "../../images/comp_1.mp4"
+// import comp_3 from "../../images/cvid.webm"
 import Consultations from "../../images/Consultations.png"
 import Solu from "../../images/Solu.png"
 
@@ -163,7 +163,7 @@ class LandingContainer extends React.Component {
                     <div className="container">
                         <div className="row">
                         <div className="col-lg-12 video_sec">
-                        <video controls src={comp_3} id="video-container"></video>
+                        <video controls src='./video/cvid.webm' id="video-container"></video>
                         {/* <iframe src={comp_2}> </iframe> */}
                         </div>
                         </div>
@@ -290,7 +290,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">Dermatology Procedures</h2>
                                             <p className="card-text2">Dermatology Consultation <br></br> Laser Hair Reduction <br></br> Botox Treatment</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/dermatology" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>
@@ -306,7 +306,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2">Gynecology Procedures</h2>
                                             <p className="card-text2">Gynecologist Consultation<br></br>Cesarean / C-section <br></br>Ovarian Cyst Removal</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/gynae" class="card_a">View more</a>
                                         </div>
                                     </div></a>
                             </div>
@@ -321,7 +321,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">Radiology Diagnosis</h2>
                                             <p className="card-text2">MRI, CT Scan, X-ray<br></br> Ultrasound <br></br>Doppler Test</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/radiology" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>
@@ -337,7 +337,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">Dentistry Procedures</h2>
                                             <p className="card-text2">Tooth Removal, Tooth Whitening<br></br>Root Canal Treatment<br></br>Dental Implant, Braces</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/dentist" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>
@@ -346,14 +346,14 @@ class LandingContainer extends React.Component {
                                 <a href="/pathology" title='Pathology Tests'>
                                     <div className="card" >
                                     <div class="trendingBox">
-                                        <img className=" card-align" src="/Pathology.png" alt=".." />
+                                        <img className=" card-align" src="/pathology.png" alt=".." />
                                         <div class="overlay">
                                            </div>
                                         </div>
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">Pathology Tests</h2>
                                             <p className="card-text2">Complete Blood Count Test<br></br>LIPID Profile<br></br>HIV Test</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/pathology" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>
@@ -369,7 +369,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">Orthopedic Procedures</h2>
                                             <p className="card-text2">Joint Replacement<br></br>Fracture<br></br>Arthroplasty</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/orthopedics" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>
@@ -385,7 +385,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">ENT Procedures</h2>
                                             <p className="card-text2">Ear Drum Repair<br></br>Tonsillectomy<br></br>Sinusitis Treatment</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/ent" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>
@@ -401,7 +401,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">Ayurveda Procedures</h2>
                                             <p className="card-text2">Dhara Treatment<br></br>Panchkarma Treatment<br></br>Ayurvedic Massage</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/ayurveda" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>
@@ -409,7 +409,7 @@ class LandingContainer extends React.Component {
                             </div>
 
                             <div className='item'>
-                                <a href="/ayurveda" title='Ayurveda Procedures'>
+                                <a href="/physiotherapy" title='Physiotherapy Procedures'>
                                     <div className="card" >
                                     <div class="trendingBox">
                                         <img className=" card-align" src="/close-up-physiotherapist-working-with-patient-clinic_1150-15063.png" alt=".." />
@@ -419,7 +419,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">Physiotherapy</h2>
                                             <p className="card-text2">Physiotherapy Consultation<br></br>Back Pain/Knee Pain<br></br>Frozen Shoulder</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/physiotherapy" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>
@@ -427,7 +427,7 @@ class LandingContainer extends React.Component {
                             </div>
 
                             <div className='item'>
-                                <a href="/ayurveda" title='Ayurveda Procedures'>
+                                <a href="/psychiatry" title='Psychiatry Procedures'>
                                     <div className="card" >
                                     <div class="trendingBox">
                                         <img className=" card-align" src="/Psychology.png" alt=".." />
@@ -437,7 +437,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">Psychiatry</h2>
                                             <p className="card-text2">Psychiatric Consultation<br></br>Autism Assessment<br></br>Counseling</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/psychiatry" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>
@@ -445,7 +445,7 @@ class LandingContainer extends React.Component {
                             </div>
 
                             <div className='item'>
-                                <a href="/ayurveda" title='Ayurveda Procedures'>
+                                <a href="/ophthalmology" title='Ophthalmology Procedures'>
                                     <div className="card" >
                                     <div class="trendingBox">
                                         <img className=" card-align" src="/Ophthalmology.png" alt=".." />
@@ -455,7 +455,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">Ophthalmology</h2>
                                             <p className="card-text2">Ophthalmology Consultation<br></br>Cataract Surgery<br></br>Glaucoma Surgery</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/ophthalmology" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>
@@ -463,7 +463,7 @@ class LandingContainer extends React.Component {
                             </div>
 
                             <div className='item'>
-                                <a href="/ayurveda" title='Ayurveda Procedures'>
+                                <a href="/neurology" title='Neurology Procedures'>
                                     <div className="card" >
                                     <div class="trendingBox">
                                         <img className=" card-align" src="/Neurologists@2x.png" alt=".." />
@@ -473,7 +473,7 @@ class LandingContainer extends React.Component {
                                         <div className="card-body ">
                                             <h2 className="card-title2 ">Neurology</h2>
                                             <p className="card-text2">Neurology Consultation<br></br>Chemotherapy <br></br>Brain Tumor Surgery</p>
-                                            <a href="#" class="card_a">View more</a>
+                                            <a href="/neurology" class="card_a">View more</a>
                                         </div>
                                     </div>
                                 </a>

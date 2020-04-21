@@ -29,7 +29,7 @@ class DentalComplicationsComponent extends Component {
 
                         </div> */}
                         <div className="col-sm-5 col-img-dental">
-                            <img className="dentalcompli-img" src="/blog5.png" alt=".." />
+                            <img className="dentalcompli-img" src="/blog05.png" alt=".." />
                         </div>
                         <div className="col-sm-6 ">
                             <p className="dental-problem"> <a className="tag-color" href="/save-your-tooth-best-dentist">Dental problems</a> are very common these days also can't be ignored. Almost everyone at some stage of life would face dental problems in different forms. Maximum time oral problems do happen by the care we give to our teeth, ignorance or simply by our hereditary. One of the great facts is an advancement in dental care has made the entire clinical procedure pain free.  </p>

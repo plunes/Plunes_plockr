@@ -386,7 +386,10 @@ p.card-text2 {
     margin-top: 10%;
 }
 .book_madical h4 {
-    font-size: 25px;margin-bottom: 33px;}
+    font-size: 20px;margin-bottom: 33px;}
+    .map_sec {
+        margin-bottom: 25px;
+    }
 .plunes_brd h2 {font-size: 20px;margin-bottom: 0px;}
 .black_bordr{width: 114px;}
 .we_content h2{padding-left: 0%;font-size: 20px;

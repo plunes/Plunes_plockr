@@ -163,7 +163,10 @@ class LandingContainer extends React.Component {
                     <div className="container">
                         <div className="row">
                         <div className="col-lg-12 video_sec">
-                        <video controls src='./video/cvid.webm' id="video-container"></video>
+                        <video controls id="video-container">
+                         <source src="./video/cvid.webm" type='video/webm;codecs="vp8, opus"'/>
+                         <source src="./video/cvid.mp4" type='video/mp4;codecs="avc1.4D401E, mp4a.40.2"'/>   
+                        </video>
                         {/* <iframe src={comp_2}> </iframe> */}
                         </div>
                         </div>
@@ -330,7 +333,7 @@ class LandingContainer extends React.Component {
                                 <a href="/dentist" title='Dentistry Procedures'>
                                     <div className="card" >
                                     <div class="trendingBox">
-                                        <img className="card-align" src="/Dentistry.png" alt=".." />
+                                        <img className=" card-align" src="/Dentistry.png" alt=".." />
                                         <div class="overlay">
                                            </div>
                                         </div>

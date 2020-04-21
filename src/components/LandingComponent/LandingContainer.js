@@ -88,6 +88,7 @@ class LandingContainer extends React.Component {
     }
 
     async sendAppLink(e) {
+        console.log("Inside SendAppLink")
         e.preventDefault()
         let response = await axios.get("https://plunes.co/v4/notification/applink/" + this.state.mobileNo)
             .then(({ data }) => {
@@ -185,8 +186,8 @@ class LandingContainer extends React.Component {
                                 <a href="#" className="get_link">Get link to download the app</a>
                                 <div className="number_of_app">
                                 <div class="cntry_cde">+91</div>
-                                    <input type="tel" id="phone" name="phone" placeholder="Mobile Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required className="country_nu" />
-                                    <a href="#" className="explore_field">Get App Link</a>
+                                    <input type="tel" id="phone" name="phone" value={this.state.mobileNo} onChange={(e)=>this.setState({mobileNo:e.target.value})} placeholder="Mobile Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required className="country_nu" />
+                                    <a href="#" onClick= {(e)=>this.sendAppLink(e)} className="explore_field">Get App Link</a>
                                 </div>
                                 <div class="play_store">
                                 <a href="https://apps.apple.com/us/app/plunes/id1463747553/"target="_blank" title="app store"> 

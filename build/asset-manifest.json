@@ -1,27 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.9b305c57.chunk.css",
-    "main.js": "/static/js/main.72031070.chunk.js",
-    "main.js.map": "/static/js/main.72031070.chunk.js.map",
+    "main.js": "/static/js/main.b82d245e.chunk.js",
+    "main.js.map": "/static/js/main.b82d245e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.549be430.js",
     "runtime-main.js.map": "/static/js/runtime-main.549be430.js.map",
     "static/css/2.69121389.chunk.css": "/static/css/2.69121389.chunk.css",
-    "static/js/2.75cbd8fe.chunk.js": "/static/js/2.75cbd8fe.chunk.js",
-    "static/js/2.75cbd8fe.chunk.js.map": "/static/js/2.75cbd8fe.chunk.js.map",
+    "static/js/2.74802a09.chunk.js": "/static/js/2.74802a09.chunk.js",
+    "static/js/2.74802a09.chunk.js.map": "/static/js/2.74802a09.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.094b53d9a14bf8dc7f4a78efa17e1766.js": "/precache-manifest.094b53d9a14bf8dc7f4a78efa17e1766.js",
+    "precache-manifest.90c6609c1cb42a1624b0560f67af0492.js": "/precache-manifest.90c6609c1cb42a1624b0560f67af0492.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/static/css/2.69121389.chunk.css.map",
     "static/css/main.9b305c57.chunk.css.map": "/static/css/main.9b305c57.chunk.css.map",
-    "static/js/2.75cbd8fe.chunk.js.LICENSE.txt": "/static/js/2.75cbd8fe.chunk.js.LICENSE.txt",
+    "static/js/2.74802a09.chunk.js.LICENSE.txt": "/static/js/2.74802a09.chunk.js.LICENSE.txt",
     "static/media/Consultations.png": "/static/media/Consultations.013fba67.png",
     "static/media/index.css": "/static/media/ProximaNovaW08-Regular.f4d596d8.woff2",
     "static/media/Solu.png": "/static/media/Solu.623ebd93.png",
     "static/media/aero.svg": "/static/media/aero.0dd91517.svg",
     "static/media/annote.svg": "/static/media/annote.2dcf46e0.svg",
-    "static/media/comp_1.mp4": "/static/media/comp_1.8ce1372e.mp4",
-    "static/media/comp_2.mp4": "/static/media/comp_2.23ce67d9.mp4",
-    "static/media/cvid.webm": "/static/media/cvid.1c45960d.webm",
     "static/media/proxima.otf": "/static/media/proxima.410504d4.otf",
     "static/media/rectangle.svg": "/static/media/rectangle.87580e14.svg",
     "static/media/rotate.svg": "/static/media/rotate.735d6963.svg",
@@ -31,8 +28,8 @@
   "entrypoints": [
     "static/js/runtime-main.549be430.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.75cbd8fe.chunk.js",
+    "static/js/2.74802a09.chunk.js",
     "static/css/main.9b305c57.chunk.css",
-    "static/js/main.72031070.chunk.js"
+    "static/js/main.b82d245e.chunk.js"
   ]
 }

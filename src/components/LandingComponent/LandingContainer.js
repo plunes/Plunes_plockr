@@ -163,10 +163,19 @@ class LandingContainer extends React.Component {
                     <div className="container">
                         <div className="row">
                         <div className="col-lg-12 video_sec">
-                        <video controls id="video-container" class="video_fone">
-                         <source src="./video/cvid.webm" type='video/webm;codecs="vp8, opus"'/>
-                         <source src="./video/cvid.mp4" type='video/mp4;codecs="avc1.4D401E, mp4a.40.2"'/>   
-                        </video>
+                        <div  id="video-container" >
+                        <iframe 
+                        width="560"
+                        height="315" 
+                        src="https://www.youtube.com/embed/sITYg1awTPE" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowFullScreen>
+
+                        </iframe>
+                         {/* <source src="./video/cvid.webm" type='video/webm;codecs="vp8, opus"'/>
+                         <source src="./video/cvid.mp4" type='video/mp4;codecs="avc1.4D401E, mp4a.40.2"'/>    */}
+                        </div>
                         {/* <iframe src={comp_2}> </iframe> */}
                         </div>
                         </div>

@@ -61,11 +61,11 @@ width: 35px !important;
         height: 35px;
         width: 35px !important;   
     }
-    .navbar-collapse{
+    /* .navbar-collapse{
         margin-right: 75px;
-    }
+    } */
     .dropdown-align{
-    width: 110%;
+    width: 100%;
     outline: none ;
     margin-left: -5%;
     background-color: white !important;

@@ -152,19 +152,29 @@
       padding: 10%;
       margin-top: 4%;
     }
+    
   .covidInfo1 {
       font-size: 16px;
       margin-top: 0px;
     }
-  .covidPara{
+  /* .covidPara.covidPara{
     font-size: 11px;
     margin-bottom: 0%;}
-  
+   */
   .covidTest {
     font-size: 10px;
   }
  }
   @media only screen and (min-width : 320px) and (max-width : 479px) {
+
+    .footerele {
+      font-size: 10px !important;}
+      .second_part {
+        width: 50% !important;
+    }
+    .Third_part {
+      width: 50% !important;
+  }
     .thankYouCont{
       margin-top: 30%;
     }
@@ -203,7 +213,7 @@
   }
 .covidTestForm{margin-top: 23%;}
 
-.covidTest {
+/* .covidTest {
     color: white !important;
     background: #0B5E58;
     border-radius: 34px;
@@ -211,20 +221,20 @@
     padding:4px 10px 4px 8px;
     margin-top: 10px;
     display: inline-block;
-}
+} */
 
 .lastPara{margin-bottom: -3% !important;
 }
-.covidPara{
+/* .covidPara{
   margin-left: 0%;
   margin-bottom: 0%;
   margin-top: 0%;
   font-size: 6px;
-}
-.covidInfo1 {
+} */
+/* .covidInfo1 {
   font-size: 13px;
   margin-top: 0px;
-}
+} */
 .ReactModal__Content, .ReactModal__Content--after-open{
     width: 55%;
   }
@@ -269,10 +279,10 @@
   .item{
 margin-left: -5% !important;
   }
-  .card-align{
+  /* .card-align{
     margin-left: 10% !important;
     margin-right: 10% !important;
-  }
+  } */
   .why-plunes{
     margin-top: 20px !important;
   }
@@ -281,9 +291,10 @@ margin-left: -5% !important;
   }
 .android{margin-left: 40px !important;}
   .dropdown-toggle{
-    width: 156px !important;
+    width: 80% !important;
     margin-left: 0px !important;
     font-size: 12px !important;
+    margin-bottom: 15px;
   }
   .footer-col-align{
     margin-top: -16px !important;
@@ -303,8 +314,8 @@ margin-left: -5% !important;
     margin-left: 0px !important;
   }
   .card-text2{
-    margin-left: -2px !important;
-    font-size: 15px !important;
+    margin-left: 0px !important;
+    font-size: 12px !important;
     
   }
   .header2{
@@ -334,14 +345,16 @@ margin-left: -5% !important;
   .navbar-brand {
     margin-left: -50px;
   }
-  .card-align{
+  /* .card-align{
     margin-left: 7% !important;
-  }
-  .services{
+  } */
+  /* .services{
     margin-left: 16px !important;
-  }
+  } */
   .responsive-logo{
-    margin-left: 16px;
+    width: 90px !important;
+    height: 46px !important;
+    object-fit: contain;
    }
   .responsiv-futtor{
     margin-left: -43px;
@@ -350,7 +363,7 @@ margin-left: -5% !important;
     margin-left: 0px;
   }
   .new-footer-ele{
-    margin-left: 16px !important;
+    margin-left: 0px !important;
   }
   .MARGIN-FOOTER{
     margin-left: 16px !important;
@@ -401,23 +414,27 @@ margin-left: -5% !important;
     margin-bottom: 67px !important;
   }
   .owl-prev {
-    width: 35px !important;
+  width: 30px !important;
     outline: none !important;
-    height: 34px !important;
+    height: 50px !important;
   }
   .footerfont{
     
-    font-size: 15px !important;
-    margin-right: 16px !important;
+    font-size: 11px !important;
+    margin-right: 0px !important;
     padding-top: 6px !important;
-    margin-left: 16px;
+    margin-left: 0px;
   }
+
+  .follow-us-at img {
+    width: 26px;
+}
   
   .owl-next{
     width:45px !important;
     outline: none !important;
     right: 20px;
-    height: 34px !important;
+    height: 50px !important;
 
   }
   .card-item-top{
@@ -426,7 +443,7 @@ margin-left: -5% !important;
     margin-left: 31px !important;
   }
   .dropdown-menu.show{
-    width: 109% !important;
+    width: 89% !important;
 margin-left: 8% !important;
   }
   
@@ -490,8 +507,7 @@ margin-left: 8% !important;
     /* margin-left: 205px; */
 }
 .ftr3{
-    /* margin-left: 205px !important;
-    margin-top: -55px !important; */
+  margin-top: 0px !important;
 }
     .header{
         
@@ -557,11 +573,11 @@ width: 190px !important;
   margin-top: 133px !important;
 }
 .navbar-nav .nav-link{
-      width: 100% !important;
-        padding-left: 44px;
-    margin-left: 23px;
-    margin-top: 10px;
-    font-size: 12px;
+      width: 80% !important;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 13px !important;
+    border: 1px solid #6E6E6E;
 }
     .footer-pic{
         height: 65px;
@@ -714,7 +730,7 @@ width: 190px !important;
     height: 49px;
   }
   .main-content .owl-theme .custom-nav .owl-next {
-    right: 115px;
+    right: 89px;
     outline: none !important;
     box-shadow: 0px 3px 6px #00000029;
     background-color: hsl(0, 0%, 100%);
@@ -960,7 +976,7 @@ width: 190px !important;
     margin-left: 111px;
   }
   .card-align{
-    width: 300px !important;
+    width: 324px !important;
     height: auto !important;
    margin-left: 1%;
   }

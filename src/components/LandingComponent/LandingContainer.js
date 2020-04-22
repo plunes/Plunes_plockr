@@ -129,6 +129,27 @@ class LandingContainer extends React.Component {
                     </meta>
                 </Helmet>
                 {/* <!-- <banner-start> --> */}
+                {/* mobile-design */}
+                <section className="mobile_banner">
+                <div className="container-fluid ">
+                <div className="covid_mobile">
+                <div className="row">
+                    <div className="col-sm-6 col-7 cvd_cont">
+                        <h1 className="ava_mobile">COVID-19 Test now <br/>available
+                         with PLUNES!</h1>
+                        <p className="covis_upto">Upto <b>50%</b> off in public interest!</p>
+                        <p className="covis_upto">Home Collection Available, No Hassle!</p>
+                        <p className=" covis_upto">24/7 Helpline No. : <b>+91-7701805081</b></p><a href="/covid19-test" className="book_cvd">Book now</a>
+                  </div>
+                  <div className="col-5 col-sm-6 human_mu">
+                     <img src="/mobile_hum.svg"/>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </section>
+            {/* mobile-design-end */}
+             {/* Desk-top-design */}
                 <section className="covid_bnr">
                 <div className="container-fluid ">
                 <div className="covid">
@@ -152,7 +173,7 @@ class LandingContainer extends React.Component {
                         <div className="row">
                         <div className="col-lg-12 text-center">
                             <h1 className="utility_network">Welcome to India's First Utility Network</h1>
-                            <p className="Unique_avail">Experiene our Unique AI & Avail upto 50% off on all your Medical Procedures, <br/>Diagnostics & Appointments</p>
+                            <p className="Unique_avail">Experiene our Unique AI & Avail upto 50% off on all your Medical Procedures,Diagnostics & Appointments</p>
                         </div>
                         </div>
                         </div>
@@ -191,15 +212,15 @@ class LandingContainer extends React.Component {
                             <img src={Consultations} className="first_fone" />
                             <img src={Solu} className="second_fone" />
                             </div>
-                            <div className="col-lg-7">
+                            <div className="col-lg-7 col-12 besic_mo">
                             <div className="book_madical">
                                 <p>Book Medical Procedures, Appointments & Tests</p>
                                 <h4>Download Plunes <br />App Now!</h4>
                                 <a href="#" className="get_link">Get link to download the app</a>
-                                <div className="number_of_app">
-                                <div class="cntry_cde">+91</div>
-                                    <input type="tel" id="phone" name="phone" value={this.state.mobileNo} onChange={(e)=>this.setState({mobileNo:e.target.value})} placeholder="Mobile Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required className="country_nu" />
-                                    <a href="#" onClick= {(e)=>this.sendAppLink(e)} className="explore_field">Get App Link</a>
+                                <div className="number_of_app row">
+                                <div class="cntry_cde col-2 col-lg-1">+91</div>
+                                    <div className="col-5 col-lg-5"><input type="tel" id="phone" name="phone" value={this.state.mobileNo} onChange={(e)=>this.setState({mobileNo:e.target.value})} placeholder="Mobile Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required className="country_nu" /></div>
+                                    <div className="col-4 col-lg-3"><a href="#" onClick= {(e)=>this.sendAppLink(e)} className="explore_field">Get App Link</a></div>
                                 </div>
                                 <div class="play_store">
                                 <a href="https://apps.apple.com/us/app/plunes/id1463747553/"target="_blank" title="app store"> 
@@ -222,7 +243,7 @@ class LandingContainer extends React.Component {
             <h2>Why Plunes?</h2>
             </div>
           <div className="row text-center">
-            <div className="col-lg-4 col-12 refund_im">
+            <div className="col-lg-4 col-4 refund_im">
               <div className="bg_colur">
                 <a href="#"> <img src="refunpayment.svg"/></a>
               </div>
@@ -230,7 +251,7 @@ class LandingContainer extends React.Component {
                 <a href="#"><h2>100% Refundable <br/>Payment</h2></a>
                 </div>
             </div>
-            <div className="col-lg-4 col-6 refund_im">
+            <div className="col-lg-4 col-4 refund_im">
               <div className="bg_colur">
                 <a href="#"><img src="firstconsu.png"/></a>
             </div>
@@ -238,7 +259,7 @@ class LandingContainer extends React.Component {
                 <a href="#"><h2>First Consultation<br/> Free</h2></a>
                 </div>
             </div>
-            <div className="col-lg-4 col-6 refund_im">
+            <div className="col-lg-4 col-4 refund_im">
               <div className="bg_colur">
                 <a href="#"><img src="prefeared.svg"/></a>
               </div>
@@ -249,7 +270,7 @@ class LandingContainer extends React.Component {
           </div>
           
           <div className="row text-center margin_icn mobile_re">
-            <div className="col-lg-4 col-6 refund_im">
+            <div className="col-lg-4 col-4 refund_im">
               <div className="bg_colur">
               <a href="#"><img src="makepart.svg"/></a>
               </div>
@@ -257,7 +278,7 @@ class LandingContainer extends React.Component {
                 <a href="#"> <h2>Make Partial<br/> Payments</h2></a>
                 </div>
             </div>
-            <div className="col-lg-4 col-6 refund_im">
+            <div className="col-lg-4 col-4 refund_im">
               <div className="bg_colur">
                 <a href="#"><img src="freetelphonic.png"/></a>
             </div>
@@ -494,7 +515,10 @@ class LandingContainer extends React.Component {
                         </div>
                         <div className="owl-theme">
                             <div className="owl-controls">
-                                <div className="custom-nav owl-nav"></div>
+                                <div className="custom-nav owl-nav">
+
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -508,7 +532,7 @@ class LandingContainer extends React.Component {
             <h2>We Have</h2>
         </div>
         <div class="row text-center">
-            <div class="col-lg-4 col-12 col-md-4">
+            <div class="col-lg-4 col-4 col-md-4">
                 <div class="we_hsection">
                     <a href="#"> <img src="procedure.svg" /></a>
                 </div>
@@ -517,7 +541,7 @@ class LandingContainer extends React.Component {
                     <p>Procedures</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-6 col-md-4">
+            <div class="col-lg-4 col-4 col-md-4">
                 <div class="we_hsection">
                     <a href="#"><img src="doctors.svg" /></a>
                 </div>
@@ -526,7 +550,7 @@ class LandingContainer extends React.Component {
                     <p>Doctors</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-6 col-md-4">
+            <div class="col-lg-4 col-4 col-md-4">
                 <div class="we_hsection">
                     <a href="#"><img src="hospital.svg" /></a>
                 </div>

@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 export default class LandingFooter extends Component {
   constructor(props) {
     super(props);
-    this.state = { width: 0, height: 0 };
+    this.state = { width: 0, height: 0, openFooter:false };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
   
@@ -115,11 +115,13 @@ export default class LandingFooter extends Component {
               </div>
             </div>
             <div className="up_down">
-            <a href="#" onClick={(e)=>{
+          {(this.state.openFooter===false) &&   <a href="#" onClick={(e)=>{
               e.preventDefault()
               this.setState({openFooter:true})
-            }} className="giphi_sec"><img  className="giphi_sec" src="/giphy.gif" alt=".." /></a>
-             <a href="#" className="giphi_sec"><img className="gifidown" src="/giphy_up.gif" alt=".." /></a>
+            }} className="giphi_sec"><img  className="giphi_sec" src="/giphy.gif" alt=".." /></a>}
+   {(this.state.openFooter===true) &&    <a href="#" onClick={(e)=>{
+              e.preventDefault()
+              this.setState({openFooter:false})}} className="giphi_sec"><img className="gifidown" src="/giphy_up.gif" alt=".." /></a>}
              </div>
             <div className="row footer-alignment ">
               <div className="col-sm-5"></div>

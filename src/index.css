@@ -314,6 +314,7 @@ p.card-text2 {
 .card{    background-color: transparent !important;}
 .card_a{text-decoration: underline;color: #3B3B3B;font-size: 14px;}
 .aero_pre{width: 30px;height: 30px;}
+.giphi_sec{display: none;}
 /* mobile-css-start */
 @media screen and (device-aspect-ratio: 40/71) {
 
@@ -394,7 +395,7 @@ p.card-text2 {
         padding-left: 0px;
     }
         .book_madical.p{margin-left: 0 !important;}
-    .video_sec iframe{width: 68% !important;height: 100px !important;}
+    .video_sec iframe{width: 100% !important;height: auto !important;}
     .network_marg {
         margin-top: 0% !important;
     }
@@ -475,6 +476,10 @@ p.card-text2 {
         position: relative;
         top: -25px;}
         /* footer-section */
+        .giphi_sec {
+            float: right;
+            padding-right: 41px;
+        }
         .fiveth_part {
             width: 50% !important;
         }
@@ -501,8 +506,53 @@ p.card-text2 {
         top: -144px;
         position: relative;
     }
+    .giphi_sec{display: block;}
 }
 /* end-media-query */
+/* laptop_media-query */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .video_sec iframe {
+        width: 470px;
+        height: 222px;
+    }
+    .covid_bnr{display: block;}
+    .covidInfo1{font-size: 20px !important;margin-top: 10px !important;}
+    .covidPara{margin-bottom: 0;}
+    .covid_mar {
+        margin-left: 45px;
+    }
+    .covidTest{font-size: 11px !important;
+        padding: 6px 27px 8px 26px;
+        margin-top: 6px;
+        display: inline-block !important;}
+    .covid {
+        font-size: 12px !important;}
+      
+    .drp_part{text-align: center;}
+    .CovidContent{height: 254px !important;}
+    .utility_network {font-size: 25px;}
+    .Unique_avail {font-size: 16px;}
+    .first_fone {
+        width: 150px;}
+        .second_fone {
+            width: 150px;left: 116px;}
+    .explore_field {width: 120px;
+        text-align: center;}
+        .country_nu{width: 162px;}
+        .cntry_cde{text-align: center;}
+        .main-content .owl-theme .custom-nav .owl-prev {
+            left: 15px !important;}
+            .main-content .owl-theme .custom-nav .owl-next{right:17px !important;}
+            .we_content h2{font-size: 23px;}
+
+            .new-footer-ele2 {
+                padding-left: 0px;
+            }
+
+}
+
+
+/* laptop_media-query-end */
 :focus {
     outline: -webkit-focus-ring-color auto 0px;
 }

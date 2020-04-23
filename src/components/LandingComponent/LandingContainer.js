@@ -208,19 +208,19 @@ class LandingContainer extends React.Component {
                 <section className="mobile_app">
                     <div className="container">
                     <div className="row">
-                        <div className="col-lg-4 connsultin_im offset-lg-1">
+                        <div className="col-lg-4 col-md-5 connsultin_im offset-lg-1">
                             <img src={Consultations} className="first_fone" />
                             <img src={Solu} className="second_fone" />
                             </div>
-                            <div className="col-lg-7 col-12 besic_mo">
+                            <div className="col-lg-7 col-md-7 col-12 besic_mo">
                             <div className="book_madical">
                                 <p>Book Medical Procedures, Appointments & Tests</p>
                                 <h4>Download Plunes <br />App Now!</h4>
                                 <a href="#" className="get_link">Get link to download the app</a>
                                 <div className="number_of_app row">
-                                <div class="cntry_cde col-2 col-lg-1">+91</div>
-                                    <div className="col-5 col-lg-5"><input type="tel" id="phone" name="phone" value={this.state.mobileNo} onChange={(e)=>this.setState({mobileNo:e.target.value})} placeholder="Mobile Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required className="country_nu" /></div>
-                                    <div className="col-4 col-lg-3"><a href="#" onClick= {(e)=>this.sendAppLink(e)} className="explore_field">Get App Link</a></div>
+                                <div class="cntry_cde col-2 col-lg-1 col-md-2">+91</div>
+                                    <div className="col-5 col-lg-5 col-md-6"><input type="tel" id="phone" name="phone" value={this.state.mobileNo} onChange={(e)=>this.setState({mobileNo:e.target.value})} placeholder="Mobile Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required className="country_nu" /></div>
+                                    <div className="col-4 col-lg-3 col-md-4"><a href="#" onClick= {(e)=>this.sendAppLink(e)} className="explore_field">Get App Link</a></div>
                                 </div>
                                 <div class="play_store">
                                 <a href="https://apps.apple.com/us/app/plunes/id1463747553/"target="_blank" title="app store"> 

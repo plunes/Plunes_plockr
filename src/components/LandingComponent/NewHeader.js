@@ -7,9 +7,9 @@ class NewHeader extends Component {
     render() {
         return (
           <React.Fragment>
-          <nav className="navbar custom_ha navbar-expand-lg custom-navbar">
+          <nav className="navbar custom_ha navbar-expand-md custom-navbar">
           <div className="container">
-              <a className="navbar-brand logo_size col-lg-3 col-md-6 col-6" href="#">
+              <a className="navbar-brand logo_size col-lg-3 col-md-4 col-6" href="#">
                   <img src={logo} />
               </a>
              <button className="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

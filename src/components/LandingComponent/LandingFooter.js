@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 
 export default class LandingFooter extends Component {
   render() {
+    
     return (
       
       <div class="footer">
@@ -11,14 +12,14 @@ export default class LandingFooter extends Component {
             <div class="row">
               <div className="col-sm-1 futtor">
               </div>
-              <div className="col-sm-2 ">
+              <div className="col-sm-2 col-md-4 col-lg-2">
                 <div className="row">
-                <div className="col-6">
+                <div className="col-6 col-md-6">
                   <a href="/" title="home" >
                     <img className="responsive-logo" src="/logo.png" alt=".."/>
                   </a>
                 </div>
-                <div className="col-6 col-lg-12">
+                <div className="col-6 col-lg-12 col-md-12">
                 <h3 class="ftr3 footerfont">FOLLOW US AT </h3>
                 <ul className="follow-us-at top_mobile">
                  
@@ -39,7 +40,7 @@ export default class LandingFooter extends Component {
                 </div>
               </div>
                
-              <div class="col-sm-2 second_part">
+              <div class="col-sm-2 col-md-4 col-lg-2 second_part">
                 <h3 className="footerfont">FOR USERS</h3>
                 <ul className="services footerele">
                   <li><a href="/pediatrics" title='Pediatricians'>Pediatricians in Gurgaon</a> </li>
@@ -51,7 +52,7 @@ export default class LandingFooter extends Component {
                 </ul>
               </div>
               
-              <div className="col-sm-2 Third_part">
+              <div className="col-sm-2 col-md-4 col-lg-2 Third_part">
                 <ul className="services footerele footer-col-align">
                   <li><a href="/gynae" title='Gynaecologist'>Gynaecologists in Gurgaon </a>   </li>
                   <li><a href="/psychiatry" title= 'Psychiatrists'>Psychiatrists in Gurgaon</a></li>
@@ -61,14 +62,14 @@ export default class LandingFooter extends Component {
               </div>
           
               
-              <div className="col-sm-2 fourth_part">
+              <div className="col-sm-2 col-md-4 col-lg-2 fourth_part">
                 <h3 className="footerfont">FOR HOSPITALS/CLINICS</h3>
                 <ul className="services footerele">
                   <li><a href="/register" title='Registration'>Register</a></li>
                   <li><a href="/plockr" title='Plockr'>Plockr</a></li>
                 </ul>
               </div>
-              <div className="col-sm-2 fiveth_part">
+              <div className="col-sm-2 col-md-4 col-lg-2 fiveth_part">
                 <h3 className="footerfont">GET IN TOUCH</h3>
                 <ul className="services footerele">
                   <li><a href="/about-us" title='About us'>About us</a> </li>
@@ -77,7 +78,7 @@ export default class LandingFooter extends Component {
                   <li><a href="/blog" title= 'Blogs'>Blogs</a></li>
                 </ul>
               </div>
-              <div className="col-sm-1 footer-row-align six-2">
+              <div className="col-sm-1 col-md-4 col-lg-1 footer-row-align six-2">
                 <div className="six_part">
               <h3 className="footerfont six1">REACH US AT </h3>
                 <ul className="services footerele ">
@@ -93,18 +94,21 @@ export default class LandingFooter extends Component {
                 </div>
               </div>
             </div>
+            <a href="#" className="giphi_sec"><img className="ftr" src="/giphy.gif" alt=".." /></a>
             <div className="row footer-alignment ">
               <div className="col-sm-5"></div>
-              <div className="col-sm-2">
-                <h3 className="procedure-text">COMMON PROCEDURES</h3><hr width="60%"></hr>
+              <div className="col-sm-2 col-md-12">
+                <h3 className="procedure-text ">COMMON PROCEDURES</h3><hr width="60%"></hr>
 
               </div>
               <div className="col-sm-5">
               </div>
             </div>
           </div>
+        
+        
           <div className="row deskTop_fro">
-            <div className="col-sm-3 responsiv-futtor one_sec">
+            <div className="col-sm-3  col-md-4  col-lg-3 responsiv-futtor one_sec">
               <ul className="services footerele new-footer-ele2">
                 <li><a href="/gynae" title= 'Medically Terminated Pregnancy in Gurgaon'>Medically Terminated Pregnancy</a></li>
                 <li><a href="/gynae" title= 'Vaginal Reconstruction in Gurgaon'>Vaginal Reconstruction</a></li>
@@ -118,7 +122,7 @@ export default class LandingFooter extends Component {
                 <li><a href="/gynae" title = 'C-Section in Gurgaon'>C-Section in Gurgaon</a></li>
               </ul>
             </div>
-            <div className="col-sm-3 two_sec">
+            <div className="col-sm-3  col-md-4 col-lg-3 two_sec">
               <ul className="services footerele">
                 <li><a href="/dermatology" title='Botox Treatment in Gurgaon'>Botox Treatment in Gurgaon</a>  </li>
                 <li><a href="/dermatology" title='Acne Treatment in Gurgaon'>Acne Treatment in Gurgaon</a> </li>
@@ -132,7 +136,7 @@ export default class LandingFooter extends Component {
                 <li><a href="/orthopedics" title='Knee Pain Treatment in Gurgaon'>Knee Pain Treatment in Gurgaon</a>   </li>
               </ul>
             </div>
-            <div className="col-sm-2 three_sec">
+            <div className="col-sm-2  col-md-4 col-lg-2 three_sec">
               <ul className="services footerele new-footer-ele">
                 <li><a href="/dentist" title='Dental Filling in Gurgaon'>Dental Filling in Gurgaon </a> </li>
                 <li><a href="/dentist" title='Dental Braces in Gurgaon'> Dental Braces in Gurgaon</a>  </li>
@@ -143,7 +147,7 @@ export default class LandingFooter extends Component {
                 <li><a href="/ophthalmology" title='Cataract Eye Surgery in Gurgaon'>Cataract Eye Surgery in Gurgaon </a>   </li>
               </ul>
             </div>
-            <div className="col-sm-2 four_sec">
+            <div className="col-sm-2  col-md-4 col-lg-2 four_sec">
               <ul className="services footerele">
                 <li><a href="/pathology" title='Sugar Test in Gurgaon'>Sugar Test in Gurgaon</a> </li>
                 <li><a href="/pathology" title='Ultrasound in Gurgaon'>Ultrasound in Gurgaon </a> </li>
@@ -154,19 +158,20 @@ export default class LandingFooter extends Component {
                 <li><a href="/pathology" title='Blood Pressure Test in Gurgaon'>Blood Pressure Test in Gurgaon</a> </li>
               </ul>
             </div>
-            <div className="col-sm-2 five_sec">
+            <div className="col-sm-2  col-md-4 col-lg-2 five_sec">
               <ul className="services footerele MARGIN-FOOTER">
-                <li><a href="/radiology" title='CT Scan in Gurgaon'>CT Scan </a>  </li>
-                <li><a href="/radiology" title='ECG in Gurgaon'>ECG</a> </li>
-                <li><a href="/radiology" title= 'X-RAY in Gurgaon'>X-RAY  </a> </li>
-                <li><a href="/radiology" title = 'Heart Check-up in Gurgaon'>Heart Check-up </a> </li>
-                <li><a href="/radiology" title='TMT in Gurgaon'>TMT </a> </li>
-                <li><a href="/radiology" title='MRI in Gurgaon'>MRI </a>   </li>
-                <li><a href="/pathology" title='Blood Test in Gurgaon'>Blood Test</a> </li>
-                <li><a href="/radiology" title='PET CT Scan in Gurgaon'>PET-CT Scan  </a>   </li>
+                <li><a href="/radiology" title='CT Scan in Gurgaon'>CT Scan in Gurgaon</a>  </li>
+                <li><a href="/radiology" title='ECG in Gurgaon'>ECG in Gurgaon</a> </li>
+                <li><a href="/radiology" title= 'X-RAY in Gurgaon'>X-RAY in Gurgaon </a> </li>
+                <li><a href="/radiology" title = 'Heart Check-up in Gurgaon'>Heart Check-up in Gurgaon</a> </li>
+                <li><a href="/radiology" title='TMT in Gurgaon'>TMT in Gurgaon</a> </li>
+                <li><a href="/radiology" title='MRI in Gurgaon'>MRI in Gurgaon</a>   </li>
+                <li><a href="/pathology" title='Blood Test in Gurgaon'>Blood Test in Gurgaon</a> </li>
+                <li><a href="/radiology" title='PET CT Scan in Gurgaon'>PET-CT Scan in Gurgaon </a>   </li>
               </ul>
             </div>
           </div>
+         
           {/* mobile-footer */}
           {/* <div className="row mobile_futrt_sec d-lg-none">
             <div className="col-sm-3 responsiv-futtor">

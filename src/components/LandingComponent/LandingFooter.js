@@ -2,7 +2,27 @@ import React, { Component } from 'react'
 
 
 export default class LandingFooter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { width: 0, height: 0 };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+  
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
   render() {
+    console.log(this.state,"state in LandingFooter")
+    console.log(this.state.width<400,"this.state.width<400")
     
     return (
       
@@ -94,7 +114,10 @@ export default class LandingFooter extends Component {
                 </div>
               </div>
             </div>
-            <a href="#" className="giphi_sec"><img className="ftr" src="/giphy.gif" alt=".." /></a>
+            <a href="#" onClick={(e)=>{
+              e.preventDefault()
+              this.setState({openFooter:true})
+            }} className="giphi_sec"><img  className="ftr" src="/giphy.gif" alt=".." /></a>
             <div className="row footer-alignment ">
               <div className="col-sm-5"></div>
               <div className="col-sm-2 col-md-12">
@@ -107,7 +130,7 @@ export default class LandingFooter extends Component {
           </div>
         
         
-          <div className="row deskTop_fro">
+          <div className={`row deskTop_fro ${this.state.width<400?this.state.openFooter?'':'hide-footer':''}`}>
             <div className="col-sm-3  col-md-4  col-lg-3 responsiv-futtor one_sec">
               <ul className="services footerele new-footer-ele2">
                 <li><a href="/gynae" title= 'Medically Terminated Pregnancy in Gurgaon'>Medically Terminated Pregnancy</a></li>

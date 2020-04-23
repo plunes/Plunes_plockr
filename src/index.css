@@ -132,10 +132,10 @@ a:hover{text-decoration: none;}
 .download-play2{width: 130px;
     height: 40px;}
 .country_nu{border: 0px;border-radius: 34px;box-shadow: 0px 3px 6px #00000029;font-size: 14px;
-    width: 100%;padding: 6px 15px 8px 33px; margin-left: 10px;}
+    width: 300px;padding: 6px 15px 8px 33px; margin-left: 10px;}
 .explore_field{background: #01D35A;color:#FFFFFF !important;box-shadow: 0px 3px 6px #00000029;border-radius: 34px;padding: 9px 10px 9px 20px;font-size: 13px;
     display: block;
-    width: 100%;}
+    width: 150px;margin-left: 75px;}
 .explore_field:hover{
     text-decoration: none;
 }
@@ -182,11 +182,57 @@ a:hover{text-decoration: none;}
 .kno_more h3{padding-top: 55px;padding-bottom: 60px;font-size: 30px;}
 .Procedure_search{text-align: center; margin: 0 auto;box-shadow: 0px 3px 6px #00000029;border: 0px;margin-bottom: 45px;}
 .owl-theme .owl-dots .owl-dot span{display: none;}
+.bg_sect_pro .owl-nav button span {
+    background: #fff;
+    background-repeat: no-repeat;
+    height: 55px;
+    width: 55px;
+    display: block;
+    font-size: 60px;
+    margin: 0 5px 0;
+    padding: 19px 13px 18px 14px;;
+    text-align: center;
+    align-items: center;
+    line-height: 0px;
+    box-shadow: 0px 3px 6px #00000029;
+    background-color: hsl(0, 0%, 100%);
+    color: #888888;
+    border: 1px solid #B9B9B9;
+   border-radius: 34px;
+}
+.bg_sect_pro .owl-nav button.owl-prev {
+    position: absolute;
+    top: 98px;
+    margin: 0;
+    left: -67px;
+}
+.bg_sect_pro .owl-nav button.owl-next {
+    position: absolute;
+    top: 98px;
+    right: -100px;
+    margin: 0;
+}
+button:focus {
+    outline: 1px dotted;
+    outline: 0px;
+}
 
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: none !important;
+    color: #000 !important;
+    text-decoration: none;}
 
-
+    h2.card_den {
+        font-size: 22px;
+        color: #000;
+    }
+    .card_tooth {
+        font-size: 15px;
+        color: #9C9C9C;
+        padding-top: 13px;
+    }
 .video_fone{width:750px;}
-.effect_new{width: 375px !important;}
+
 h2.card-title2 {
     font-size: 22px;
 }
@@ -310,7 +356,8 @@ p.card-text2 {
     .card_a {font-size: 13px;
         position: relative;
         top: -18px;}
-    .bg_sect_pro {margin-top: 10px;}
+    .bg_sect_pro {margin-top: 10px;margin-bottom: 64px;
+        height: 550px;}
     .aero_pre{width: 20px;height: 20px;}
     .col-sm-6.col-9.col-lg-6.covid_mar {
         padding-left: 0px;
@@ -326,9 +373,10 @@ p.card-text2 {
         margin-left: 45px;
     }
     .number_of_app {
-       display: block;
+       display:flex;
        margin-top:14px;
     }
+    .card-align{width: 100%;}
     .cntry_cde {font-size: 11px;}
      .country_nu {    width: 120px;
         padding: 6px 8px 8px 16px;
@@ -351,10 +399,8 @@ p.card-text2 {
 }
     .mobile_hs
     .search-query{width: 100%;}
-    .effect_new {
-        width: 100% !important;
-    }
-    .explore_field{padding: 6px 10px 7px 14px;width: 100px;margin-left: 10px; font-size: 12px;}
+   
+    .explore_field{padding: 6px 10px 7px 14px;width: 100px !important;margin-left: 10px; font-size: 12px;}
     .connsultin_im {
         display: none;
     }
@@ -423,6 +469,13 @@ p.card-text2 {
     .refund_pay{margin-bottom: 0px;
         position: relative;
         top: -25px;}
+        /* slider-section */
+        .bg_sect_pro .owl-nav button.owl-next{right: 0;}
+        .bg_sect_pro .owl-nav button.owl-prev{left: 0;}
+        .bg_sect_pro .owl-nav button span{height: 40px;
+            width: 41px;font-size: 46px;padding: 14px 13px 18px 14px;}
+            .bg_sect_pro .owl-nav button span{margin: 80px 9px 0;
+                display: inline-block;}
         /* footer-section */
         .giphi_sec {
             float: right;
@@ -495,7 +548,9 @@ p.card-text2 {
         .second_fone {
             width: 150px;left: 116px;}
     .explore_field {width: 120px;
-        text-align: center;}
+        text-align: center;margin-left: 12px;}
+        .bg_sect_pro .owl-nav button.owl-next{    right: -33px;}
+        .bg_sect_pro .owl-nav button.owl-prev{left: 0;}
         .country_nu{width: 162px;}
         .cntry_cde{text-align: center;}
         .main-content .owl-theme .custom-nav .owl-prev {

@@ -217,10 +217,12 @@ class LandingContainer extends React.Component {
                                 <p>Book Medical Procedures, Appointments & Tests</p>
                                 <h4>Download Plunes <br />App Now!</h4>
                                 <a href="#" className="get_link">Get link to download the app</a>
-                                <div className="number_of_app row">
+                                <div className="number_of_app">
+                                <div className="row">
                                 <div class="cntry_cde col-2 col-lg-1 col-md-2">+91</div>
                                     <div className="col-5 col-lg-5 col-md-6"><input type="tel" id="phone" name="phone" value={this.state.mobileNo} onChange={(e)=>this.setState({mobileNo:e.target.value})} placeholder="Mobile Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required className="country_nu" /></div>
                                     <div className="col-4 col-lg-3 col-md-4"><a href="#" onClick= {(e)=>this.sendAppLink(e)} className="explore_field">Get App Link</a></div>
+                                </div>
                                 </div>
                                 <div class="play_store">
                                 <a href="https://apps.apple.com/us/app/plunes/id1463747553/"target="_blank" title="app store"> 
@@ -309,252 +311,298 @@ class LandingContainer extends React.Component {
                 <div class="kno_more text-center">
                 <h3>Know more about your Procedure</h3>
                 </div>
-                    <div className="main-content">
-                        <div class="container">
-                        <div className="owl-carousel owl-theme" id="owl-demo">
-                            <div className="item">
-                                <a href="/dermatology" title='Dermatology Procedures'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className=" card-align" src="/Dermatology.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">Dermatology Procedures</h2>
-                                            <p className="card-text2">Dermatology Consultation <br></br> Laser Hair Reduction <br></br> Botox Treatment</p>
-                                            <a href="/dermatology" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="/gynae" title='Gynecology Procedures'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className="card-align" src="/Gynecology.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2">Gynecology Procedures</h2>
-                                            <p className="card-text2">Gynecologist Consultation<br></br>Cesarean / C-section <br></br>Ovarian Cyst Removal</p>
-                                            <a href="/gynae" class="card_a">View more</a>
-                                        </div>
-                                    </div></a>
-                            </div>
-                            <div className="item">
-                                <a href="/radiology" title='Radiology Diagnosis'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className="card-align" src="/Radiologists@2x.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">Radiology Diagnosis</h2>
-                                            <p className="card-text2">MRI, CT Scan, X-ray<br></br> Ultrasound <br></br>Doppler Test</p>
-                                            <a href="/radiology" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="/dentist" title='Dentistry Procedures'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className=" card-align" src="/Dentistry.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">Dentistry Procedures</h2>
-                                            <p className="card-text2">Tooth Removal, Tooth Whitening<br></br>Root Canal Treatment<br></br>Dental Implant, Braces</p>
-                                            <a href="/dentist" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="item">
-                                <a href="/pathology" title='Pathology Tests'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className=" card-align" src="/pathology.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">Pathology Tests</h2>
-                                            <p className="card-text2">Complete Blood Count Test<br></br>LIPID Profile<br></br>HIV Test</p>
-                                            <a href="/pathology" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className='item'>
-                                <a href="/orthopedics" title='Orthopedic Procedures'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className=" card-align" src="/Ortho.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">Orthopedic Procedures</h2>
-                                            <p className="card-text2">Joint Replacement<br></br>Fracture<br></br>Arthroplasty</p>
-                                            <a href="/orthopedics" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className='item'>
-                                <a href="/ent" title='ENT Procedures'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className=" card-align" src="/entproc.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">ENT Procedures</h2>
-                                            <p className="card-text2">Ear Drum Repair<br></br>Tonsillectomy<br></br>Sinusitis Treatment</p>
-                                            <a href="/ent" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className='item'>
-                                <a href="/ayurveda" title='Ayurveda Procedures'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className=" card-align" src="/ayurveda.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">Ayurveda Procedures</h2>
-                                            <p className="card-text2">Dhara Treatment<br></br>Panchkarma Treatment<br></br>Ayurvedic Massage</p>
-                                            <a href="/ayurveda" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
+                <div className="container">
+                <div class="row">
+    <div class="owl-carousel owl-theme">
+        <div class="item" data-aos="zoom-in">
+        <a href="/dermatology" title='Dermatology Procedures'>
+            <div class="trendingBox">
+                <img src="/Dermatology.png" alt=".." class="image effect_new"/>
+                <div class="overlay">
 
-                            </div>
-
-                            <div className='item'>
-                                <a href="/physiotherapy" title='Physiotherapy Procedures'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className=" card-align" src="/close-up-physiotherapist-working-with-patient-clinic_1150-15063.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">Physiotherapy</h2>
-                                            <p className="card-text2">Physiotherapy Consultation<br></br>Back Pain/Knee Pain<br></br>Frozen Shoulder</p>
-                                            <a href="/physiotherapy" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-
-                            <div className='item'>
-                                <a href="/psychiatry" title='Psychiatry Procedures'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className=" card-align" src="/Psychology.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">Psychiatry</h2>
-                                            <p className="card-text2">Psychiatric Consultation<br></br>Autism Assessment<br></br>Counseling</p>
-                                            <a href="/psychiatry" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-
-                            <div className='item'>
-                                <a href="/ophthalmology" title='Ophthalmology Procedures'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className=" card-align" src="/Ophthalmology.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">Ophthalmology</h2>
-                                            <p className="card-text2">Ophthalmology Consultation<br></br>Cataract Surgery<br></br>Glaucoma Surgery</p>
-                                            <a href="/ophthalmology" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-
-                            <div className='item'>
-                                <a href="/neurology" title='Neurology Procedures'>
-                                    <div className="card" >
-                                    <div class="trendingBox">
-                                        <img className=" card-align" src="/Neurologists@2x.png" alt=".." />
-                                        <div class="overlay">
-                                           </div>
-                                        </div>
-                                        <div className="card-body ">
-                                            <h2 className="card-title2 ">Neurology</h2>
-                                            <p className="card-text2">Neurology Consultation<br></br>Chemotherapy <br></br>Brain Tumor Surgery</p>
-                                            <a href="/neurology" class="card_a">View more</a>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                        <div className="owl-theme">
-                            <div className="owl-controls">
-                                <div className="custom-nav owl-nav">
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
                 </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Dentistry Procedures</h2>
+                <p class="card_tooth">Tooth Removal, Tooth Whitening
+                    <br/>Root Canal Treatment
+                    <br/>Dnetal Implant, Braces</p>
+                <a href="/dermatology" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+
+        <div class="item">
+        <a href="/gynae" title='Gynecology Procedures'>
+            <div class="trendingBox">
+                <img src="/Gynecology.png" alt="" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Gynecology Procedures</h2>
+                <p class="card_tooth">Gynecologist Consultation
+                    <br/> Cesarean / C-section
+                    <br/>Ovarian Cyst Removal</p>
+                <a href="/gynae" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+        <div class="item">
+        <a href="/orthopedics" title='Orthopedic Procedures'>
+            <div class="trendingBox">
+                <img src="/Ortho.png" alt="" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Orthopedic Procedures</h2>
+                <p class="card_tooth">Joint Replacement
+                    <br/> Fracture
+                    <br/>Arthroplasty</p>
+                <a href="/orthopedics" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+        {/* <!-- <1st slider-end> --> */}
+        <div class="item">
+        <a href="/pathology" title='Pathology Tests'>
+            <div class="trendingBox">
+                <img src="/pathology.png" alt="Avatar" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Pathology Tests</h2>
+                <p class="card_tooth">Complete Blood Count Test
+                    <br/> LIPID Profile
+                    <br/>HIV Test</p>
+                <a href="/pathology" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+
+        <div class="item">
+        <a href="/dermatology" title='Dermatology Procedures'>
+            <div class="trendingBox">
+                <img src="/Dermatology.png" alt="" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Dermatology Procedures</h2>
+                <p class="card_tooth">Dermatology Consultation
+                    <br/>Laser Hair Reduction
+                    <br/>Botox Treatment</p>
+                <a href="/dermatology" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+
+        <div class="item">
+        <a href="/ent" title='ENT Procedures'>
+            <div class="trendingBox">
+                <img src="/entproc.png" alt="" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">ENT Procedures</h2>
+                <p class="card_tooth">Ear Drum Repair
+                    <br/>Tonsillectomy
+                    <br/>Sinusitis Treatment</p>
+                <a href="/ent" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+        {/* <!-- 2nd-slider-end --> */}
+        <div class="item">
+        <a href="/ayurveda" title='Ayurveda Procedures'>
+            <div class="trendingBox">
+                <img src="/ayurveda.png" alt="" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Ayurveda Procedures</h2>
+                <p class="card_tooth">Dhara Treatment
+                    <br/>Panchkarma Treatment
+                    <br/> Ayurvedic Massage</p>
+                <a href="/ayurveda" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+
+        <div class="item">
+        <a href="/radiology" title='Radiology Diagnosis'>
+            <div class="trendingBox">
+                <img src="/Radiologists@2x.png" alt="" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Radiology Diagnosis</h2>
+                <p class="card_tooth">MRI, CT Scan, X-ray
+                    <br/>Ultrasound
+                    <br/>Doppler Test</p>
+                <a href="/radiology" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+
+        <div class="item">
+        <a href="/physiotherapy" title='Physiotherapy Procedures'>
+            <div class="trendingBox">
+                <img src="/close-up-physiotherapist-working-with-patient-clinic_1150-15063.png" alt="" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Physiotherapy</h2>
+                <p class="card_tooth">Physiotherapy Consultation
+                    <br/>Back Pain/Knee Pain
+                    <br/>Frozen Shoulder</p>
+                <a href="/physiotherapy" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+        {/* <!-- 3erd-slider-end --> */}
+
+        {/* <!-- 4rth-slider-start --> */}
+        <div class="item">
+        <a href="/psychiatry" title='Psychiatry Procedures'>
+            <div class="trendingBox">
+                <img src="/Psychology.png" alt="" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Psychiatry</h2>
+                <p class="card_tooth">Psychiatric Consultation
+                    <br/>Autism Assessment
+                    <br/> Counseling</p>
+                <a href="/psychiatry" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+
+        <div class="item">
+        <a href="/ophthalmology" title='Ophthalmology Procedures'>
+            <div class="trendingBox">
+                <img src="/Ophthalmology.png" alt="Avatar" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Ophthalmology</h2>
+                <p class="card_tooth">Ophthalmology Consultation
+                    <br/> Cataract Surgery
+                    <br/>Glaucoma Surgery</p>
+                <a href="/ophthalmology" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+
+        <div class="item">
+        <a href="/neurology" title='Neurology Procedures'>
+            <div class="trendingBox">
+                <img src="/Neurologists@2x.png" alt="" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Neurology</h2>
+                <p class="card_tooth">Neurology Consultation
+                    <br/>Chemotherapy
+                    <br/>Brain Tumor Surgery</p>
+                <a href="/neurology" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+
+        {/* <!-- 4rt-slider-end --> */}
+        <div class="item">
+        <a href="/pediatrics" title='Neurology Procedures'>
+            <div class="trendingBox">
+                <img src="/Pediatrics.png" alt="" class="image effect_new"/>
+                <div class="overlay">
+
+                </div>
+            </div>
+            <div class="card-body ">
+                <h2 class="card_den">Pediatry</h2>
+                <p class="card_tooth">Pediatric Consultation
+                    <br/> Vaccination
+                    <br/>Heart Murmur Treatment</p>
+                <a href="/pediatrics" class="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+
+        <div className="item">
+        <a href="/ivf" title='Neurology Procedures'>
+            <div className="trendingBox">
+                <img src="/ivf.png" alt="" className="image effect_new"/>
+                <div className="overlay">
+
+                </div>
+            </div>
+            <div className="card-body ">
+                <h2 className="card_den">IVF</h2>
+                <p className="card_tooth">Laparoscopic IVF
+                    <br/>Ovarian Reserve Assessment
+                    <br/> Semen Analysis</p>
+                <a href="/ivf" className="card_a">View more</a>
+            </div>
+            </a>
+        </div>
+        {/* <!-- 5th-end --> */}
+    </div>
+</div>
+</div>
+ </div>
 {/* slider-section-end */}
-<section class="we_have">
-    <div class="container">
-        <div class="plunes_brd">
-            <hr class="black_bordr" />
+<section className="we_have">
+    <div className="container">
+        <div className="plunes_brd">
+            <hr className="black_bordr" />
             <h2>We Have</h2>
         </div>
-        <div class="row text-center">
-            <div class="col-lg-4 col-4 col-md-4">
-                <div class="we_hsection">
+        <div className="row text-center">
+            <div className="col-lg-4 col-4 col-md-4">
+                <div className="we_hsection">
                     <a href="#"> <img src="procedure.svg" /></a>
                 </div>
-                <div class="we_content">
+                <div className="we_content">
                     <a href="#"><h2>20000 +</h2></a>
                     <p>Procedures</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-4 col-md-4">
-                <div class="we_hsection">
+            <div className="col-lg-4 col-4 col-md-4">
+                <div className="we_hsection">
                     <a href="#"><img src="doctors.svg" /></a>
                 </div>
-                <div class="we_content">
+                <div className="we_content">
                     <a href="#"><h2>1000 +</h2></a>
                     <p>Doctors</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-4 col-md-4">
-                <div class="we_hsection">
+            <div className="col-lg-4 col-4 col-md-4">
+                <div className="we_hsection">
                     <a href="#"><img src="hospital.svg" /></a>
                 </div>
-                <div class="we_content">
+                <div className="we_content">
                     <a href="#"><h2>300 +</h2></a>
                     <p>Hospitals</p>
                 </div>

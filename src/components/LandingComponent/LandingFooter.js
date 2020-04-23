@@ -118,7 +118,7 @@ export default class LandingFooter extends Component {
             <a href="#" onClick={(e)=>{
               e.preventDefault()
               this.setState({openFooter:true})
-            }} className="giphi_sec"><img  className="ftr" src="/giphy.gif" alt=".." /></a>
+            }} className="giphi_sec"><img  className="giphi_sec" src="/giphy.gif" alt=".." /></a>
              <a href="#" className="giphi_sec"><img className="gifidown" src="/giphy_up.gif" alt=".." /></a>
              </div>
             <div className="row footer-alignment ">

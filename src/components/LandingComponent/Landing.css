@@ -413,11 +413,7 @@ margin-left: -5% !important;
   .download-area{
     margin-bottom: 67px !important;
   }
-  .owl-prev {
-  width: 30px !important;
-    outline: none !important;
-    height: 50px !important;
-  }
+ 
   .footerfont{
     
     font-size: 11px !important;
@@ -430,13 +426,7 @@ margin-left: -5% !important;
     width: 26px;
 }
   
-  .owl-next{
-    width:45px !important;
-    outline: none !important;
-    right: 20px;
-    height: 50px !important;
-
-  }
+  
   .card-item-top{
     width: 85% !important;
     height: auto !important;
@@ -719,28 +709,8 @@ width: 190px !important;
     color: #cecece;
     outline: none !important;
   }
-  .main-content .owl-theme .custom-nav .owl-prev {
-    left: 68px;
-    outline: none !important;
-    box-shadow: 0px 3px 6px #00000029;
-    background-color: hsl(0, 0%, 100%);
-    width: 50px !important;
-    top: 0;
-    border-radius: 84px !important;border: 1px solid #B9B9B9;
-    height: 49px;
-  }
-  .main-content .owl-theme .custom-nav .owl-next {
-    right: 89px;
-    outline: none !important;
-    box-shadow: 0px 3px 6px #00000029;
-    background-color: hsl(0, 0%, 100%);
-    width: 50px;
-    top: 0;
-    border-radius: 100px !important;
-    border: 1px solid #B9B9B9;
-    height: 49px;
-
-  }
+ 
+  
   .main-content{
     position: relative;
   }
@@ -976,10 +946,10 @@ width: 190px !important;
     margin-left: 111px;
   }
   .card-align{
-    width: 324px !important;
     height: auto !important;
    margin-left: 1%;
   }
+  
   .search{
     position: absolute !important;
     top: 344px;

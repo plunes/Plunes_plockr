@@ -34,7 +34,7 @@ export default class LandingFooter extends Component {
               </div>
               <div className="col-sm-2 col-md-4 col-lg-2">
                 <div className="row">
-                <div className="col-6 col-md-6">
+                <div className="col-6 col-md-6 logo_fto">
                   <a href="/" title="home" >
                     <img className="responsive-logo" src="/logo.png" alt=".."/>
                   </a>
@@ -106,7 +106,7 @@ export default class LandingFooter extends Component {
                 </ul>
                </div>
                <div className="saventh_part">
-                <h3 className="footerfont policies-text six2">Our Policies</h3>
+                <h3 className="footerfont policies-text six2">OUR POLICIES</h3>
                 <ul className="services footerele ">
                   <li><a href="/terms-of-use" title= 'Terms of use'>Terms of Use</a></li>
                   <li><a href="/privacy" title='Privacy Policy'>Privacy Policy</a></li>
@@ -114,10 +114,13 @@ export default class LandingFooter extends Component {
                 </div>
               </div>
             </div>
+            <div className="up_down">
             <a href="#" onClick={(e)=>{
               e.preventDefault()
               this.setState({openFooter:true})
             }} className="giphi_sec"><img  className="ftr" src="/giphy.gif" alt=".." /></a>
+             <a href="#" className="giphi_sec"><img className="gifidown" src="/giphy_up.gif" alt=".." /></a>
+             </div>
             <div className="row footer-alignment ">
               <div className="col-sm-5"></div>
               <div className="col-sm-2 col-md-12">

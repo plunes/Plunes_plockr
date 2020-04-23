@@ -2,61 +2,7 @@
   font-family: 'ProximaNova';
   src: local('ProximaNova'), url(../src/proxima.otf) format('truetype');
 }
-body {
-  font-family: 'ProximaNova' !important;
-  width: 100%;
-  height: 100%;
-      background-attachment: fixed;
-      padding-bottom: 50px;}
 
-      @font-face {
-        font-family: 'ProximaNovaW08';
-        src: url('./fonts/ProximaNovaW08-Regular.woff2') format('woff2'),
-            url('./fonts/ProximaNovaW08-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Proxima Nova Alt Rg';
-        src: url('./fonts/ProximaNovaA-Regular.woff2') format('woff2'),
-            url('./fonts/ProximaNovaA-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Proxima Nova Rg';
-        src: url('./fonts/ProximaNova-Regular.woff2') format('woff2'),
-            url('./fonts/ProximaNova-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'ProximaNovaW08';
-        src: url('./fonts/ProximaNovaW08-Regular.woff2') format('woff2'),
-            url('./fonts/ProximaNovaW08-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'ProximaNovaW08';
-        src: url('./fonts/ProximaNovaW08-Regular.woff2') format('woff2'),
-            url('./fonts/ProximaNovaW08-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'ProximaNovaW08';
-        src: url('./fonts/ProximaNovaW08-Regular.woff2') format('woff2'),
-            url('./fonts/ProximaNovaW08-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
     
     
     /* alka-css */
@@ -207,7 +153,7 @@ a:hover{text-decoration: none;}
     position: absolute;
     top: -36px;
 }
-.plunes_brd h2{margin-top: 20px;color: #1E1E1E;margin-bottom: 0px;font-size: 30px;}
+.plunes_brd h2{margin-top: 20px;color: #1E1E1E;margin-bottom: 25px !important;font-size: 30px;}
 
 .refund_im img {
     width: 50%;
@@ -352,16 +298,16 @@ p.card-text2 {
     left: -27px;}
   .col-5.col-sm-6.human_mu {
     padding-left: 0px;
-    padding-top: 7px;
+    padding-top: 25px;
 }
     .mobile_banner{background: #d7f4f7;}
 
      /* mobile-section-banner-end */
      h2.card-title2 {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 600;
     }
-    .card_a {font-size: 11px;
+    .card_a {font-size: 13px;
         position: relative;
         top: -18px;}
     .bg_sect_pro {margin-top: 10px;}
@@ -371,7 +317,7 @@ p.card-text2 {
     }
     .video_fone{width:100%;}
     .covid_mar{margin-left: 0px;}
-    .kno_more h3 {font-size: 17px;padding-top: 35px;
+    .kno_more h3 {font-size: 22px;padding-top: 35px;
         padding-bottom: 40px;
     }
     .logo_size img {
@@ -385,11 +331,11 @@ p.card-text2 {
     }
     .cntry_cde {font-size: 11px;}
      .country_nu {    width: 120px;
-        padding: 6px 9px 8px 9px;
+        padding: 6px 8px 8px 16px;
         font-size: 12px;
         position: relative;
         left: -14px;
-        text-align: center;
+        
        }
        .col-lg-7.col-12.besic_mo {
         padding-left: 0px;
@@ -422,20 +368,20 @@ p.card-text2 {
         text-align: center;
         margin: 0 auto;padding-top: 14px;
         padding-bottom: 7px;}
-.Unique_avail {font-size: 11px;width: 270px;}
+.Unique_avail {font-size: 12px;width: 263px;}
 .book_madical p{font-size: 12px;}
 .book_madical {
     margin-top: 10%;
 }
 .book_madical h4 {
-    font-size: 20px;margin-bottom: 17px;}
+    font-size: 23px;margin-bottom: 17px;font-weight: 600;}
     .map_sec {
         margin-bottom: 25px;
     }
     .get_link {font-size: 13px;}
 .plunes_brd h2 {font-size: 20px;margin-bottom: 0px;}
 .black_bordr{width: 60px;}
-.we_content h2{padding-left: 0%;font-size: 15px;
+.we_content h2{padding-left: 0%;font-size: 17px;
     text-align: center;font-weight: 600;}
     .we_content {
         padding-top: 15px;
@@ -447,6 +393,8 @@ p.card-text2 {
         width: 100%;
         height: 83px;
     }
+
+
 .position_mobile{position: relative;}
     .ftr_pd{padding-left: 0px;}
     .new-footer-ele2 {
@@ -459,7 +407,7 @@ p.card-text2 {
         width: 100%;
         height: 60px;}
         .mobile_re{margin-top: 0px;}
-        .refund_pay h2{font-size: 7px;}
+        .refund_pay h2{font-size: 11px;}
        
             .main-content .owl-theme .custom-nav .owl-next {
                 right: 11px !important;}
@@ -469,7 +417,7 @@ p.card-text2 {
         width: 99px;height: 39px; object-fit: contain;}
         .download-play2 { width: 97px;height: 39px; object-fit: contain;}
         .play_store {
-            text-align: center;
+            text-align: left;
             margin-top: 30px;
         }
     .refund_pay{margin-bottom: 0px;
@@ -478,15 +426,20 @@ p.card-text2 {
         /* footer-section */
         .giphi_sec {
             float: right;
-            padding-right: 41px;
+            padding-right: 0px;
         }
+        .up_down {
+            position: relative;
+            top: -57px;
+        }
+        .giphi_sec img{width:40px;}
         .fiveth_part {
             width: 50% !important;
         }
         .fourth_part {
        width: 50% !important;
         }
-        .six_part{width: 50% !important;}
+        .six_part{width: 59% !important;}
         .saventh_part{width: 50% !important;position: relative;
             top: -19px;}
         .six-2 {
@@ -507,6 +460,11 @@ p.card-text2 {
         position: relative;
     }
     .giphi_sec{display: block;}
+    .logo_fto {
+        padding-left: 0px !important;
+    }
+    .foter_colour_section {padding-top: 25px !important;margin-top: 30px !important;}
+  
 }
 /* end-media-query */
 /* laptop_media-query */
@@ -546,7 +504,7 @@ p.card-text2 {
             .we_content h2{font-size: 23px;}
 
             .new-footer-ele2 {
-                padding-left: 0px;
+                padding-left: 0px !important;
             }
 
 }

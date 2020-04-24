@@ -9,8 +9,21 @@
     padding: 1%;
   }
   .formImg{
-    width: 110%;
+    width: 100px;
   }
+  .row.pading_bok {
+    padding-bottom: 30px;
+}
+.cont_bk{padding-left: 45px !important;}
+.cont_bk p{font-size: 19px;
+  font-weight: 300;
+  padding-top: 10px;}
+  .reminder_yourself{font-size: 21px;}
+  .avoid_inf{font-size: 20px;
+    font-weight: 300;padding-top: 17px;}
+    .socail_dis h2{font-size: 25px;
+      font-weight: 700;}
+    
   .Thanku{
     padding: 5%;
   }
@@ -57,8 +70,14 @@
     border-radius: 20px !important;
   }
   .WhyCovidTest1{
-    font-size: 26px !important;
+    font-size: 28px !important;
+    font-weight: 700;
+    margin-top: 30px;
   }
+  .new_pro{text-transform: uppercase;font-size: 25px;}
+  .partneship{color:#01D35A; font-size: 28px;}
+  .through_img{width: 120px;position: relative;left: -10px;}
+  .green_row{border-top: 3px solid #01D35A;}
   .WhyCovitTestHere{
     margin: 5% 9%;
   }
@@ -94,6 +113,8 @@
     border-radius: 34px;
     font-size: 16px;
     padding: 6px 34px 8px 34px;
+    margin-top: 10px;
+    display: inline-block;
   }
   .covidInfo1{
     margin: 0;
@@ -107,15 +128,17 @@
   .covidTestInput{
     width: 80%;
     background-color: white;
-    border-bottom: 1px solid darkgrey;
+    border-bottom: 1px solid #d4d4d4;
     margin-bottom: 5%;
+    line-height: 40px;
   }
   .covidH2{
-    color: darkgrey;
+    color: #010101;
   }
 
   .covidH1{
-    font-size: 25px;
+    font-size: 35px;
+    line-height: 60px;
   }
 
   .covidCross{
@@ -131,10 +154,12 @@
     background-color: #01D35A;
     border: none;
     color: white;
-    width: 30%;
-    font-size: 25px;
-    border-radius: 42px !important;
+    font-size: 20px;
+    border-radius: 100px !important;
     margin-top: 1%;
+    width: 180px;
+    height: 37px;
+    text-transform: uppercase;
   }
   .bookconfirmH1{
     font-size: 30px;
@@ -200,7 +225,7 @@
       font-size: 25px !important;
     }
 .WhyCovidTest1{
-  font-size: 26px !important;
+  font-size: 27px !important;
   margin-top: 20% !important;
 }
 .CovidContent {
@@ -240,14 +265,17 @@
   }
 /* .covid{padding: 1%;} */
 .covidH1 {
-    font-size: 18px;
+    font-size: 26px;
 }
-.covidH2{font-size: 14px;}
+.covidH2{    font-size: 24px;
+  font-weight: 500;    margin-bottom: 20px;}
 .covidTestInput {
-  font-size: 10px;
+  font-size: 19px;
 }
 .bookCovidTest {
   font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 22px;
 }
 .bookconfirmH1 {
   font-size: 20px;
@@ -408,8 +436,11 @@ margin-left: -5% !important;
     outline: none !important;
     background-color: transparent;
     color: rgba(0,0,0,.5);
-    border-color: rgba(0,0,0,.1);
+    border-color: 0px;
   }
+  .callOr {
+    font-size: 18px !important;
+}
   .download-area{
     margin-bottom: 67px !important;
   }
@@ -1554,7 +1585,6 @@ height: 40px !important;
 .logo-img-sizeing{
   height: 52px;
   width: 130px;
-  margin-left: 55px;
 }
 .responsive-logo{
   width: 130px;
@@ -1584,18 +1614,44 @@ padding-inline-start: 0px;
 
 
 /* alka.css */
-/* .bner_part{background-image: url("/covid.png"); 
-  position: relative;
-  margin-right: auto;
-  margin-bottom: -95px!important;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 350px;}
-  .custom_ha{background-color: #d7f4f7;padding-top: 5px;}
-  .plunes_landing {
-    color: #0B5E58;
-    font-size: 34px;
-    margin-top: 15%;
-} */
+.book_now_bnr{padding-left: 40px !important;}
+@media (max-width: 767px) and (min-width: 281px) {
+  .fixed-top {
+    top: -2px;}
+    .logo-img-sizeing {
+      height: 41px;
+      width: 106px;
+      margin-left: 48px;
+  }
+  .cont_bk{padding-left: 0px !important;}
+  .row.pading_bok {
+    padding-bottom: 30px;
+    text-align: center;
+}
+.partneship{font-size: 23px;}
+h5.CovidContentH2 {
+  font-size: 20px;font-weight: 500;margin-bottom: 20px;padding-top: 17px;}
+  .botm_covid{padding-bottom: 20px;}
+  .avoid_inf {
+    font-size: 15px;
+    font-weight: 300;}
+    .socail_dis h2 {
+      font-size: 19px;}
+      .reminder_yourself{text-align: left;font-size: 17px;}
+      .cont_bk p {
+        font-size: 15px;}
+      .formImg {
+        padding-bottom: 15px;
+    }
+    .covid2Img {
+      margin-top: 30px;
+  }
+}
+/* laptop_media-query */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
+  .covidTestForm {
+    margin-top: 20%;
+}
+}
 

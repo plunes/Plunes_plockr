@@ -8,7 +8,8 @@ class LandingHeader extends React.Component {
 
   render() {
     return <div className='container-fluid header-position'>
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top ">
+      <nav className="navbar navbar-expand-md navbar-light fixed-top ">
+        <div className="container">
         <a className="navbar-brand" href="/" title="home">
           <img className="logo-img-sizeing" src="/logo.png" alt=".." /></a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -38,13 +39,11 @@ class LandingHeader extends React.Component {
               <div className="nav333">
               </div>
             </li>
-            {/* <li className="nav-item nav2">
-              <a className="nav-link nav3" href="/" title='Log in'>Log In</a>
-            </li>
-            <li className="nav-item nav2">
-              <a className="nav-link nav3" href="/" title='Sign up'>Sign Up</a>
-            </li> */}
+            <li className="nav-item">
+                       <a className="nav-link login mobile_hs" href="/login">Login Hospitals / Doctors</a>
+                     </li> 
           </ul>
+        </div>
         </div>
       </nav>
      

@@ -47,7 +47,7 @@ a:hover{text-decoration: none;}
                           
 
 .video_sec {text-align: center;}
-.video_sec iframe{width:774px;height:345px;}
+.video_sec iframe{width:640px;height:345px;}
 .network_marg{margin-top: 0;}
 .map_sec {
     margin-top: 20px;
@@ -307,6 +307,14 @@ p.card-text2 {
 .card_a{text-decoration: underline;color: #3B3B3B;font-size: 14px;}
 .aero_pre{width: 30px;height: 30px;}
 .giphi_sec{display: none;}
+.card-body {
+    text-align: center;
+}
+p.covidPara {
+    margin-bottom: 9px;
+}
+.covidInfo1 {margin-bottom: 15px;
+}
 /* mobile-css-start */
 @media screen and (device-aspect-ratio: 40/71) {
 
@@ -400,10 +408,20 @@ p.card-text2 {
     .mobile_hs
     .search-query{width: 100%;}
    
-    .explore_field{padding: 6px 10px 7px 14px;width: 100px !important;margin-left: 10px; font-size: 12px;}
-    .connsultin_im {
-        display: none;
+    .explore_field{padding: 6px 10px 7px 14px;width: 100px !important;margin-left: 10px; font-size: 12px;text-align: center;}
+    .connsultin_im img {
+        width:100px;
     }
+    .connsultin_im {
+        text-align: center;
+        margin-top: 0px;
+    margin-bottom: 20px;
+    }
+    .first_fone {
+        margin-right: 50px;
+    }
+    .second_fone{top: 56px;
+        left: 170px;}
     .mobile_app {height: 100%;
         padding-bottom: 30px;}
   
@@ -476,6 +494,7 @@ p.card-text2 {
             width: 41px;font-size: 46px;padding: 14px 13px 18px 14px;}
             .bg_sect_pro .owl-nav button span{margin: 80px 9px 0;
                 display: inline-block;}
+                .trendingBox img{padding-left: 15px;}
         /* footer-section */
         .giphi_sec {
             float: right;
@@ -484,8 +503,12 @@ p.card-text2 {
         .up_down {
             position: relative;
             top: -57px;
+            right:30px;
         }
-        .giphi_sec img{width:40px;}
+        .giphi_sec img{width:25px;}
+        .onnsultin_im{
+            text-align: center;
+        }
         .fiveth_part {
             width: 50% !important;
         }

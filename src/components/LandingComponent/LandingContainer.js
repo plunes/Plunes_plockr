@@ -208,7 +208,7 @@ class LandingContainer extends React.Component {
                 <section className="mobile_app">
                     <div className="container">
                     <div className="row">
-                        <div className="col-lg-4 col-md-5 connsultin_im offset-lg-1">
+                        <div className="col-lg-4 col-md-5 col-12 connsultin_im offset-lg-1">
                             <img src={Consultations} className="first_fone" />
                             <img src={Solu} className="second_fone" />
                             </div>

@@ -39,9 +39,7 @@ class LandingHeader extends React.Component {
               <div className="nav333">
               </div>
             </li>
-            <li className="nav-item">
-                       <a className="nav-link login mobile_hs" href="/login">Login Hospitals / Doctors</a>
-                     </li> 
+           
           </ul>
         </div>
         </div>

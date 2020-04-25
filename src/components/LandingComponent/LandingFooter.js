@@ -114,15 +114,7 @@ export default class LandingFooter extends Component {
                 </div>
               </div>
             </div>
-            <div className="up_down">
-          {(this.state.openFooter===false) &&   <a href="#" onClick={(e)=>{
-              e.preventDefault()
-              this.setState({openFooter:true})
-            }} className="giphi_sec"><img  className="giphi_sec" src="/giphy.gif" alt=".." /></a>}
-   {(this.state.openFooter===true) &&    <a href="#" onClick={(e)=>{
-              e.preventDefault()
-              this.setState({openFooter:false})}} className="giphi_sec"><img className="gifidown" src="/giphy_up.gif" alt=".." /></a>}
-             </div>
+           
             <div className="row footer-alignment ">
               <div className="col-sm-5"></div>
               <div className="col-sm-2 col-md-12">
@@ -135,7 +127,7 @@ export default class LandingFooter extends Component {
           </div>
         
         
-          <div className={`row deskTop_fro ${this.state.width<400?this.state.openFooter?'':'hide-footer':''}`}>
+          <div className="row deskTop_fro">
             <div className="col-sm-3  col-md-4  col-lg-3 responsiv-futtor one_sec">
               <ul className="services footerele new-footer-ele2">
                 <li><a href="/gynae" title= 'Medically Terminated Pregnancy in Gurgaon'>Medically Terminated Pregnancy</a></li>

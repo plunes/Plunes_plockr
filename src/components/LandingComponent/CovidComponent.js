@@ -109,7 +109,7 @@ class CovidComponent extends Component {
                     <form onSubmit={this.handleSubmit}>
                                 <div>
                                     <h4 className="covidH1">COVID-19 Test Form</h4>
-                                    <h5 className="covidH2">Please fill your details</h5>
+                                    <h5 className="covidH2 fill_your">Please fill your details</h5>
                                 </div>
                                 <div>
                                     <input onChange={this.handleChange} name='name' placeholder='Name' className="covidTestInput" value={this.state.name} required />
@@ -120,8 +120,11 @@ class CovidComponent extends Component {
                                 <div>
                                     <input onChange={this.handleChange} name='message' placeholder='Address' className="covidTestInput" value={this.state.message} required></input>
                                 </div>
+                                <div className="sub_covid">
                                 <button type='submit' className="bookCovidTest">Book</button>
                                 <h5 className="covidH2 callOr">Call / Whatsapp: 7701805081</h5>
+                                </div>
+                              
                             </form>
                     </div>
                     <div className='col-md-2'>
@@ -158,10 +161,10 @@ class CovidComponent extends Component {
                     </div>
                 </div> */}
                 <div className="WhyCovitTestHere">
-                    <h2 className="partneship">PLUNES in Partnership with Metropolis Labs is Organising covid-19 test</h2>
-                    <hr className="green_row"></hr>
+                    {/* <h2 className="partneship">PLUNES in Partnership with Metropolis Labs is Organising covid-19 test</h2>
+                    <hr className="green_row"></hr> */}
                 <div className="WhyCovidTest1">Let’s fight CORONA VIRUS Together !</div><br></br>
-                <h5 className="CovidContentH2 new_pro">PLUNES Provides Online Booking of COVID-19 Test</h5><br></br>
+               <br></br>
 
                 <div className="WhyCovidHeading"><h5 className="CovidContentH2">Why Book Through Us?</h5></div><br></br>
                 <div className="row pading_bok">

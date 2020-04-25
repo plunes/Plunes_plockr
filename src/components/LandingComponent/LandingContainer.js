@@ -215,13 +215,13 @@ class LandingContainer extends React.Component {
                             <div className="col-lg-7 col-md-7 col-12 besic_mo">
                             <div className="book_madical">
                                 <p>Book Medical Procedures, Appointments & Tests</p>
-                                <h4>Download Plunes <br />App Now!</h4>
+                                <h4 className="downlod_app">Download Plunes App Now!</h4>
                                 <a href="#" className="get_link">Get link to download the app</a>
                                 <div className="number_of_app">
                                 <div className="row">
                                 <div class="cntry_cde col-2 col-lg-1 col-md-2">+91</div>
-                                    <div className="col-5 col-lg-5 col-md-6"><input type="tel" id="phone" name="phone" value={this.state.mobileNo} onChange={(e)=>this.setState({mobileNo:e.target.value})} placeholder="Mobile Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required className="country_nu" /></div>
-                                    <div className="col-4 col-lg-3 col-md-4"><a href="#" onClick= {(e)=>this.sendAppLink(e)} className="explore_field">Get App Link</a></div>
+                                    <div className="col-8 col-lg-5 col-md-6"><input type="tel" id="phone" name="phone" value={this.state.mobileNo} onChange={(e)=>this.setState({mobileNo:e.target.value})} placeholder="Mobile Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required className="country_nu" /></div>
+                                    <div className="col-12 col-lg-3 col-md-4"><a href="#" onClick= {(e)=>this.sendAppLink(e)} className="explore_field">Get App Link</a></div>
                                 </div>
                                 </div>
                                 <div class="play_store">
@@ -288,6 +288,14 @@ class LandingContainer extends React.Component {
                 <a href="#"><h2>Free Telephonic <br/>Consultations</h2></a>
                 </div>
             </div>
+            <div className="col-lg-4 col-4 refund_im">
+              <div className="bg_colur">
+                <a href="#"><img src="tpdoc.png"/></a>
+            </div>
+              <div className="refund_pay">
+                <a href="#"><h2>Top Doctors & <br/>Hospitals near you</h2></a>
+                </div>
+            </div>
           
           </div>
           </div>
@@ -315,9 +323,9 @@ class LandingContainer extends React.Component {
                 <div class="row">
     <div class="owl-carousel owl-theme">
         <div class="item" data-aos="zoom-in">
-        <a href="/dermatology" title='Dermatology Procedures'>
+        <a href="/dentist" title='Dentistry Procedures'>
             <div class="trendingBox">
-                <img src="/Dermatology.png" alt=".." class="image effect_new"/>
+                <img src="/Dentistry.png" alt=".." class="image effect_new"/>
                 <div class="overlay">
 
                 </div>
@@ -368,7 +376,7 @@ class LandingContainer extends React.Component {
         </div>
         {/* <!-- <1st slider-end> --> */}
         <div class="item">
-        <a href="/pathology" title='Pathology Tests'>
+        <a href="/pathology" title='Pathology Tests' >
             <div class="trendingBox">
                 <img src="/pathology.png" alt="Avatar" class="image effect_new"/>
                 <div class="overlay">
@@ -421,23 +429,7 @@ class LandingContainer extends React.Component {
             </a>
         </div>
         {/* <!-- 2nd-slider-end --> */}
-        <div class="item">
-        <a href="/ayurveda" title='Ayurveda Procedures'>
-            <div class="trendingBox">
-                <img src="/ayurveda.png" alt="" class="image effect_new"/>
-                <div class="overlay">
-
-                </div>
-            </div>
-            <div class="card-body ">
-                <h2 class="card_den">Ayurveda Procedures</h2>
-                <p class="card_tooth">Dhara Treatment
-                    <br/>Panchkarma Treatment
-                    <br/> Ayurvedic Massage</p>
-                <a href="/ayurveda" class="card_a">View more</a>
-            </div>
-            </a>
-        </div>
+       
 
         <div class="item">
         <a href="/radiology" title='Radiology Diagnosis'>
@@ -576,7 +568,9 @@ class LandingContainer extends React.Component {
 <section className="we_have">
     <div className="container">
         <div className="plunes_brd">
+
             <hr className="black_bordr" />
+
             <h2>We Have</h2>
         </div>
         <div className="row text-center">

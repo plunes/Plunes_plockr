@@ -225,8 +225,9 @@
       font-size: 25px !important;
     }
 .WhyCovidTest1{
-  font-size: 27px !important;
-  margin-top: 20% !important;
+  font-size: 21px !important;
+  margin-top: 11% !important;
+  text-align: center;
 }
 .CovidContent {
     /* position: relative; */
@@ -265,8 +266,13 @@
   }
 /* .covid{padding: 1%;} */
 .covidH1 {
+  padding-top: 25px;
     font-size: 26px;
+    text-align: center;
+    line-height: 30px;
 }
+.sub_covid{text-align: center;}
+.fill_your{font-weight: 300 !important;text-align: center !important;}
 .covidH2{    font-size: 24px;
   font-weight: 500;    margin-bottom: 20px;}
 .covidTestInput {
@@ -440,6 +446,7 @@ margin-left: -5% !important;
   }
   .callOr {
     font-size: 18px !important;
+    text-align: center !important;
 }
   .download-area{
     margin-bottom: 67px !important;
@@ -1391,6 +1398,10 @@ footer{
     position: relative;
     
 }
+h5.CovidContentH2 {
+  font-size: 24px ;
+  font-weight: 700;
+}
 .signUpContainer{
     padding-top: 100px;
 }
@@ -1610,7 +1621,9 @@ padding-inline-start: 0px;
   display: none !important;
 }
 
-
+.cont_bk h4 {
+  font-size: 19px;
+}
 
 
 /* alka.css */
@@ -1629,23 +1642,26 @@ padding-inline-start: 0px;
     text-align: center;
 }
 .partneship{font-size: 23px;}
-h5.CovidContentH2 {
-  font-size: 20px;font-weight: 500;margin-bottom: 20px;padding-top: 17px;}
+.CovidContentH2 {
+  font-size: 18px !important;font-weight: 500;margin-bottom: 20px;padding-top: 17px;text-align: center !important;}
+  .cont_bk h4{font-size:17px;}
   .botm_covid{padding-bottom: 20px;}
   .avoid_inf {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 300;}
     .socail_dis h2 {
       font-size: 19px;}
-      .reminder_yourself{text-align: left;font-size: 17px;}
+      .reminder_yourself{text-align: left;font-size: 15px;}
       .cont_bk p {
-        font-size: 15px;}
+        font-size: 14px;}
       .formImg {
         padding-bottom: 15px;
     }
     .covid2Img {
       margin-top: 30px;
   }
+  .navbar-light .navbar-toggler{border-color: #fff !important;}
+  .book_now_bnr{padding-left: 15px !important;}
 }
 /* laptop_media-query */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {

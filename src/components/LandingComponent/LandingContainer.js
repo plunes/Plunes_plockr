@@ -325,7 +325,7 @@ class LandingContainer extends React.Component {
         <div class="item" data-aos="zoom-in">
         <a href="/dentist" title='Dentistry Procedures'>
             <div class="trendingBox">
-                <img src="/Dentistry.png" alt=".." class="image effect_new"/>
+                <img src="/dent.png" alt=".." class="image effect_new"/>
                 <div class="overlay">
 
                 </div>
@@ -414,7 +414,7 @@ class LandingContainer extends React.Component {
         <div class="item">
         <a href="/ent" title='ENT Procedures'>
             <div class="trendingBox">
-                <img src="/entproc.png" alt="" class="image effect_new"/>
+                <img src="/ent.png" alt="" class="image effect_new"/>
                 <div class="overlay">
 
                 </div>

@@ -370,7 +370,7 @@ p.covidPara {
     .card_a {font-size: 14px;
         position: relative;
         top: -18px;}
-    .bg_sect_pro {margin-top: 10px;margin-bottom: 64px;
+    .bg_sect_pro {margin-top: 10px;margin-bottom: 28px;
         height: 496px;}
     .aero_pre{width: 20px;height: 20px;}
     .col-sm-6.col-9.col-lg-6.covid_mar {
@@ -497,13 +497,13 @@ p.covidPara {
         position: relative;
         top: -25px;}
         /* slider-section */
-        .bg_sect_pro .owl-nav button.owl-next{right: -13px;top: 80px;}
-        .bg_sect_pro .owl-nav button.owl-prev{left: -16px;top: 80px;}
+        .bg_sect_pro .owl-nav button.owl-next{right: -13px;top: 60px;}
+        .bg_sect_pro .owl-nav button.owl-prev{left: -16px;top: 60px;}
         .bg_sect_pro .owl-nav button span{height: 40px;
             width: 41px;font-size: 46px;padding: 14px 13px 18px 14px;}
             .bg_sect_pro .owl-nav button span{margin: 0px 9px 0;
                 display: inline-block;}
-                .trendingBox img{padding: 0px 29px 0px 45px;
+                .trendingBox img{padding: 0px 60px 0px 77px;
                 }
         /* footer-section */
         .giphi_sec {
@@ -544,6 +544,7 @@ p.covidPara {
         width: 45% !important;
         top: -144px;
         position: relative;
+        left: -44px;
     }
     .giphi_sec{display: block;}
     .logo_fto {

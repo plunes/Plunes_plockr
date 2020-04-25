@@ -130,13 +130,13 @@ export default class LandingFooter extends Component {
           <div className="row deskTop_fro">
             <div className="col-sm-3  col-md-4  col-lg-3 responsiv-futtor one_sec">
               <ul className="services footerele new-footer-ele2">
-                <li><a href="/gynae" title= 'Medically Terminated Pregnancy in Gurgaon'>Medically Terminated Pregnancy</a></li>
-                <li><a href="/gynae" title= 'Vaginal Reconstruction in Gurgaon'>Vaginal Reconstruction</a></li>
-                <li><a href="/orthopedics" title = 'Joint Replacement in Gurgaon'>Joint Replacement</a></li>
-                <li><a href="/gynae" title= 'Pregnancy Tests in Gurgaon'>Pregnancy Tests</a></li>
-                <li><a href="/orthopedics" title = 'Back Pain Treatment in Gurgaon'>Back Pain Treatment </a></li>
-                <li><a href="/gynae" title = 'Ovarian Cyst Removal in Gurgaon'>Ovarian Cyst Removal </a></li>
-                <li><a href="/gynae" title = 'Fertility Treatment in Gurgaon'>Fertility Treatment </a></li>
+                <li><a href="/gynae" title= 'Medically Terminated Pregnancy in Gurgaon'>Medically Terminated Pregnancy in Gurgaon</a></li>
+                <li><a href="/gynae" title= 'Vaginal Reconstruction in Gurgaon'>Vaginal Reconstruction in Gurgaon</a></li>
+                <li><a href="/orthopedics" title = 'Joint Replacement in Gurgaon'>Joint Replacement in Gurgaon</a></li>
+                <li><a href="/gynae" title= 'Pregnancy Tests in Gurgaon'>Pregnancy Tests in Gurgaon</a></li>
+                <li><a href="/orthopedics" title = 'Back Pain Treatment in Gurgaon'>Back Pain Treatment in Gurgaon</a></li>
+                <li><a href="/gynae" title = 'Ovarian Cyst Removal in Gurgaon'>Ovarian Cyst Removal in Gurgaon</a></li>
+                <li><a href="/gynae" title = 'Fertility Treatment in Gurgaon'>Fertility Treatment in Gurgaon</a></li>
                 <li><a href="/gynae" title = 'PCOD in Gurgaon'>PCOD in Gurgaon </a></li>
                 <li><a href="/gynae" title = 'PCOS in Gurgaon'>PCOS in Gurgaon</a></li>
                 <li><a href="/gynae" title = 'C-Section in Gurgaon'>C-Section in Gurgaon</a></li>

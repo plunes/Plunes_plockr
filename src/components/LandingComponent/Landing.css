@@ -225,10 +225,11 @@
       font-size: 25px !important;
     }
 .WhyCovidTest1{
-  font-size: 21px !important;
+  font-size: 23px !important;
   margin-top: 11% !important;
   text-align: center;
 }
+.WhyCovidHeading{padding: 0px !important;height: 53px;}
 .CovidContent {
     /* position: relative; */
     margin-left: 10%;

@@ -194,10 +194,8 @@ class LandingContainer extends React.Component {
                         allowFullScreen>
 
                         </iframe>
-                         {/* <source src="./video/cvid.webm" type='video/webm;codecs="vp8, opus"'/>
-                         <source src="./video/cvid.mp4" type='video/mp4;codecs="avc1.4D401E, mp4a.40.2"'/>    */}
                         </div>
-                        {/* <iframe src={comp_2}> </iframe> */}
+            
                         </div>
                         </div>
                     </div>

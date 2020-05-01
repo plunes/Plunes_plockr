@@ -37,7 +37,8 @@ class NewHeader extends Component {
               </div>
                     </li>
                      <li className="nav-item">
-                       <a className="nav-link login mobile_hs" href="/login">Login Hospitals / Doctors</a>
+                       <a className="nav-link login mobile_hs" href="/login">Register as Hospital/Doctor/Diagnostic
+                       </a>
                      </li>  
                    </ul>
                </div>  

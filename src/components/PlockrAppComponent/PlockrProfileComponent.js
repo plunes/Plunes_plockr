@@ -189,6 +189,7 @@ class PlockrProfileComponent extends Component {
                                 <div className="form-group">
                                     <textarea className="form-control plockr-app-form" placeholder="Remarks" rows="2" name='remarks' onChange={this.handleChange}></textarea>
                                 </div><br></br>
+                               
                                 <div className='form-group '>
                                     {/* <div class="upload-btn-wrapper"> */}
                                     {/* <button class="btn-file">Choose</button> */}
@@ -198,6 +199,7 @@ class PlockrProfileComponent extends Component {
                                     {/* <img style={{ width: "100%" }} src={this.state.file} /> */}
                                     {/* </div> */}
                                 </div>
+                                 
                                 <button type="submit" className="btn profile-button">Submit</button>
                                 <a class="btn profile-button2" href='/plockrapp'>Cancel</a>
                             </form>

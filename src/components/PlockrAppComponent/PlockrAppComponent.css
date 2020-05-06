@@ -203,6 +203,7 @@ input:-webkit-autofill:active {
     margin-bottom: 40px;
 
 }
+.pstion_sb{position: relative;top: 94px;}
 .profile-button2{
     border-color: #ACACAC !important;
     color: #8A8A8A;

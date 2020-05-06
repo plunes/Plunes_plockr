@@ -350,21 +350,29 @@ class CreateBuilderComponent extends Component {
                     <hr className='new1'></hr>
                     <div className='row'>
                         <div className='col age'>
-                            <div><p>Name </p></div>
-                            <div>Gender</div>
+                        <div className="col-lg-10"> <textarea className="form-control plockr-app-form" placeholder="Name" name='name' onChange={this.handleChange}></textarea></div>
+                            <div className="col-lg-10"> <textarea className="form-control plockr-app-form" placeholder="Gender" name='gender' onChange={this.handleChange}></textarea></div>
                         </div>
                         <div className='col userAge'>
-                            <div><p>Age </p></div>
-                            <div><p>Date</p></div>
+                            <div className="col-lg-10"><textarea className="form-control plockr-app-form" placeholder="Age" name='age' onChange={this.handleChange}></textarea></div>
+                            <div className="col-lg-10"><textarea className="form-control plockr-app-form" placeholder="Date" name='date' onChange={this.handleChange}></textarea></div>
                         </div>
                     </div>
-                    <ul className='prescriptionField age'>
+                    {/* <ul className='prescriptionField age'>
                         {
                             this.state.prescriptionField.map((item, index) => (
                                 <li className="name" key={index}>{item}<hr width="50%"/></li>
                             ))
                         }
-                    </ul>
+                    </ul> */}
+                    <div className="single_rw_frm">
+                    <div className="col-lg-7 offset-lg-3"><label className="diagn_re">Diagnosis</label> <textarea className="form-control plockr-app-form" placeholder="" name='Diagnosis' onChange={this.handleChange}></textarea></div>
+                    <div className="col-lg-7 offset-lg-3"><label className="diagn_re">Medicine</label> <textarea className="form-control plockr-app-form" placeholder="" name='Medicine' onChange={this.handleChange}></textarea></div>
+                    <div className="col-lg-7 offset-lg-3"><label className="diagn_re">Test</label> <textarea className="form-control plockr-app-form" placeholder="" name='Test' onChange={this.handleChange}></textarea></div>
+                    <div className="col-lg-7 offset-lg-3"> <label className="diagn_re">Remarks</label><textarea className="form-control plockr-app-form" placeholder="" name='Remarks' onChange={this.handleChange}></textarea></div>
+                    <div className="col-lg-7 offset-lg-3"> <label className="diagn_re">Mobile Number</label><textarea className="form-control plockr-app-form" placeholder="" name='phone' onChange={this.handleChange}></textarea></div>
+
+                        </div>
                     <div className='row' className='addField'>
                        <button className="add-field" type='button' onClick={this.showElementModal}><span><img className="add-png" src="/add.png"/>Add Field</span></button>
                         {

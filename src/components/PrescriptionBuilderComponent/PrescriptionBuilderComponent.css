@@ -338,9 +338,10 @@ li.example {
 .chose_dr{text-align: center;margin-bottom: 50px;}
 .Drlist{margin-top: 10%;}
 .dr_report img {
-    width: 98px;
-    /* margin-left: 30px; */
+    width: 68px !important;
     border-radius: 50%;
+    height: 67px;
+    object-fit: cover;
 }
     .dr_report {
         display: flex;
@@ -386,4 +387,15 @@ li.example {
                 }
          .dr_content h5 { font-size: 12px;}
          .dr_lis_mobile{}
+        }
+
+
+
+        label.diagn_re {
+            position: relative;
+            right: 155px;
+            top: 32px;
+        }
+        .single_rw_frm {
+            margin-top: 40px;
         }

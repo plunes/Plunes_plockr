@@ -169,12 +169,15 @@ class PlockrProfileEditComponent extends Component {
                                         {/* <div className="form-group">
                                             <textarea className="form-control plockr-app-form" placeholder="Report Name" name='reportName' onChange={this.handleChange} value={this.state.reportName}></textarea>
                                         </div><br></br> */}
-                                        <div className="form-group col-md-6">
+                                        <div className="form-group col-lg-6 col-md-6">
                                             <textarea className="form-control plockr-app-form" placeholder="Diagnosis" name='reasonDiagnosis' onChange={this.handleChange}></textarea>
                                         </div><br />
-                                        <div className="form-group col-md-6">
+                                        <div className="form-group col-lg-6 col-md-6">
                                             <textarea className="form-control plockr-app-form" placeholder="Remarks" name='remarks' onChange={this.handleChange}></textarea>
                                         </div><br /> 
+                                        <div className="form-group col-lg-6 col-md-6">
+                                       <textarea className="form-control plockr-app-form" placeholder="123-45-678" rows="2" name='phone' onChange={this.handleChange}></textarea>
+                                      </div><br></br>
                                         {/* <div className="form-group">
                                             <textarea className="form-control plockr-app-form" placeholder="Enter Patient's Mobile Number" name='patientMobileNumber' onChange={this.handleChange} required></textarea>
                                         </div><br></br> */}
@@ -185,7 +188,7 @@ class PlockrProfileEditComponent extends Component {
                                             <textarea className="form-control plockr-app-form" placeholder="Precautions" name='precautions' onChange={this.handleChange}></textarea>
                                         </div><br></br> */}
                                         <div className='col-md-6'>
-                                        <button type="submit" className="btn profile-button">Submit</button>
+                                        <button type="submit" className="btn profile-button pstion_sb">Submit</button>
                                         </div>
                                         <div className='col-md-6'>
                                         <a className="btn profile-button2 display-inline" href='/plockr-dashboard'>Cancel</a>

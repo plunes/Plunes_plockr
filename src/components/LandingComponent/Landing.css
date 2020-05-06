@@ -1084,7 +1084,7 @@ width: 190px !important;
       margin-bottom: -16px;
   }
 
-  .form-control:focus{box-shadow:none !important;border-color:#01d35a !important;}
+  .form-control:focus{box-shadow:none !important;border-color:#B2B2B2 !important;}
   
   @media (min-width: 992px){
   .navbar-expand-lg .navbar-nav .nav-link {

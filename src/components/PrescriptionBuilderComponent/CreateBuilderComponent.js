@@ -286,6 +286,16 @@ class CreateBuilderComponent extends Component {
         }
         return (
         <div>
+            <div className="col-lg-10 offset-lg-2 text-center">
+             <div className="row">
+                <div className="form-group col-lg-6 col-md-6">
+                    <textarea className="form-control plockr-app-form inpt_contro" placeholder="Enter Patient Mobile Number" name='phone' onChange={this.handleChange}></textarea>
+                </div>
+                       <div className="col-lg-6">
+                           <a href="#"className="moble_sub">Submit</a>
+                       </div>
+                    </div>
+                    </div>
             <div className='container-fluid createBuilder'>
                 {/* <Modal
                     isOpen={this.state.modalIsOpen}
@@ -301,6 +311,7 @@ class CreateBuilderComponent extends Component {
                         <button type='submit'>Submit</button>
                     </form>
                 </Modal> */}
+               
                 <form onSubmit={this.handleTemplateSubmit}>
                     <div className='row'>
                         <div className='col'>
@@ -350,29 +361,21 @@ class CreateBuilderComponent extends Component {
                     <hr className='new1'></hr>
                     <div className='row'>
                         <div className='col age'>
-                        <div className="col-lg-10"> <textarea className="form-control plockr-app-form" placeholder="Name" name='name' onChange={this.handleChange}></textarea></div>
-                            <div className="col-lg-10"> <textarea className="form-control plockr-app-form" placeholder="Gender" name='gender' onChange={this.handleChange}></textarea></div>
+                            <div><p>Name </p></div>
+                            <div>Gender</div>
                         </div>
                         <div className='col userAge'>
-                            <div className="col-lg-10"><textarea className="form-control plockr-app-form" placeholder="Age" name='age' onChange={this.handleChange}></textarea></div>
-                            <div className="col-lg-10"><textarea className="form-control plockr-app-form" placeholder="Date" name='date' onChange={this.handleChange}></textarea></div>
+                            <div><p>Age </p></div>
+                            <div><p>Date</p></div>
                         </div>
                     </div>
-                    {/* <ul className='prescriptionField age'>
+                    <ul className='prescriptionField age'>
                         {
                             this.state.prescriptionField.map((item, index) => (
                                 <li className="name" key={index}>{item}<hr width="50%"/></li>
                             ))
                         }
-                    </ul> */}
-                    <div className="single_rw_frm">
-                    <div className="col-lg-7 offset-lg-3"><label className="diagn_re">Diagnosis</label> <textarea className="form-control plockr-app-form" placeholder="" name='Diagnosis' onChange={this.handleChange}></textarea></div>
-                    <div className="col-lg-7 offset-lg-3"><label className="diagn_re">Medicine</label> <textarea className="form-control plockr-app-form" placeholder="" name='Medicine' onChange={this.handleChange}></textarea></div>
-                    <div className="col-lg-7 offset-lg-3"><label className="diagn_re">Test</label> <textarea className="form-control plockr-app-form" placeholder="" name='Test' onChange={this.handleChange}></textarea></div>
-                    <div className="col-lg-7 offset-lg-3"> <label className="diagn_re">Remarks</label><textarea className="form-control plockr-app-form" placeholder="" name='Remarks' onChange={this.handleChange}></textarea></div>
-                    <div className="col-lg-7 offset-lg-3"> <label className="diagn_re">Mobile Number</label><textarea className="form-control plockr-app-form" placeholder="" name='phone' onChange={this.handleChange}></textarea></div>
-
-                        </div>
+                    </ul>
                     <div className='row' className='addField'>
                        <button className="add-field" type='button' onClick={this.showElementModal}><span><img className="add-png" src="/add.png"/>Add Field</span></button>
                         {

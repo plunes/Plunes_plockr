@@ -124,11 +124,12 @@ class PrescriptionListComponent extends Component {
         return (
             <div className='container-fluid'>
                     <div className='row justify-content-center'>
-                    <p><h5 className="send-prescription">Sent Prescriptions</h5></p><br></br>
+                    <p><h5 className="send-prescription sen_des">Sent Prescriptions</h5></p><br></br>
                         {/* Add Class in This input */}
-                        
+                        <div className="col-lg-12">
                         <input type='text' className="PLSearchBar" name='filter' onChange={this.onSearchQuery} placeholder='Search'></input>
-                        <img className="PLsearchicon" src={window.location.origin + '/PLsearchbar.png'} />
+                        <img className="PLsearchicon" src={window.location.origin + '/search.png'} />
+                        </div>
                     <ul className='fileContainer2 row'>
                         {
                           this.state.filterList.length > 0  ?  this.state.filterList.map((p, index) => (

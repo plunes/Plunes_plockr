@@ -259,11 +259,11 @@ class ContainerComponent extends React.PureComponent {
                             <div className='col-md-1'>
                             </div>
                             <div className='col-md-5 colhead' onClick={(e) => this.handleReports('r')}>
-                                <li className='tabReport color-white cursor-pointer' >Personal</li>
+                                <li className='tabReport color-white cursor-pointer' >Sent</li>
                                 <hr style={this.state.active ? greenStyle : greyStyle}></hr>
                             </div>
                             <div className='col-md-5 colhead' onClick={(e) => this.handleReports('s')}>
-                                <li className='tabReport color-white cursor-pointer' >Sent</li>
+                                <li className='tabReport color-white cursor-pointer' >Uploaded</li>
                                 <hr style={this.state.active ? greyStyle : greenStyle}></hr>
                             </div>
                             <div className='col-md-1'>

@@ -17,14 +17,7 @@ class PlockrHeader extends Component {
                 </div>
                 <div className='col-md-5'>
                 </div>
-                {/* <div className='col-md-2 text-right'>
-                    <a href="/prescription_builder">
-                        <button type="button" className="btn builder-button">Download PLOCKR</button>
-                    </a>
-                </div>
-                <div className='col-md-2'>
-                    <button type="button" className="btn logout" onClick={this.handlelogout}>Logout</button>
-                </div> */}
+              
             </div>
             </header>
         </div>

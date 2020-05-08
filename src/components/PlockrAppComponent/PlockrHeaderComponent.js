@@ -222,7 +222,7 @@ class PlockrHeaderComponent extends Component {
                         </div>
                     </form>
                 </Modal>
-                <div className="navbar navbar-expand-lg navbar-light row">
+             
                 <div className="navbar navbar-expand-lg navbar-light row plock_shdo">
                     <div className='col-md-3'>
                         <a href="/plockrapp" title='Home'> <img className="logo-img-sizeing" src="/logo.png" alt=".." /></a>
@@ -242,7 +242,7 @@ class PlockrHeaderComponent extends Component {
                     </div>
                 </div>
             </div>
-            </div>
+           
         );
     }
 }

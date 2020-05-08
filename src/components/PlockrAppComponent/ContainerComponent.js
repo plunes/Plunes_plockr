@@ -2,136 +2,53 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import Modal from 'react-modal';
 import './index.css'
+import { Table, Button } from 'react-bootstrap'
+import { Modal as Modal2 } from 'react-bootstrap'
 import ReportImage from '../../commonCompo/ReportImage';
 import Loader from "react-loader-spinner"
-const customStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
-    }
-};
+
 class ContainerComponent extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            businessRecievedReports: [],
-            businessSentReports: [],
             active: true,
-            showRecieved: true,
+            showReceived: true,
             modalIsOpen: false,
             file: null,
             report: [],
             data: {},
             modalIsOpen: false,
             sent: false,
-            disabled : true,
-            pleaseWait : false,
-            loading:false
+            disabled: true,
+            pleaseWait: false,
+            loading: false,
+            showInfoModal: false,
+            showDeleteModal: false
         }
-        this.openModal = this.openModal.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleChange = this.handleChange.bind(this);
-        this.afterOpenModal = this.afterOpenModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
         this.handleReports = this.handleReports.bind(this);
-        this.getReports = this.getReports.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleReports = this.handleReports.bind(this);
         this.getExtension = this.getExtension.bind(this);
-        this.openModal = this.openModal.bind(this);
-        this.afterOpenModal = this.afterOpenModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
     }
 
-
-    async handleSubmit(e) {
-        e.preventDefault();
-        let user = JSON.parse(localStorage.getItem('docDetails'))
-        let token = localStorage.getItem('auth')
-        let data = {
-            report: this.state.report,
-            userId: user._id,
-            self: false
-        }
-        console.log(data, 'data')
-        await axios.post('https://plunes.co/v4/report/test', data, { headers: { "Authorization": `Bearer ${token}` } })
-            .then((res) => {
-                this.getReports();
-                this.setState({
-                    modalIsOpen : false,
-                    report : []
-                })
-            })
-            .catch((e) => {
-                console.log(e)
-            })
-    }
-
-
-    handleChange = (e) => {
-        e.preventDefault();
-        this.setState({
-            file: e.target.files,
-        }, async () => {
-            this.setState({
-                pleaseWait :  true
-            })
-            for(let i = 0; i<this.state.file.length; i++){
-                const data = new FormData();
-                data.append('file', this.state.file[i])
-               await axios.post("https://plunes.co/v4/upload", data, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    }
-                }).then(res => {
-                    if (res.status === 200) {
-                        let report = {
-                            reportUrl : "https://plunes.co/v4/" + res.data.path,
-                            reportName : res.data.originalname
-                        }
-                        this.setState({
-                            report: [...this.state.report, report],
-                        })
-                    }
-                });
-            }
-            this.setState({
-                disabled : false,
-                pleaseWait :  false,
-                sendReports :  true
-            })
-        });
-       
-    };
-    openModal() {
-        this.setState({ modalIsOpen: true });
-    }
-    afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        // this.subtitle.style.color = '#f00';
-    }
-    closeModal() {
-        this.setState({ modalIsOpen: false });
+    componentWillMount() {
+        console.log(this.props, "Container props")
     }
 
     handleClick(e, file) {
-        console.log(e,file,"e and data in handleClick")
-        let fileType = this.getExtension(e.currentTarget.dataset.url)
+        console.log(e, file, "e and data in handleClick")
+        let fileType = this.getExtension(file.reportName)
         let data = {
-            fileName: e.currentTarget.dataset.filename,
-            url: e.currentTarget.dataset.url,
+            fileName: file.reportDisplayName,
+            url: file.reportUrl,
             type: fileType,
-            id: e.currentTarget.dataset.id,
+            id: file._id,
             showFile: true
         }
-        let stack = file.reportType==='sent'?this.state.businessSentReports:this.state.businessRecievedReports
-        console.log(this.state,"this.state in ComtainerComponent")
-        
-        this.props.handleSelection(data,stack)
+        let stack = file.self ? this.props.businessSentReports : this.props.businessReceivedReports
+        console.log(this.state, "this.state in ComtainerComponent")
+
+        this.props.handleSelection(data, stack)
     }
 
     getExtension(url) {
@@ -141,56 +58,74 @@ class ContainerComponent extends React.PureComponent {
             extEnd = ext.search(/$|[?#]/);
         return ext.substring(0, extEnd);
     }
-   
+
     handleReports(e) {
         if (e == 'r') {
             this.setState({
-                showRecieved: true,
+                showReceived: true,
                 active: true
             })
         } else {
             this.setState({
-                showRecieved: false,
+                showReceived: false,
                 active: false
             })
         }
     }
-    async componentDidMount() {
-        this.getReports();
-        // this.interval = setInterval(this.getReports, 10000);
+
+    showDetails = (e, f) => {
+        console.log("Show details", e, f)
+        this.setState({
+            displayReportName: f.reportDisplayName,
+            displayReportTime: f.createdTime,
+            displayReportDiagnosis: f.problemAreaDiagnosis,
+            displayReportPatientName: f.userName,
+            displayReportPatientPhone: f.userMobileNumber,
+            displayReportRemarks: f.remarks,
+            displayReportPrecautions: f.precautions,
+            displayReportPatientAddress: f.userAddress,
+            showInfoModal: true
+        })
     }
-    async getReports() {
-        let token = localStorage.getItem('auth')
-        // this.props.toggleLoading()
-        await axios.get('https://plunes.co/v4/report/', { 'headers': { 'Authorization': token } })
-            .then(res => {
-                if (res.status === 201) {
-                    let reports = res.data.businessReports;
-                    let sentReports = reports.filter((r) => r.patientMobileNumber && !r.reportUrl.includes('prescription') ? true : false)
-                    let recieveReports = reports.filter((r) => !r.patientMobileNumber ? true : false)
-                    recieveReports.forEach((r) => {
-                        var datetime = new Date(r.createdTime);
-                        var now = datetime.toLocaleString();
-                        r.createdTime = now;
-                        r.reportName = r.reportName ? r.reportName.split('_').join(' ') : '';
-                        r.reportType = 'recieved'
-                        // console.log(r.reportUrl, 'report url')
-                    })
-                    sentReports.forEach((r) => {
-                        var datetime = new Date(r.createdTime);
-                        var now = datetime.toLocaleString();
-                        r.createdTime = now
-                        r.reportName = r.reportName.split('_').join(' ');
-                        r.reportType = 'sent'
-                    })
-                    this.setState({
-                        businessRecievedReports: recieveReports,
-                        businessSentReports: sentReports
-                    })
-                }
+
+    closeInfoModal = () => {
+        this.setState({
+            showInfoModal: false
+        })
+    }
+
+    deleteReport = (e) => {
+        console.log("Delete report")
+        axios.delete('https://devapi.plunes.com/v5/report/' + this.state.deleteReportId, { 'headers': { 'Authorization': localStorage.getItem('auth') } }).then(res => {
+            console.log("Deleted report")
+            this.setState({
+                showDeleteModal: false,
+                deleteReportId: '',
+                deleteReportName: ''
             })
-        // this.props.toggleLoading()
+            this.props.getReports()
+        })
     }
+
+    closeDeleteModal = () => {
+        this.setState({
+            showDeleteModal: false
+        })
+    }
+
+    openDeleteModal = (e, f) => {
+        console.log({ e, f })
+        this.setState({
+            showDeleteModal: true,
+            deleteReportName: f.reportDisplayName,
+            deleteReportId: f._id
+        })
+    }
+
+    shareReport = (e) => {
+
+    }
+
     render() {
 
         if (this.state.loading) {
@@ -227,7 +162,7 @@ class ContainerComponent extends React.PureComponent {
             marginTop: '0 !important',
             marginBottom: '0 !important'
         }
-        
+
         const greyStyle = {
             background: "#DCDCDC 0% 0% no-repeat padding-box",
             opacity: 1,
@@ -236,72 +171,116 @@ class ContainerComponent extends React.PureComponent {
             marginBottom: '0 !important'
         }
 
+        const customStyles = {
+            content: {
+                top: '50%',
+                left: '50%',
+                right: 'auto',
+                bottom: 'auto',
+                marginRight: '-50%',
+                transform: 'translate(-50%, -50%)'
+            }
+        };
+
         return (
             <div className=' repolist_images_wrapper'>
-                <div className='text-center'>
-                    <button type="button" className="btn builder-button fit-content-width" onClick={this.openModal}>Upload Reports</button>
-                </div>
-                <Modal
-                    isOpen={this.state.modalIsOpen}
-                    onAfterOpen={this.afterOpenModal}
-                    onRequestClose={this.closeModal}
-                    style={customStyles}
-                >
-                    <h2 className="upload-report-button">Upload Report</h2>
-                    {
-                        this.state.pleaseWait ?
-                            <div className='fail'>
-                                <p style={{ color: "red" }}>Please wait for a minute to send reports...</p>
-                            </div> : false
-                    }
-                    {
-                        this.state.sendReports ? <div>
-                            <p style={{color : "green"}}>Now Press Send button</p>
-                        </div> : false
-                    }
-                    <form onSubmit={this.handleSubmit}>
-                        <div className="input-group">
-                            <div className='row'>
-                                <input id='uploadFile' className=" file-path-wrapper" name='file' onChange={this.handleChange} type="file" multiple />
-                            </div>
-                        </div>
+                {this.state.showInfoModal ?
+                    <Modal
+                        isOpen={this.state.showInfoModal}
+                        onRequestClose={this.closeInfoModal}
+                        style={customStyles}
+                    >
+                        <h2 className="text-center">Report Details</h2>
+                        <br />
+                        <Table striped bordered hover>
+                            <tbody>
+                                <tr>
+                                    <td>Report Name</td>
+                                    <td>{this.state.displayReportName}</td>
+                                </tr>
+                                <tr>
+                                    <td>Uploaded</td>
+                                    <td>{this.state.displayReportTime}</td>
+                                </tr>
+                                <tr>
+                                    <td>Patient Name</td>
+                                    <td>{this.state.displayReportPatientName}</td>
+                                </tr>
+                                <tr>
+                                    <td>Patient Phone</td>
+                                    <td>{this.state.displayReportPatientPhone}</td>
+                                </tr>
+                                <tr>
+                                    <td>Patient Address</td>
+                                    <td>{this.state.displayReportPatientAddress}</td>
+                                </tr>
+                                <tr>
+                                    <td>Diagnosis</td>
+                                    <td>{this.state.displayReportDiagnosis}</td>
+                                </tr>
+                                <tr>
+                                    <td>Precautions</td>
+                                    <td>{this.state.displayReportPrecautions}</td>
+                                </tr>
+                                <tr>
+                                    <td>Remarks</td>
+                                    <td>{this.state.displayReportRemarks}</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </Modal>
+                    : ''}
+                {this.state.showDeleteModal ?
+                    <Modal
+                        isOpen={this.state.showDeleteModal}
+                        onRequestClose={this.closeDeleteModal}
+                        style={customStyles}
+                    >
+                        <h2 className="text-center">Delete Report</h2>
+                        <br />
+                        {`Are you sure you want to permanently delete report ${this.state.deleteReportName}?`}
+                        <br />
                         <div className='row'>
                             <div className='col'>
-                                <button className="uploader-button-modal" type="submit" disabled = {this.state.disabled}>Send</button>
+                                <button className="uploader-button-modal" onClick={this.deleteReport}>Delete</button>
                             </div>
                             <div className='col'>
-                                <button type='button' className='send-button-modal' onClick={this.closeModal} >Close</button>
+                                <button type='button' className='send-button-modal' onClick={this.closeDeleteModal} >Cancel</button>
                             </div>
                         </div>
-                    </form>
-                </Modal>
-                <div>
-                    <h5 className="text-center color-white">Report List</h5>
-                    <div className='text-center row'>
-                        <div className='col-md-1'>
+                    </Modal>
+                    : ''}
+                {(this.props.businessReceivedReports.length > 0 || this.props.businessSentReports.length > 0) ?
+                    <div>
+                        {/* <div className='text-center row'>
+                        <h5 className="text-center color-white">Report List</h5>
+                    </div> */}
+                        <div className='text-center row'>
+                            <div className='col-md-1'>
+                            </div>
+                            <div className='col-md-5 colhead' onClick={(e) => this.handleReports('r')}>
+                                <li className='tabReport color-white cursor-pointer' >Personal</li>
+                                <hr style={this.state.active ? greenStyle : greyStyle}></hr>
+                            </div>
+                            <div className='col-md-5 colhead' onClick={(e) => this.handleReports('s')}>
+                                <li className='tabReport color-white cursor-pointer' >Sent</li>
+                                <hr style={this.state.active ? greyStyle : greenStyle}></hr>
+                            </div>
+                            <div className='col-md-1'>
+                            </div>
                         </div>
-                        <div className='col-md-5 colhead' onClick={(e) => this.handleReports('r')}>
-                            <li className='tabReport color-white cursor-pointer' >New</li>
-                            <hr style={this.state.active ? greenStyle : greyStyle}></hr>
-                        </div>
-                        <div className='col-md-5 colhead' onClick={(e) => this.handleReports('s')}>
-                            <li className='tabReport color-white cursor-pointer' >Sent</li>
-                            <hr style={this.state.active ? greyStyle : greenStyle}></hr>
-                        </div>
-                        <div className='col-md-1'>
-                        </div>
-                    </div>
-                    <ul className='fileContainer row'>
-                        {
-                            this.state.showRecieved ? this.state.businessRecievedReports.map((b, index) => (
-                                <ReportImage handleClick = {this.handleClick} b = {b} index={index} />
-                            ))
-                                : this.state.businessSentReports.map((b, index) => (
-                                    <ReportImage handleClick = {this.handleClick} b = {b} index={index} />
+                        <ul className='fileContainer row'>
+                            {
+                                this.state.showReceived ? this.props.businessReceivedReports.map((b, index) => (
+                                    <ReportImage handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.shareReport} />
                                 ))
-                        }
-                    </ul>
-                </div>
+                                    : this.props.businessSentReports.map((b, index) => (
+                                        <ReportImage handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.shareReport} />
+                                    ))
+                            }
+                        </ul>
+                    </div> : ''
+                }
             </div>
         );
     }

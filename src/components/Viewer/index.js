@@ -31,7 +31,7 @@ cornerstoneTools.external.Hammer = Hammer;
 
   const divStyle = {
     width: "100%",
-    height: "500px",
+    height: "100vh",
     position: "relative",
     margin:"20px"
   };
@@ -193,24 +193,24 @@ class CornerstoneElement extends React.Component {
 <div className="annonate_header">
                     <ul>
                         <li className="image_size b-relative-3"><i className ="fa fa-plus cursor-pointer" onClick={this.switchPanHandlar} ></i><span className ={this.state.isEnablePanEvent?"pan active-green b-relative-5":'pan  b-relative-5'}>Pan</span></li>
-                        <li className="image_size"  onClick={this.switchAnnotationHandlar}><img src={annote} className ={this.state.isEnableAnnotEvent?"cursor-pointer active-green":'cursor-pointer'}/><span className ={this.state.isEnableAnnotEvent?"pan active-green":'pan'}>Annotate</span></li>
                         <li className="image_size"  onClick={this.switchMagnifyHandlar}><img src={search} className="cursor-pointer" /><span className ={this.state.isEnableMagnifyEvent?"pan active-green":'pan'}>Magnify</span></li>
-                        <li className="image_size"  onClick={this.switchRectangularHandlar}><img src={rectangle} className="cursor-pointer" /><span className ={this.state.isEnableRectangleEvent?"pan active-green":'pan'}>Rectangular</span></li>
                         <li className="image_size"  onClick={this.switchRotateHandlar}><img src={rotate} className="cursor-pointer" /><span className ={this.state.isEnableRotateEvent?"pan active-green":'pan'}>Rotate</span></li>
                         <li className="image_size"  onClick={this.switchScrollHandlar}><img src={aero} className="cursor-pointer" /><span className ={this.state.isEnableScrollEvent?"pan active-green":'pan'}>Scroll</span></li>
+                        {/* <li className="image_size"  onClick={this.switchAnnotationHandlar}><img src={annote} className ={this.state.isEnableAnnotEvent?"cursor-pointer active-green":'cursor-pointer'}/><span className ={this.state.isEnableAnnotEvent?"pan active-green":'pan'}>Annotate</span></li> */}
+                        {/* <li className="image_size"  onClick={this.switchRectangularHandlar}><img src={rectangle} className="cursor-pointer" /><span className ={this.state.isEnableRectangleEvent?"pan active-green":'pan'}>Rectangular</span></li> */}
                     </ul>
                     {this.state.isEnablePanEvent ? cornerstoneTools.setToolActive("Pan", { mouseButtonMask: 1}) :cornerstoneTools.setToolDisabled("Pan", { mouseButtonMask: 1}) }
                     {this.state.isEnableMagnifyEvent? cornerstoneTools.setToolActive('Magnify', { mouseButtonMask: 1 }) :cornerstoneTools.setToolDisabled("Magnify", { mouseButtonMask: 1}) }
-                    {this.state.isEnableAnnotEvent ? cornerstoneTools.setToolActive('ArrowAnnotate', { mouseButtonMask: 1 }) :cornerstoneTools.setToolDisabled('ArrowAnnotate', { mouseButtonMask: 1 }) }
-                    {this.state.isEnableRectangleEvent? cornerstoneTools.setToolActive('RectangleRoi', { mouseButtonMask: 1 }) :cornerstoneTools.setToolDisabled('RectangleRoi', { mouseButtonMask: 1 }) }
-                    {this.state.isEnableRotateEvent? cornerstoneTools.setToolActive('Rotate', { mouseButtonMask: 1 }) :cornerstoneTools.setToolDisabled('Rotate', { mouseButtonMask: 1 }) }
                     {this.state.isEnableScrollEvent? cornerstoneTools.setToolActive('StackScrollTool', { mouseButtonMask: 1 }) :cornerstoneTools.setToolDisabled('StackScrollTool', { mouseButtonMask: 1 })  }
+                    {this.state.isEnableRotateEvent? cornerstoneTools.setToolActive('Rotate', { mouseButtonMask: 1 }) :cornerstoneTools.setToolDisabled('Rotate', { mouseButtonMask: 1 }) }
+                    {/* {this.state.isEnableAnnotEvent ? cornerstoneTools.setToolActive('ArrowAnnotate', { mouseButtonMask: 1 }) :cornerstoneTools.setToolDisabled('ArrowAnnotate', { mouseButtonMask: 1 }) } */}
+                    {/* {this.state.isEnableRectangleEvent? cornerstoneTools.setToolActive('RectangleRoi', { mouseButtonMask: 1 }) :cornerstoneTools.setToolDisabled('RectangleRoi', { mouseButtonMask: 1 }) } */}
                         </div>
 
-         <div className="share_but">
+         {/* <div className="share_but">
           <img src={share} />
           <span className="shre_intr"><text className="" > Share Internaly</text></span>
-         </div>
+         </div> */}
         <div className="viewportElement"  style={divStyle}>
             <div style={bottomRightStyle}>Zoom: {this.state.viewport.scale}</div>
             <div style={bottomLeftStyle}> 

@@ -21,7 +21,7 @@ class PlockrMainComponent extends Component {
     handlelogout(e) {
         e.preventDefault();
         let token = localStorage.getItem('auth');
-        axios.post('https://plunes.co/v4/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.post('https://devapi.plunes.com/v5/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then((response) => {
                 localStorage.removeItem('auth')
                 localStorage.removeItem('isAuth')
@@ -54,7 +54,7 @@ class PlockrMainComponent extends Component {
             mobileNumber: this.state.mobileNo,
             password: this.state.password
         }
-        axios.post('https://plunes.co/v4/user/login', data)
+        axios.post('https://devapi.plunes.com/v5/user/login', data)
             .then((res) => {
                 if (res.status === 201 && res.data.user.userType !== 'User') {
                     localStorage.setItem('isAuth', true)
@@ -93,24 +93,6 @@ class PlockrMainComponent extends Component {
                 showLogin: false
             })
         }
-        await axios.get('https://plunes.co/v4/catalogue')
-            .then((res) => {
-                if (res.status == 201) {
-                    let catalogue = res.data;
-                    let specArray = [];
-                    catalogue.forEach((c) => {
-                        let speciality = {
-                            id: c._id,
-                            name: c.speciality
-                        }
-                        specArray.push(speciality)
-                    })
-                    localStorage.setItem('specialities', JSON.stringify(specArray))
-                    this.setState({
-                        specialities: specArray
-                    })
-                }
-            })
     }
 
     componentWillReceiveProps() {

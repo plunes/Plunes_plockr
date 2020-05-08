@@ -31,27 +31,27 @@ class PlockrAppComponent extends React.PureComponent {
             fileType: '',
             fileUrl: '',
             reportDet: {},
-            showFile : false,
+            showFile: false,
             failed: false,
-            loading:false,
-            stackElements:[]
-
+            loading: false,
+            stackElements: [],
+            businessReceivedReports: [],
+            businessSentReports: []
         }
-        
+        this.getReports = this.getReports.bind(this)
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
         this.handleSelection = this.handleSelection.bind(this);
         this.handleDownload = this.handleDownload.bind(this);
     }
 
 
     async handleDownload() {
-        
+
         const res = await axios.get('https://plunes.co/v4/installer/' + localStorage.getItem('uploaderUserId'));
         if (res.status === 201) {
-                new Downloader({
-                    url: res.data.downloadUrl
-                })
+            new Downloader({
+                url: res.data.downloadUrl
+            })
                 .then(function () {
                     // Called when download ended
                 })
@@ -66,11 +66,44 @@ class PlockrAppComponent extends React.PureComponent {
         this.setState({
             reportDet: select,
             showFile: true,
-            stackElements:data
+            stackElements: data
         })
     }
 
-    componentWillMount(){
+    async getReports() {
+        let token = localStorage.getItem('auth')
+        // this.props.toggleLoading()
+        await axios.get('https://devapi.plunes.com/v5/report/', { 'headers': { 'Authorization': token } })
+            .then(res => {
+                if (res.status === 201) {
+                    let sharedReports = res.data.sharedReports
+                    let uploadedReports = res.data.uploadedReports
+                    sharedReports.forEach((r) => {
+                        var datetime = new Date(r.createdTime);
+                        var now = datetime.toLocaleString();
+                        r.createdTime = now;
+                        r.reportName = r.reportName ? r.reportName.split('_').join(' ') : '';
+                        r.reportType = 'received'
+                        // console.log(r.reportUrl, 'report url')
+                    })
+                    uploadedReports.forEach((r) => {
+                        var datetime = new Date(r.createdTime);
+                        var now = datetime.toLocaleString();
+                        r.createdTime = now
+                        r.reportName = r.reportName.split('_').join(' ');
+                        r.reportType = 'sent'
+                    })
+                    this.setState({
+                        businessReceivedReports: uploadedReports,
+                        businessSentReports: sharedReports
+                    })
+                }
+            })
+        // this.props.toggleLoading()
+    }
+
+    componentWillMount() {
+        this.getReports()
     }
 
     async componentDidMount() {
@@ -78,65 +111,16 @@ class PlockrAppComponent extends React.PureComponent {
             this.setState({
                 showNumber: true,
                 showLogin: false,
-                loading:true
+                loading: false
             })
         }
-        await axios.get('https://plunes.co/v4/catalogue')
-            .then((res) => {
-                if (res.status == 201) {
-                    let catalogue = res.data;
-                    let specArray = [];
-                    catalogue.forEach((c) => {
-                        let speciality = {
-                            id: c._id,
-                            name: c.speciality
-                        }
-                        specArray.push(speciality)
-                    })
-                    localStorage.setItem('specialities', JSON.stringify(specArray))
-                    this.setState({
-                        specialities: specArray,
-                        loading:false
-                    })
-                }
-            })
     }
 
-    handleLogout(select){
+    handleLogout(select) {
         this.setState({
-            showLogin : select,
+            showLogin: select,
         })
     }
-
-    handleSubmit(e) {
-        e.preventDefault();
-        let data = {
-            mobileNumber: this.state.mobileNo,
-            password: this.state.password
-        }
-        axios.post('https://plunes.co/v4/user/login', data)
-            .then((res) => {
-                console.log(res.status)
-                if (res.status === 201) {
-                    //console.log(res.status)
-                    localStorage.setItem('isAuth', true)
-                    localStorage.setItem('auth', res.data.token)
-                    localStorage.setItem('uploaderUserId', res.data.user._id)
-                    this.setState({
-                        showLogin: false,
-                        showNumber: true
-                    })
-                }
-            })
-            .catch((e)=> {
-                    this.setState({
-                        failed : true,
-                        mobileNo : '',
-                        password : ''
-                    })
-            })
-    }
-
 
     handleChange(e) {
         this.setState({
@@ -144,17 +128,17 @@ class PlockrAppComponent extends React.PureComponent {
         })
     }
 
-    toggleLoading = () =>{
-        console.log(this.state.loading," this.props.toggleLoading")
+    toggleLoading = () => {
+        console.log(this.state.loading, " this.props.toggleLoading")
         this.setState({
-            loading:!this.state.loading
+            loading: !this.state.loading
         })
     }
 
-   
+
     render() {
-       
-            if (this.state.loading) {
+
+        if (this.state.loading) {
             return (
                 <div className="loader-wrapper">
                     <Loader
@@ -167,61 +151,47 @@ class PlockrAppComponent extends React.PureComponent {
                 </div>
             )
         }
-       
-            return (
-            
+
+        return (
+
             <div>
                 <div className='container-fluid'>
                     <div className='row'>
-                    <PlockrHeaderComponent />
-                   
-         <div className="row">
-              <h6 className="hme">Home > <a className="plo" href="#">Plockr </a></h6>
-         </div>
-                    <div className='row background-black'>
-                    <div className='col-md-8 viewFile'>
-                        {!this.state.showFile &&  <div className="annonate_header">
-                    <ul>
-                        <li className="image_size b-relative-3"><i className="fa fa-plus" ></i><span className="pan b-relative-5">Pan</span></li>
-                        <li className="image_size"><img src={annote} className="cursor-pointer" /><span className="pan">Annotate</span></li>
-                        <li className="image_size"><img src={search} className="cursor-pointer" /><span className="pan">Magnify</span></li>
-                        <li className="image_size"><img src={rectangle} className="cursor-pointer" /><span className="pan">Rectangular</span></li>
-                        <li className="image_size"><img src={rotate} className="cursor-pointer" /><span className="pan">Rotate</span></li>
-                        <li className="image_size"><img src={aero} className="cursor-pointer" /><span className="pan">Scroll</span></li>
-                    </ul>
-                        </div> }
-                   
-                        {
-                                this.state.showFile ?
-                                    <div>
-                                        <div className='pdfContainer'>
-                                            <CornerstoneElement stack= {this.state.stackElements} data={this.state.reportDet} imageId = {this.state.reportDet.url} />
-                                            {/* <MyComponent className='viewFile' key={Math.random().toString()} data={this.state.reportDet} /> */}
-                                        </div>
-                                      
-                                    </div>
-                                    : <div className='row'>
-                                       <div className='pdfContainer'>
-                                        <div className="dummy">
-                                            {/* <img className="dummy-img" src="dummySvg" /> */}
-                                        </div>
-                                    </div>
-                                </div>
-                            }
+                        <PlockrHeaderComponent getReports={this.getReports} />
+                        <div className="row">
+                            <h6 className="hme">Home > <a className="plo" href="#">Plockr </a></h6>
                         </div>
-                        <div className='col-md-4'>
-                            <ContainerComponent toggleLoading = {()=>this.toggleLoading()} handleSelection={this.handleSelection} />
-                        </div>
+                        <div className='row background-black' style={{ width: '100vw' }}>
+                            <div className='col-md-9 viewFile'>
+                                {
+                                    !this.state.showFile ?
+                                        '' :
+                                        <div>
+                                            <div className='pdfContainer'>
+                                                <CornerstoneElement stack={this.state.stackElements} data={this.state.reportDet} imageId={this.state.reportDet.url} />
+                                                {/* <MyComponent className='viewFile' key={Math.random().toString()} data={this.state.reportDet} /> */}
+                                            </div>
 
-                    </div>
-                                                <div className='row'>
-                         <PlockrProfileEditComponent key={Math.random().toString()} data={this.state.reportDet} />
-                         </div>
+                                        </div>
+                                }
+                            </div>
+                            <div className='col-md-3'>
+                                <ContainerComponent toggleLoading={() => this.toggleLoading()} handleSelection={this.handleSelection}
+                                    businessSentReports={this.state.businessSentReports || []}
+                                    businessReceivedReports={this.state.businessReceivedReports || []}
+                                    getReports={this.getReports}
+                                />
+                            </div>
+
+                        </div>
+                        {/* <div className='row'>
+                            <PlockrProfileEditComponent key={Math.random().toString()} data={this.state.reportDet} />
+                        </div> */}
                     </div>
                 </div></div>
-            );
-        }
-    
+        );
+    }
+
 }
 
 export default PlockrAppComponent;

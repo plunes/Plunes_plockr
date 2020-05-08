@@ -7,10 +7,11 @@
 
 .fit-content-width{
   width: fit-content !important;
+  margin: 2rem 1rem;
 }
 
 .color-white{
-  color:#fff;
+  margin-bottom: 4rem;
 }
 /* /Alka-css */
 .banner_img{background:#000;width:100%;height:700px;margin-top: 24px;}
@@ -130,7 +131,7 @@ span.pan {
         height: 107px;}
         .overlay.overlay2 {
             width: 154px;
-            height:112px;
+            height:0px;
             left: 15px;
         }
   .new_tec{padding-left: 22px;

@@ -223,6 +223,7 @@ class PlockrHeaderComponent extends Component {
                     </form>
                 </Modal>
                 <div className="navbar navbar-expand-lg navbar-light row">
+                <div className="navbar navbar-expand-lg navbar-light row plock_shdo">
                     <div className='col-md-3'>
                         <a href="/plockrapp" title='Home'> <img className="logo-img-sizeing" src="/logo.png" alt=".." /></a>
                     </div>
@@ -240,6 +241,7 @@ class PlockrHeaderComponent extends Component {
                         <button type="button" style={{ width: "100%!important" }} className="btn logout" onClick={this.handlelogout}>Logout</button>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }

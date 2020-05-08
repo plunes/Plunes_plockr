@@ -67,7 +67,7 @@ class PrescriptionHeaderComponent extends Component {
 
         return (
             <div className='container-fluid'>
-                <div className="navbar navbar-expand-lg navbar-light row">
+                <div className="navbar navbar-expand-lg navbar-light row back_ground">
                     <div className='col-md-3'>
                         <a href="/plockrapp" title='Home'> <img className="logo-img-sizeing" src="/logo.png" alt=".." /></a>
                     </div>

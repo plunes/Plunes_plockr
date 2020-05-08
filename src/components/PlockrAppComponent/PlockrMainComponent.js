@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Downloader from 'js-file-downloader';
 import axios from 'axios'
 import PlockrHeaderComponent from './PlockrHeaderComponent';
+import PlockrHeader from './PlockrHeader'
 
 class PlockrMainComponent extends Component {
     constructor(props) {
@@ -119,10 +120,11 @@ class PlockrMainComponent extends Component {
 
         if (this.state.showLogin) {
             return (
+               
                 <div className='container-fluid'>
-                    <div className="navbar navbar-expand-lg navbar-light ">
-                        <a href="/"> <img className="logo-img-sizeing" src="/logo.png" alt=".." /></a>
-                    </div>
+                   <div className="row">
+                       <PlockrHeader/>
+                       </div>
                     <div>
                         <br></br>
                         <h3 className='justify text-center headingTag'>Welcome to PLOCKR</h3>
@@ -177,7 +179,7 @@ class PlockrMainComponent extends Component {
                 <div>
                     <div className='container-fluid'>
                         <div className='container-fluid'>
-                            <div className="navbar navbar-expand-lg navbar-light row">
+                            <div className="navbar navbar-expand-md navbar-light row back_shado ">
                                 <div className='col-md-3'>
                                     <a href="/plockrapp" title='Home'> <img className="logo-img-sizeing" src="/logo.png" alt=".." /></a>
                                 </div>

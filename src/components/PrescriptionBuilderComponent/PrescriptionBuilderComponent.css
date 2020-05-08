@@ -155,8 +155,9 @@ textarea {
 
 .add-upload-logo{margin-left: 15px;}
 .breadcrumb-style{
-    margin-top: 6px !important;
+    margin-top: 25px !important;
 }
+.breadcrumb li a{color: #474747;}
 .uploadBtn1 {
     border: 1px solid  #818181 !important ;
     border-radius: 35px !important;
@@ -195,6 +196,7 @@ textarea {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #C9C8C8;
     opacity: 1;
+    margin-top: 20px;
 }
 .prescriptionField:focus{
 outline: none;
@@ -345,28 +347,14 @@ li.example {
     background: #01D35A;
     /* border: 1px solid #fff; */
 /* } */ 
-.chose_dr{text-align: center;margin-bottom: 50px;}
+.chose_dr{margin-top: 50px;}
 .Drlist{margin-top: 10%;}
-.dr_report img {
-    width: 68px !important;
-    border-radius: 50%;
-    height: 67px;
-    object-fit: cover;
-}
-    .dr_report {
-        display: flex;
-        border: 1px solid #E3E3E3;
-    padding: 15px;
-    }
-    .dr_content h4 {
-        font-size: 20px;
-        padding-top: 20px;
-        color: #474747;
-        font-weight: 500;
-        opacity: 1;
-    }
+
+  .back_ground{box-shadow: 0px 0px 6px #00000029;}
+    
     .dr_content {
-        padding-left: 15px;
+        position: relative;
+    top: -8px;
     }
     .dr_content h5 {
         font-size: 17px;
@@ -375,10 +363,7 @@ li.example {
         font-weight: 500;
     }
     .dr_mr{margin-top: 20px;}
-    .dr_report:hover{box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
-        -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
-        -moz-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
-        -ms-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);}
+    
         .dr_content a:hover{text-decoration: none;}
 
         @media only screen and (max-width: 600px) {

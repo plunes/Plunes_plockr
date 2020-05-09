@@ -148,17 +148,18 @@ class ContainerComponent extends React.PureComponent {
                 })
                 this.props.getReports()
             } catch (e) {
+                console.log({e})
                 if (e.response.data) {
                     this.setState({
-                        showError: true,
-                        errorText: e.response.data,
+                        showShareError: true,
+                        errorShareText: e.response.data.error,
                         uploading: false,
                         disabled: false
                     })
                 } else {
                     this.setState({
-                        showError: true,
-                        errorText: "Error uploading file",
+                        showShareError: true,
+                        errorShareText: "Error uploading file",
                         uploading: false,
                         disabled: false
                     })

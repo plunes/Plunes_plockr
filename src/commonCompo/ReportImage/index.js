@@ -3,7 +3,7 @@ import docstockimage from "../../images/dummy-doctor.jpg"
 import { InfoCircle, BoxArrowUp, XCircle } from 'react-bootstrap-icons'
 
 const style = {
-    svg : {
+    svg: {
         display: "inline-block",
         padding: "0 3px 0 3px",
         cursor: 'pointer'
@@ -22,13 +22,15 @@ const ReportImage = React.memo((props) => {
                     </div>
                     <div style={{ textAlign: "center" }}>
                         <div style={style.svg}>
-                            <InfoCircle onClick={e => props.showDetails(e, props.b)}/>
+                            <InfoCircle onClick={e => props.showDetails(e, props.b)} />
                         </div>
+                        {props.showShare ?
+                            <div style={style.svg}>
+                                <BoxArrowUp onClick={e => props.handleShare(e, props.b)} />
+                            </div>
+                            : ''}
                         <div style={style.svg}>
-                            <BoxArrowUp onClick={e => props.handleShare(e, props.b)}/>
-                        </div>
-                        <div style={style.svg}>
-                            <XCircle onClick={e => props.handleDelete(e, props.b)}/>
+                            <XCircle onClick={e => props.handleDelete(e, props.b)} />
                         </div>
                     </div>
                 </div>

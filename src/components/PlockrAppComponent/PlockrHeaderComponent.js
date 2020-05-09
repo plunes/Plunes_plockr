@@ -99,7 +99,7 @@ class PlockrHeaderComponent extends Component {
 
     async handleSubmit(e) {
         e.preventDefault();
-        if (this.state.file) {
+        if (this.state.file && this.state.reportDisplayName) {
             let token = localStorage.getItem('auth')
             this.setState({
                 pleaseWait: true,
@@ -109,10 +109,10 @@ class PlockrHeaderComponent extends Component {
             const data = new FormData();
             data.append('file', this.state.file)
             data.append('reportDisplayName', this.state.reportDisplayName)
-            data.append('userMobileNumber', this.state.mobileNumber)
-            data.append('remarks', this.state.remarks)
-            data.append('problemAreaDiagnosis', this.state.problemAreaDiagnosis)
-            data.append('precautions', this.state.precautions)
+            // data.append('userMobileNumber', this.state.mobileNumber)
+            // data.append('remarks', this.state.remarks)
+            // data.append('problemAreaDiagnosis', this.state.problemAreaDiagnosis)
+            // data.append('precautions', this.state.precautions)
 
             console.log(data, 'data')
             await axios.post('https://devapi.plunes.com/v5/report/', data, { headers: { 'Content-Type': 'multipart/form-data', "Authorization": `Bearer ${token}` } })
@@ -133,7 +133,7 @@ class PlockrHeaderComponent extends Component {
                 })
                 .catch((e) => {
                     console.log({ e })
-                    if (e.response.data) {
+                    if (typeof e.response.data == 'string') {
                         this.setState({
                             showError: true,
                             errorText: e.response.data,
@@ -152,7 +152,7 @@ class PlockrHeaderComponent extends Component {
         } else {
             this.setState({
                 showError: true,
-                errorText: "Please upload file"
+                errorText: "Please upload file and enter report name"
             })
         }
     }
@@ -189,15 +189,12 @@ class PlockrHeaderComponent extends Component {
                         </div>
                         <br />
                         <Form>
-                            <Form.Group controlId="formBasicPassword">
-                                <Form.Control type="number" placeholder="Patient's phone number" name="mobileNumber" onChange={this.handleInput} value={this.state.mobileNumber} />
-                            </Form.Group>
-
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Control type="text" name="reportDisplayName" placeholder="Enter report name" onChange={this.handleInput} value={this.state.reportDisplayName} />
                             </Form.Group>
-
-
+                            {/* <Form.Group controlId="formBasicPassword">
+                                <Form.Control type="number" placeholder="Patient's phone number" name="mobileNumber" onChange={this.handleInput} value={this.state.mobileNumber} />
+                            </Form.Group>
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Control type="text" placeholder="Problem Area Diagnosis" name="problemAreaDiagnosis" onChange={this.handleInput} value={this.state.problemAreaDiagnosis} />
                             </Form.Group>
@@ -206,7 +203,7 @@ class PlockrHeaderComponent extends Component {
                             </Form.Group>
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Control type="text" placeholder="Remarks" name="remarks" onChange={this.handleInput} value={this.state.remarks} />
-                            </Form.Group>
+                            </Form.Group> */}
                         </Form>
                         {this.state.uploading ?
                             <Spinner animation="grow" variant="success" /> : ''

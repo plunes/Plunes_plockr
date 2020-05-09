@@ -9,6 +9,10 @@
   width: fit-content !important;
 }
 
+.body {
+  font-size: 0.8rem;
+}
+
 .color-white{
   color:#fff;
 }

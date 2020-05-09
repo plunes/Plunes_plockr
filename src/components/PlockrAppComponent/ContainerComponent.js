@@ -6,6 +6,7 @@ import { Table, Button } from 'react-bootstrap'
 import { Modal as Modal2 } from 'react-bootstrap'
 import ReportImage from '../../commonCompo/ReportImage';
 import Loader from "react-loader-spinner"
+import { Form, Spinner } from 'react-bootstrap'
 
 class ContainerComponent extends React.PureComponent {
     constructor(props) {
@@ -122,8 +123,74 @@ class ContainerComponent extends React.PureComponent {
         })
     }
 
-    shareReport = (e) => {
+    shareReport = async (e) => {
+        e.preventDefault()
+        if (this.state.shareReportName && this.state.mobileNumber) {
+            try {
+                const data = {
+                    mobileNumber: this.state.mobileNumber,
+                    reportId: this.state.shareReportId,
+                    reportDisplayName: this.state.shareReportName,
+                    problemAreaDiagnosis: this.state.problemAreaDiagnosis,
+                    precautions: this.state.precautions,
+                    remarks: this.state.remarks
+                }
+                await axios.post('https://devapi.plunes.com/v5/report/sendReport', data, { 'headers': { 'Authorization': localStorage.getItem('auth') } })
+                this.setState({
+                    showShareError: false,
+                    errorShareText: '',
+                    showShareModal: false,
+                    shareReportId: '',
+                    shareReportName: '',
+                    problemAreaDiagnosis: '',
+                    precautions: '',
+                    remarks: '',
+                    mobileNumber: ''
+                })
+                this.props.getReports()
+            } catch (e) {
+                if (e.response.data) {
+                    this.setState({
+                        showError: true,
+                        errorText: e.response.data,
+                        uploading: false,
+                        disabled: false
+                    })
+                } else {
+                    this.setState({
+                        showError: true,
+                        errorText: "Error uploading file",
+                        uploading: false,
+                        disabled: false
+                    })
+                }
+            }
+        } else {
+            this.setState({
+                showShareError: true,
+                errorShareText: "Please enter patient's phone number and report name"
+            })
+        }
+    }
 
+    openShareModal = (e, f) => {
+        this.setState({
+            showShareModal: true,
+            shareReportName: f.reportDisplayName,
+            shareReportId: f._id
+        })
+    }
+
+    closeShareModal = () => {
+        this.setState({
+            showShareModal: false
+        })
+    }
+
+    handleInput = event => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     }
 
     render() {
@@ -250,6 +317,45 @@ class ContainerComponent extends React.PureComponent {
                         </div>
                     </Modal>
                     : ''}
+                {this.state.showShareModal ?
+                    <Modal
+                        isOpen={this.state.showShareModal}
+                        onRequestClose={this.closeShareModal}
+                        style={customStyles}
+                    >
+                        <h2 className="text-center">Share Report</h2>
+                        <br />
+                        <form onSubmit={this.shareReport}>
+                            <Form>
+                                <Form.Group controlId="formBasicEmail">
+                                    <Form.Control type="text" name="shareReportName" placeholder="Enter report name" onChange={this.handleInput} value={this.state.shareReportName} />
+                                </Form.Group>
+                                <Form.Group controlId="formBasicPassword">
+                                    <Form.Control type="number" placeholder="Patient's phone number" name="mobileNumber" onChange={this.handleInput} value={this.state.mobileNumber} />
+                                </Form.Group>
+                                <Form.Group controlId="formBasicPassword">
+                                    <Form.Control type="text" placeholder="Problem Area Diagnosis" name="problemAreaDiagnosis" onChange={this.handleInput} value={this.state.problemAreaDiagnosis} />
+                                </Form.Group>
+                                <Form.Group controlId="formBasicPassword">
+                                    <Form.Control type="text" placeholder="Precautions" name="precautions" onChange={this.handleInput} value={this.state.precautions} />
+                                </Form.Group>
+                                <Form.Group controlId="formBasicPassword">
+                                    <Form.Control type="text" placeholder="Remarks" name="remarks" onChange={this.handleInput} value={this.state.remarks} />
+                                </Form.Group>
+                            </Form>
+                            {this.state.showShareError ? <div style={{ color: 'red' }}>{this.state.errorShareText}</div> : ''}
+                            <div className='row'>
+                                <div className='col'>
+                                    <button className="uploader-button-modal" type="submit">Send</button>
+                                </div>
+                                <div className='col'>
+                                    <button type='button' className='send-button-modal' onClick={this.closeModal} >Close</button>
+                                </div>
+                            </div>
+                        </form>
+                    </Modal>
+                    : ''}
+
                 {(this.props.businessReceivedReports.length > 0 || this.props.businessSentReports.length > 0) ?
                     <div>
                         {/* <div className='text-center row'>
@@ -259,11 +365,11 @@ class ContainerComponent extends React.PureComponent {
                             <div className='col-md-1'>
                             </div>
                             <div className='col-md-5 colhead' onClick={(e) => this.handleReports('r')}>
-                                <li className='tabReport color-white cursor-pointer' >Sent</li>
+                                <li className='tabReport color-white cursor-pointer' >{`Uploaded (${this.props.businessReceivedReports.length})`}</li>
                                 <hr style={this.state.active ? greenStyle : greyStyle}></hr>
                             </div>
                             <div className='col-md-5 colhead' onClick={(e) => this.handleReports('s')}>
-                                <li className='tabReport color-white cursor-pointer' >Uploaded</li>
+                                <li className='tabReport color-white cursor-pointer' >{`Shared (${this.props.businessSentReports.length})`}</li>
                                 <hr style={this.state.active ? greyStyle : greenStyle}></hr>
                             </div>
                             <div className='col-md-1'>
@@ -272,10 +378,10 @@ class ContainerComponent extends React.PureComponent {
                         <ul className='fileContainer row'>
                             {
                                 this.state.showReceived ? this.props.businessReceivedReports.map((b, index) => (
-                                    <ReportImage handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.shareReport} />
+                                    <ReportImage showShare={true} handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.openShareModal} />
                                 ))
                                     : this.props.businessSentReports.map((b, index) => (
-                                        <ReportImage handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.shareReport} />
+                                        <ReportImage showShare={false} handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.openShareModal} />
                                     ))
                             }
                         </ul>

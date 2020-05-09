@@ -154,7 +154,6 @@ button:focus{
     background-color: #A9E9F3;
     padding-bottom: 13%;
     margin-top: 1px;
-z-index:-1;
 }
 .prescription-img1{
     width: 350px;

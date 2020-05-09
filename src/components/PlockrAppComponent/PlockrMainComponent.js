@@ -225,7 +225,7 @@ class PlockrMainComponent extends Component {
                                 </div>
                             </div>
                             <div className='col prescription-img'>
-                                <img className="prescription-img1" src="/prescription.png" alt="prescription" />
+                                <img className="prescription-img1" src="prescription.png" alt="prescription" />
                             </div>
                         </div>
                     </div>

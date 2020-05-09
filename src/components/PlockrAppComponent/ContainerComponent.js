@@ -349,7 +349,7 @@ class ContainerComponent extends React.PureComponent {
                                     <button className="uploader-button-modal" type="submit">Send</button>
                                 </div>
                                 <div className='col'>
-                                    <button type='button' className='send-button-modal' onClick={this.closeModal} >Close</button>
+                                    <button type='button' className='send-button-modal' onClick={this.closeShareModal} >Close</button>
                                 </div>
                             </div>
                         </form>

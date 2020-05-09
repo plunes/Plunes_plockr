@@ -294,7 +294,6 @@ input:-webkit-autofill:active {
       /* padding-top: 30px; */
       padding-left: 0px;
       padding-left: 0px !important;
-      border-right: 1px solid#B4B4B4;
       padding-right: 4px;
       background-color:#000;
       margin-right: -14px;

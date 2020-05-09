@@ -47,8 +47,7 @@ class ContainerComponent extends React.PureComponent {
             showFile: true
         }
         let stack = file.self ? this.props.businessSentReports : this.props.businessReceivedReports
-        console.log(this.state, "this.state in ComtainerComponent")
-
+        console.log(this.state, fileType, "this.state in ComtainerComponent")
         this.props.handleSelection(data, stack)
     }
 

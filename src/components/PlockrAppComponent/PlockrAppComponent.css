@@ -12,6 +12,14 @@ font-size: 16px;
 .colhead{
     padding: 0 !important;
 }
+.box{
+    width: 700px;
+    margin: auto !important;
+    height: auto;
+}
+.boxMod{
+    margin-top: 1%;
+}
 .prescription-button2{
     text-align: center;
     padding: 10px;

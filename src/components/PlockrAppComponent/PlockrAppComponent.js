@@ -5,6 +5,7 @@ import './PlockrAppComponent.css'
 import PlockrProfileEditComponent from './PlockrProfileEditComponent'
 import PlockrHeaderComponent from './PlockrHeaderComponent'
 import MyComponent from './MyComponent';
+import PDFViewer from 'pdf-viewer-reactjs'
 import Downloader from 'js-file-downloader';
 import search from "../../images/search.svg"
 import share from "../../images/share.svg"
@@ -167,10 +168,15 @@ class PlockrAppComponent extends React.PureComponent {
                                     !this.state.showFile ?
                                         '' :
                                         <div>
-                                            <div className='pdfContainer'>
-                                                <CornerstoneElement stack={this.state.stackElements} data={this.state.reportDet} imageId={this.state.reportDet.url} />
-                                                {/* <MyComponent className='viewFile' key={Math.random().toString()} data={this.state.reportDet} /> */}
-                                            </div>
+                                            {this.state.reportDet.type === 'pdf' ?
+                                                <div className="boxMod">
+                                                    <PDFViewer document={{ url: this.state.reportDet.url }} />
+                                                </div> :
+                                                <div className='pdfContainer'>
+                                                    <CornerstoneElement stack={this.state.stackElements} data={this.state.reportDet} imageId={this.state.reportDet.url} />
+                                                    {/* <MyComponent className='viewFile' key={Math.random().toString()} data={this.state.reportDet} /> */}
+                                                </div>
+                                            }
 
                                         </div>
                                 }

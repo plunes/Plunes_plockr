@@ -65,7 +65,7 @@ class PlockrMainComponent extends Component {
                     this.setState({
                         showLogin: false,
                     })
-                }else{
+                } else {
                     this.setState({
                         failed: true,
                         mobileNo: '',
@@ -89,7 +89,20 @@ class PlockrMainComponent extends Component {
     }
 
     async componentDidMount() {
-        if (localStorage.getItem('isAuth')) {
+        console.log(this.props.match.params.auth)
+        if (this.props.match.params.auth) {
+            const token = this.props.match.params.auth
+            axios.get('https://devapi.plunes.com/v5/user/whoami', { headers: { Authorization: token } }).then(res => {
+                console.log(res.data)
+                localStorage.setItem('auth', token)
+                localStorage.setItem('isAuth', true)
+                localStorage.setItem('uploaderUserId', res.data._id)
+                localStorage.setItem('docDetails', JSON.stringify(res.data))
+                this.setState({
+                    showLogin: false
+                })
+            })
+        } else if (localStorage.getItem('isAuth')) {
             this.setState({
                 showLogin: false
             })
@@ -120,11 +133,10 @@ class PlockrMainComponent extends Component {
 
         if (this.state.showLogin) {
             return (
-               
                 <div className='container-fluid'>
-                   <div className="row">
-                       <PlockrHeader/>
-                       </div>
+                    <div className="row">
+                        <PlockrHeader />
+                    </div>
                     <div>
                         <br></br>
                         <h3 className='justify text-center headingTag'>Welcome to PLOCKR</h3>
@@ -163,7 +175,7 @@ class PlockrMainComponent extends Component {
                         <div className='row'>
                             <div className='col-md-3'>
                             </div>
-                            <div className='col-md-6'>
+                            <div className='col-md-6' style={{ textAlign: "center" }}>
                                 <img src='/plockrimages.png' height='300' width='690'></img>
                             </div>
                             <div className='col-md-3'>
@@ -213,7 +225,7 @@ class PlockrMainComponent extends Component {
                                 </div>
                             </div>
                             <div className='col prescription-img'>
-                            <img className="prescription-img1" src="prescription.png" alt=".."/>
+                                <img className="prescription-img1" src="/prescription.png" alt="prescription" />
                             </div>
                         </div>
                     </div>

@@ -122,7 +122,7 @@ export default class App extends React.Component {
             {/* <Route exact path='/dentalcomplications' component={() => (<DentalComplicationsComponent/>)}/> */}
             <Route exact path='/rootcanal' component={() => (<RootCanalComponent />)} />
             <Route exact path='/teethwhitening' component={() => (<TeethWhiteningComponent />)} />
-            <Route exact path='/plockrapp' component={() => (<PlockrMainComponent />)} />
+            <Route exact path='/plockrapp/:auth?' component={PlockrMainComponent} />
             <Route exact path='/plockr-dashboard' component={() => (<PlockrAppComponent />)} />
             <Route exact path='/plockr-uploader' component={() => (<PlockrUploaderComponent />)} />
             <Route exact path='/plockr_profile_edit' render={(props) => <PlockrProfileEditComponent {...props} />} />

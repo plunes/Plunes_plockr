@@ -24,7 +24,7 @@
 }
 
 .color-white{
-  color:#fff !important;
+  color:#B9B9B9 !important;
 }
 
 .cursor-pointer{
@@ -40,7 +40,7 @@
   display: inline;
 }
 
-.hme{color:#474747;margin-top: 9%;font-weight: 400;padding-left: 33px;cursor: pointer;}
+
 .plo{color:#06DF86 !important;}
 .plo:hover{color:#06DF86;}
 
@@ -55,7 +55,7 @@
 span.active-green {
    color: #01d35a !important;
    transform: scaleX(1.4) scaleY(1.6) ;
-   box-shadow: 0 1rem 2rem rgba($color-black,.2);
+   box-shadow: 0 1rem 2rem rgba(.2);
 }
 
 .b-relative-5 {

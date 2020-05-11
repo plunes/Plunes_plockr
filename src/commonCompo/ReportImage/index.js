@@ -13,9 +13,9 @@ const style = {
 const ReportImage = React.memo((props) => {
     console.log(props, "props in ReportImage")
     return (
-        <div style={{ position: 'relative', maxHeight: "250px" }} className='fileList ' key={Math.random().toString()}>
+        <div style={{ position: 'relative', maxHeight: "150px" }} className='fileList ' key={Math.random().toString()}>
             <li className='headTab trendingBox' key={Math.random().toString()} data-url={props.b.reportUrl} data-filename={props.b.reportName} data-id={props._id} onClick={(e) => props.handleClick(e, props.b)}>
-                <img className={props.index / 2 == 0 ? 'file-report-img img_change' : 'file-report-img '} src={props.b.reportThumbnail} height='112' width='100%' onError={(e) => { e.target.onerror = null; e.target.src = "/screenshot.svg" }}></img>
+                <img className={props.index / 2 == 0 ? 'file-report-img img_change' : 'file-report-img '} src={props.b.reportThumbnail} height='112' width='100%' style={{maxHeight: '150px'}} onError={(e) => { e.target.onerror = null; e.target.src = "/screenshot.svg" }}></img>
                 <div className='overlay'>
                     <div class="text">
                         <p className='fileName'>{props.b.reportDisplayName.slice(0, 31) + (props.b.reportDisplayName.charAt(32) ? '...' : '')}</p>

@@ -327,7 +327,8 @@ input:-webkit-autofill:active {
       padding: 5%;
       width: 50%;
       display: inline-block;
-      height: 33%;
+      height: auto;
+      position: relative;
     }
     .selectSpeciality{
         width: 98%;

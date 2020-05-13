@@ -1,18 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ContainerComponent from './ContainerComponent'
 import axios from 'axios'
 import './PlockrAppComponent.css'
 import PlockrProfileEditComponent from './PlockrProfileEditComponent'
 import PlockrHeaderComponent from './PlockrHeaderComponent'
-import MyComponent from './MyComponent';
 import PDFViewer from 'pdf-viewer-reactjs'
 import Downloader from 'js-file-downloader';
-import search from "../../images/search.svg"
-import share from "../../images/share.svg"
-import rotate from "../../images/rotate.svg"
-import rectangle from "../../images/rectangle.svg"
-import annote from "../../images/annote.svg"
-import aero from "../../images/aero.svg"
 import Loader from "react-loader-spinner"
 import CornerstoneElement from '../Viewer'
 // import dummySvg from "../../images/dummy.svg"
@@ -44,10 +37,7 @@ class PlockrAppComponent extends React.PureComponent {
         this.handleSelection = this.handleSelection.bind(this);
         this.handleDownload = this.handleDownload.bind(this);
     }
-
-
     async handleDownload() {
-
         const res = await axios.get('https://plunes.co/v4/installer/' + localStorage.getItem('uploaderUserId'));
         if (res.status === 201) {
             new Downloader({
@@ -182,18 +172,24 @@ class PlockrAppComponent extends React.PureComponent {
                                 }
                             </div>
                             <div className='col-md-3'>
-                                <ContainerComponent toggleLoading={() => this.toggleLoading()} handleSelection={this.handleSelection}
-                                    businessSentReports={this.state.businessSentReports || []}
-                                    businessReceivedReports={this.state.businessReceivedReports || []}
-                                    getReports={this.getReports}
+                                <ContainerComponent
+                                 toggleLoading={() => this.toggleLoading()}
+                                 handleSelection={this.handleSelection}
+                                 businessSentReports={this.state.businessSentReports || []}
+                                 businessReceivedReports={this.state.businessReceivedReports || []}
+                                 getReports={this.getReports}
                                 />
                             </div>
 
                         </div>
-                        {/* <div className='row'>
-                            <PlockrProfileEditComponent key={Math.random().toString()} data={this.state.reportDet} />
-                        </div> */}
+                      
                     </div>
+                     <div className='row'>
+                                <PlockrProfileEditComponent 
+                                key={Math.random().toString()} 
+                                data={this.state.reportDet} 
+                                />
+                        </div>
                 </div></div>
         );
     }

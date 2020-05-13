@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router'
 import Modal from 'react-modal';
+import ReportDetails from "../Functional/ReportDetails"
+import NotifFunc from '../Functional/NotifFunc';
 
 const customStyles = {
     content: {
@@ -20,7 +22,7 @@ class PlockrProfileEditComponent extends Component {
         this.state = {
             userId: localStorage.getItem('uploaderUserId'),
             reportId: '',
-            patientMobileNumber: '',
+            phone: '',
             problemAreaDiagnosis: '',
             reasonDiagnosis: '',
             consumptionDiet: '',
@@ -33,11 +35,25 @@ class PlockrProfileEditComponent extends Component {
             speciality: '',
             reportName: '',
             test: '',
-            specialities: []
+            specialities: [],
+            error:false,
+            success:false
         }
         this.handleLogout = this.handleLogout.bind(this)
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handlePhoneChange = (e)=>{
+        let str = e.target.value
+        console.log(str.substring(0,3)," str.substring(0,2) in handlePhoneChange ")
+        if(str.substring(0,3)==='+91'){
+            
+        }else{
+            str = '+91'+e.target.value
+        }
+        this.setState({
+                phone:str
+        })
     }
 
     componentDidMount() {
@@ -61,7 +77,7 @@ class PlockrProfileEditComponent extends Component {
     handleLogout(e) {
         e.preventDefault();
         let token = localStorage.getItem('auth');
-        axios.post('https://plunes.co/v4/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.post('https://devapi.plunes.com/v5/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then((response) => {
                 localStorage.removeItem('auth');
                 localStorage.removeItem('isAuth');
@@ -75,35 +91,49 @@ class PlockrProfileEditComponent extends Component {
             })
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
+    handleSubmit(data) {
         let body = {
             userId: this.state.userId,
             self: false,
             reportId: this.state.reportId,
+            ...data
+            // consumptionDiet: this.state.consumptionDiet,
             // specialityId: this.state.speciality,
             // patientMobileNumber: this.state.patientMobileNumber.trim(),
             // problemAreaDiagnosis: this.state.problemAreaDiagnosis,
-            reasonDiagnosis: this.state.reasonDiagnosis,
-            // consumptionDiet: this.state.consumptionDiet,
             // avoidDiet: this.state.avoidDiet,
             // precautions: this.state.precautions,
             // medicines: this.state.medicines,
-            remarks: this.state.remarks,
             // reportName: this.state.reportName,
             // test: this.state.test,
+           
         }
-        // console.log(body, 'body')
+        console.log(body, 'body before Submit')
         let token = localStorage.getItem('auth')
-        axios.put('https://plunes.co/v4/report', body, { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.put('https://devapi.plunes.com/v5/report/', body, { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then(res => {
                 this.setState({
-                    modalIsOpen: true
+                    modalIsOpen: true,
+                    // success:{
+                    //     message:"Report Sucessfully sent"
+                    // }
                 })
             })
-            .catch((e) => {
-                console.log(e)
-                alert('Not Sent!!! Please Check Plunes Patient Phone Number ....')
+            .catch((error) => {
+                console.log(error,"error in api")
+                console.log(error.response,"error.response in api")
+                if(!!error.response.data){
+                    this.setState({
+                        error:{
+                            message:error.response.data.error?error.response.data.error:'Some error from the api'
+                        }
+                    })
+                }else{
+                    console.log("No response body from api")
+                }
+                
+                console.log(error.response,"error in Catch Block")
+                // alert('Not Sent!!! Please Check Plunes Patient Phone Number ....')
             }
             )
     }
@@ -114,8 +144,15 @@ class PlockrProfileEditComponent extends Component {
         })
     }
 
+    closeModal = ()=>{
+        this.setState({
+            modalIsOpen:false
+        })
+    }
+
     render() {
-        const { showLogin } = this.state;
+        console.log(this.state,"state in ProfileEditComponent")
+        const { showLogin, remarks, reasonDiagnosis, phone, reportId } = this.state;
         if (showLogin) {
             return <Redirect to={{
                 pathname: "/plockrapp",
@@ -123,10 +160,15 @@ class PlockrProfileEditComponent extends Component {
         } else {
             return (
                 <div className='container-fluid'>
+                    <NotifFunc
+                    error = {this.state.error}
+                    success={this.state.success}
+                    clearError = {()=>this.setState({error:false, success:false})}
+                    />
                     <div className='row profile-row-align '>
                         <Modal
                             isOpen={this.state.modalIsOpen}
-                            onAfterOpen={this.afterOpenModal}
+                            onAfterOpen={()=>console.log()}
                             onRequestClose={this.closeModal}
                             style={customStyles}
                             contentLabel="Example Modal">
@@ -144,59 +186,22 @@ class PlockrProfileEditComponent extends Component {
                                 <div className='col'>
                                 </div>
                                 <div className='col'>
-                                    <a type='button' className="btn model-button2" href='/plockr-dashboard'>OK</a>
+                                    <span type='button' className="btn model-button2" onClick={()=>this.setState({modalIsOpen:false})}>OK</span>
                                 </div>
                                 <div className='col'>
                                 </div>
                             </div>
                         </Modal>
-                        <div className='col-md-2'>
-                        </div>
-                        <div className='col-md-10'>
-                            <form onSubmit={this.handleSubmit}>
-                                {/* <div className="form-group selectSpeciality">
-                                    <select className="form-control plockr-app-form" onChange={this.handleChange} name='speciality' required >
-                                        <option value=''>Speciality</option>
-                                        {
-                                            this.state.specialities.map((speciality, index) => (
-                                                <option value={speciality.id} key={index}>{speciality.name}</option>
-                                            ))
-                                        }
-                                    </select>
-                                </div><br></br> */}
-                                <div className='row'>
-                                   
-                                        {/* <div className="form-group">
-                                            <textarea className="form-control plockr-app-form" placeholder="Report Name" name='reportName' onChange={this.handleChange} value={this.state.reportName}></textarea>
-                                        </div><br></br> */}
-                                        <div className="form-group col-lg-6 col-md-6">
-                                            <textarea className="form-control plockr-app-form" placeholder="Diagnosis" name='reasonDiagnosis' onChange={this.handleChange}></textarea>
-                                        </div><br />
-                                        <div className="form-group col-lg-6 col-md-6">
-                                            <textarea className="form-control plockr-app-form" placeholder="Remarks" name='remarks' onChange={this.handleChange}></textarea>
-                                        </div><br /> 
-                                        <div className="form-group col-lg-6 col-md-6">
-                                       <textarea className="form-control plockr-app-form" placeholder="123-45-678" rows="2" name='phone' onChange={this.handleChange}></textarea>
-                                      </div><br></br>
-                                        {/* <div className="form-group">
-                                            <textarea className="form-control plockr-app-form" placeholder="Enter Patient's Mobile Number" name='patientMobileNumber' onChange={this.handleChange} required></textarea>
-                                        </div><br></br> */}
-                                        {/* <div className="form-group">
-                                            <textarea className="form-control plockr-app-form" placeholder="Problem Area (Diagnosis)" name='problemAreaDiagnosis' onChange={this.handleChange} ></textarea>
-                                        </div><br></br> */}
-                                        {/* <div className="form-group">
-                                            <textarea className="form-control plockr-app-form" placeholder="Precautions" name='precautions' onChange={this.handleChange}></textarea>
-                                        </div><br></br> */}
-                                        <div className='col-md-6'>
-                                        <button type="submit" className="btn profile-button pstion_sb">Submit</button>
-                                        </div>
-                                        <div className='col-md-6'>
-                                        <a className="btn profile-button2 display-inline" href='/plockr-dashboard'>Cancel</a>
-                                        </div>
-                                       
-                                    
-                                </div>
-                            </form>
+                        <div className='col-md-7'>
+                            <ReportDetails 
+                                remarks = {remarks}
+                                phone= {phone}
+                                reasonDiagnosis = {reasonDiagnosis}
+                                reportId = {reportId}
+                                handleChange = {this.handleChange}
+                                handleSubmit  = {this.handleSubmit}
+                                handlePhoneChange = {this.handlePhoneChange}
+                            />
                         </div>
                     </div>
                 </div>

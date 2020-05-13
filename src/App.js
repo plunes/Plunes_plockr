@@ -70,6 +70,7 @@ import BlogPost from './components/blog/genericBlogComponent';
 import CovidComponent from './components/LandingComponent/CovidComponent';
 import ThankyouComponent from './components/LandingComponent/ThankyouComponent';
 import NotFoundPage from './components/LandingComponent/404';
+import { ToastProvider } from 'react-toast-notifications'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -78,6 +79,7 @@ export default class App extends React.Component {
   render() {
     const App = () => (
       <div className='container-fluid'>
+        <ToastProvider>
         <BrowserRouter>
           <Switch>
             <Route exact path='/' component={() => (<LandingPage root={this.root} />)} />
@@ -154,6 +156,7 @@ export default class App extends React.Component {
             <Route path='*' component={NotFoundPage} />
           </Switch>
         </BrowserRouter>
+        </ToastProvider>
       </div>
     )
     return (

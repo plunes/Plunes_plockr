@@ -503,7 +503,13 @@ p.covidPara {
             width: 41px;font-size: 46px;padding: 14px 13px 18px 14px;}
             .bg_sect_pro .owl-nav button span{margin: 0px 9px 0;
                 display: inline-block;}
-                .trendingBox img{padding: 0px 60px 0px 77px;
+                .trendingBox {
+                    object-fit: cover;
+                    
+                }
+                .trendingBox img{
+                 padding: 0px 60px 0px 77px;
+                 height: 10rem !important;
                 }
         /* footer-section */
         .giphi_sec {

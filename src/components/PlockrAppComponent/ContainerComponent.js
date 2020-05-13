@@ -378,10 +378,10 @@ class ContainerComponent extends React.PureComponent {
                         <ul className='fileContainer row'>
                             {
                                 this.state.showReceived ? this.props.businessReceivedReports.map((b, index) => (
-                                    <ReportImage showShare={true} handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.openShareModal} />
+                                <ReportImage showShare={true} handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.openShareModal} />
                                 ))
                                     : this.props.businessSentReports.map((b, index) => (
-                                        <ReportImage showShare={false} handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.openShareModal} />
+                                 <ReportImage showShare={false} handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.openShareModal} />
                                     ))
                             }
                         </ul>

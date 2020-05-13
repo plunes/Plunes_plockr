@@ -103,12 +103,13 @@ class CornerstoneElement extends React.Component {
     // Enable the DOM Element for use with Cornerstone
      cornerstone.enable(element);
     // Load the first image in the stack
-    const ext = path.extname(this.state.imageId);
+    const ext = path.extname(imageUrl);
     console.log('sss'+ ext);
     var url =imageUrl;
-    if(ext ==='.dcm'){
-      url ='wadouri:'+this.state.imageId
+    if(ext.slice(0, 4) ==='.dcm'){
+      url ='wadouri:'+imageUrl
     }
+    console.log('dcm file mmmm '+ url);
     cornerstone.loadImage(url).then(image => {
       // Display the first image
       cornerstone.displayImage(element, image);
@@ -156,9 +157,6 @@ class CornerstoneElement extends React.Component {
     //cornerstoneTools.setToolActive("ZoomMouseWheel", {});
     cornerstoneTools.setToolActive("ZoomTouchPinch", {});
   }
-
-
-
 
   switchAnnotationHandlar=()=>{
      this.setState(
@@ -223,7 +221,6 @@ class CornerstoneElement extends React.Component {
     );
   }
 }
-
 
 export default CornerstoneElement;
 

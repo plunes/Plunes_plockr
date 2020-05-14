@@ -26,7 +26,7 @@ export default class LandingFooter extends Component {
     
     return (
       
-      <div class="footer">
+      <div class="">
         <div class="container-fluid foter_colour_section">
           <div className="container-fluid">
             <div class="row">
@@ -34,7 +34,7 @@ export default class LandingFooter extends Component {
               </div>
               <div className="col-sm-2 col-md-4 col-lg-2">
                 <div className="row">
-                <div className="col-6 col-md-6 logo_fto">
+                <div className="col-6 col-md-9 logo_fto">
                   <a href="/" title="home" >
                     <img className="responsive-logo" src="/logo.png" alt=".."/>
                   </a>
@@ -118,7 +118,7 @@ export default class LandingFooter extends Component {
             <div className="row footer-alignment ">
               <div className="col-sm-5"></div>
               <div className="col-sm-2 col-md-12">
-                <h3 className="procedure-text ">COMMON PROCEDURES</h3><hr width="60%"></hr>
+                <h3 className="procedure-text ">COMMON PROCEDURES</h3><hr width="60%"className="comn_proces_bor"></hr>
 
               </div>
               <div className="col-sm-5">

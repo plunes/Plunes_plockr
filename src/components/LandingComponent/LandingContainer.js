@@ -151,17 +151,18 @@ class LandingContainer extends React.Component {
             {/* mobile-design-end */}
              {/* Desk-top-design */}
                 <section className="covid_bnr">
-                <div className="container-fluid ">
+                <div className="container">
                 <div className="covid">
                 <div className="row CovidContent">
-                    <div className="col-sm-1 col-1"></div>
                     <div className="col-sm-6 col-9 col-lg-6 covid_mar">
                         <p className="covidInfo1">COVID-19 Test now available
                             <br/> with PLUNES!</p>
                         <p className="covidPara">Upto <b>50%</b> off in public interest!</p>
                         <p className="covidPara">Home Collection Available, No Hassle!</p>
                         <p className="covidPara lastPara">24/7 Helpline No. : <b>+91-7701805081</b></p><a href="/covid19-test" className="covidTest">Book now</a></div>
-                    <div className="col-sm-5 col-2"></div>
+                    <div className="col-5 col-sm-6 col-lg-5">
+                     <img src="/mobile_hum.svg" className="human_bnr"/>
+                    </div>
                 </div>
             </div>
             </div>

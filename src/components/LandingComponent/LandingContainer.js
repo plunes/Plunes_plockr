@@ -131,7 +131,7 @@ class LandingContainer extends React.Component {
                 {/* <!-- <banner-start> --> */}
                 {/* mobile-design */}
                 <section className="mobile_banner">
-                <div className="container-fluid ">
+                <div className="container">
                 <div className="covid_mobile">
                 <div className="row">
                     <div className="col-sm-6 col-7 cvd_cont">
@@ -160,7 +160,7 @@ class LandingContainer extends React.Component {
                         <p className="covidPara">Upto <b>50%</b> off in public interest!</p>
                         <p className="covidPara">Home Collection Available, No Hassle!</p>
                         <p className="covidPara lastPara">24/7 Helpline No. : <b>+91-7701805081</b></p><a href="/covid19-test" className="covidTest">Book now</a></div>
-                    <div className="col-5 col-sm-6 col-lg-5">
+                    <div className="col-5 col-sm-6 col-lg-5 col-md-5">
                      <img src="/mobile_hum.svg" className="human_bnr"/>
                     </div>
                 </div>

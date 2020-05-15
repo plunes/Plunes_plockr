@@ -1,5 +1,5 @@
 import React from 'react';
-import './Landing.css';
+//import './Landing.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import { Redirect } from 'react-router'

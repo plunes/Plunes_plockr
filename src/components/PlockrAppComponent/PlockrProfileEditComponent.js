@@ -34,6 +34,7 @@ class PlockrProfileEditComponent extends Component {
             modalIsOpen: false,
             speciality: '',
             reportName: '',
+            mobileNumber: '',
             test: '',
             specialities: [],
             error:false,
@@ -95,8 +96,12 @@ class PlockrProfileEditComponent extends Component {
         let body = {
             userId: this.state.userId,
             self: false,
+            mobileNumber: this.state.phone,
             reportId: this.state.reportId,
-            ...data
+           // reportDisplayName: this.state.reportName,
+            problemAreaDiagnosis: this.state.reasonDiagnosis,
+            precautions: this.state.precautions,
+            remarks: this.state.remarks
             // consumptionDiet: this.state.consumptionDiet,
             // specialityId: this.state.speciality,
             // patientMobileNumber: this.state.patientMobileNumber.trim(),
@@ -110,8 +115,9 @@ class PlockrProfileEditComponent extends Component {
         }
         console.log(body, 'body before Submit')
         let token = localStorage.getItem('auth')
-        axios.put('https://devapi.plunes.com/v5/report/', body, { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.post('https://devapi.plunes.com/v5/report/sendReport', body, { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then(res => {
+                console.log(res)
                 this.setState({
                     modalIsOpen: true,
                     // success:{

@@ -129,7 +129,7 @@ class ContainerComponent extends React.PureComponent {
                 const data = {
                     mobileNumber: this.state.mobileNumber,
                     reportId: this.state.shareReportId,
-                    reportDisplayName: this.state.shareReportName,
+                   // reportDisplayName: this.state.shareReportName,
                     problemAreaDiagnosis: this.state.problemAreaDiagnosis,
                     precautions: this.state.precautions,
                     remarks: this.state.remarks

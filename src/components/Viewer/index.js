@@ -109,7 +109,8 @@ class CornerstoneElement extends React.Component {
     if(ext.slice(0, 4) ==='.dcm'){
       url ='wadouri:'+imageUrl
     }
-    console.log('dcm file mmmm '+ url);
+   // url ='wadouri:'+imageUrl;
+    console.log('file url is  '+ url);
     cornerstone.loadImage(url).then(image => {
       // Display the first image
       cornerstone.displayImage(element, image);
@@ -157,6 +158,9 @@ class CornerstoneElement extends React.Component {
     //cornerstoneTools.setToolActive("ZoomMouseWheel", {});
     cornerstoneTools.setToolActive("ZoomTouchPinch", {});
   }
+
+
+
 
   switchAnnotationHandlar=()=>{
      this.setState(

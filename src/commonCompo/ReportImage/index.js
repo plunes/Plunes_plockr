@@ -23,7 +23,7 @@ const ReportImage = React.memo((props) => {
                  ></img>
                 <div className='overlay'>
                     <div class="text">
-                        <p className='fileName'>{props.b.reportDisplayName.slice(0, 31) + (props.b.reportDisplayName.charAt(32) ? '...' : '')}</p>
+                       {/* <p className='fileName'>{props.b.reportDisplayName.slice(0, 31) + (props.b.reportDisplayName.charAt(32) ? '...' : '')}</p> */}
                     </div>
                     <div style={{ textAlign: "center" }}>
                         <div style={style.svg}>

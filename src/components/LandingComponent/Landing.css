@@ -110,6 +110,7 @@
   .covid_bnr{background-color: #d7f4f7}
   img.human_bnr {
     width: 27rem;
+    margin-top: 2rem;
 }
   .covidTest{
     color: white !important;

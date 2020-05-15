@@ -1,7 +1,7 @@
 import React from 'react';
 import ContainerComponent from './ContainerComponent'
 import axios from 'axios'
-import './PlockrAppComponent.css'
+//import './PlockrAppComponent.css'
 import PlockrProfileEditComponent from './PlockrProfileEditComponent'
 import PlockrHeaderComponent from './PlockrHeaderComponent'
 import PDFViewer from 'pdf-viewer-reactjs'
@@ -144,7 +144,6 @@ class PlockrAppComponent extends React.PureComponent {
         }
 
         return (
-
             <div>
                 <div className='container-fluid'>
                     <div className='row'>
@@ -191,8 +190,11 @@ class PlockrAppComponent extends React.PureComponent {
                                 />
                         </div>
                 </div></div>
+                
         );
+      
     }
+    
 
 }
 

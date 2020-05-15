@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Redirect } from 'react-router'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import Downloader from 'js-file-downloader';
 
 class PrescriptionHeaderComponent extends Component {
@@ -69,15 +69,19 @@ class PrescriptionHeaderComponent extends Component {
             <div className='container-fluid'>
                 <div className="navbar navbar-expand-lg navbar-light row back_ground">
                     <div className='col-md-3'>
-                        <a href="/plockrapp" title='Home'> <img className="logo-img-sizeing" src="/logo.png" alt=".." /></a>
+                        <Link to="/plockrapp"
+                        >
+                         <img className="logo-img-sizeing" src="/logo.png" alt=".." /></Link>
                     </div>
                     <div className='col-md-3 text-right'>
                     </div>
                     <div className='col-md-2'></div>
                     <div className='col-md-2 text-right'>
-                        <a href="/plockr-dashboard">
+                        <Link
+                        to="/plockr-dashboard"
+                        >
                             <button type="button" className="btn builder-button">Create Report</button>
-                        </a>
+                            </Link>
                     </div>
                     {/* <div className='col-md-2 text-right'>
                         <button type="button" className="btn builder-button" onClick={this.handleDownload}>Download PLOCKR</button>

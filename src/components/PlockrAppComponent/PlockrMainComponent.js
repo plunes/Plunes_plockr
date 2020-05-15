@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Downloader from 'js-file-downloader';
+import { Link } from "react-router-dom"
 import axios from 'axios'
 import PlockrHeaderComponent from './PlockrHeaderComponent';
 import PlockrHeader from './PlockrHeader'
@@ -193,7 +194,10 @@ class PlockrMainComponent extends Component {
                         <div className='container-fluid'>
                             <div className="navbar navbar-expand-md navbar-light row back_shado ">
                                 <div className='col-md-3'>
-                                    <a href="/plockrapp" title='Home'> <img className="logo-img-sizeing" src="/logo.png" alt=".." /></a>
+                                <Link
+                                  to ="/plockrapp">
+                                <img className="logo-img-sizeing" src="/logo.png" alt=".." />
+                                </Link>
                                 </div>
                                 <div className='col-md-7'>
                                 </div>
@@ -212,14 +216,20 @@ class PlockrMainComponent extends Component {
                                 <div className='row'>
                                     <div className='col-sm-2'></div>
                                     <div className='col-sm-8'>
-                                        <button className="prescription-button2"> <a href='/prescription_builder'>Prescriptions</a></button>
+                                        <button className="prescription-button2">
+                                        <Link
+                                  to ="/prescription_builder">
+                                        Prescriptions</Link></button>
                                     </div>
                                     <div className='col-sm-2'></div>
                                 </div>
                                 <div className='row'>
                                     <div className='col-sm-2'></div>
                                     <div className='col-sm-8'>
-                                        <button className="prescription-button"><a href='/plockr-dashboard'>Diagnostic Reports</a></button>
+                                        <button className="prescription-button">
+                                        <Link
+                                  to ="/plockr-dashboard">
+                                    Diagnostic Reports</Link></button>
                                     </div>
                                     <div className='col-sm-2'></div>
                                 </div>

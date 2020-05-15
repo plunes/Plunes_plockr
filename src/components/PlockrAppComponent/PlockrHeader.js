@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import './plockrhader.css'
 
 
@@ -13,7 +13,10 @@ class PlockrHeader extends Component {
                 <header className="backgrou_headr">
             <div className="navbar navbar-expand-md navbar-light row">
                 <div className='col-md-3'>
-                    <a href="/plockrapp" title='Home'> <img className="logo-img-sizeing" src="/logo.png" alt=".." /></a>
+                    <Link 
+                    to="/plockapp">
+                  <img className="logo-img-sizeing" src="/logo.png" alt=".." />
+                   </Link>
                 </div>
                 <div className='col-md-5'>
                 </div>
@@ -21,8 +24,7 @@ class PlockrHeader extends Component {
             </div>
             </header>
         </div>
-       
-
+    
 
             );
         }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Downloader from 'js-file-downloader';
 import axios from 'axios'
 import { Redirect } from 'react-router'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import Modal from 'react-modal';
 import { Form, Button, Spinner } from 'react-bootstrap'
 
@@ -222,7 +222,10 @@ class PlockrHeaderComponent extends Component {
              
                 <div className="navbar navbar-expand-lg navbar-light row plock_shdo">
                     <div className='col-md-3'>
-                        <a href="/plockrapp" title='Home'> <img className="logo-img-sizeing" src="/logo.png" alt=".." /></a>
+                    <Link 
+                    to="/plockrapp"
+                    >
+                     <img className="logo-img-sizeing" src="/logo.png" alt=".." /></Link>
                     </div>
                     <div className='col-md-4'>
                     </div>
@@ -230,9 +233,11 @@ class PlockrHeaderComponent extends Component {
                         <button type="button" className="btn builder-button" onClick={this.openModal}>Upload Report</button>
                     </div>
                     <div className='col-md-2'>
-                        <a href="/prescription_builder">
+                        <Link 
+                        to= "/prescription_builder"
+                        >
                             <button type="button" className="btn builder-button">Create Prescription</button>
-                        </a>
+                      </Link>
                     </div>
                     <div className='col-md-1'>
                         <button type="button" style={{ width: "100%!important" }} className="btn logout" onClick={this.handlelogout}>Logout</button>

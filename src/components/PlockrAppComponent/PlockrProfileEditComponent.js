@@ -62,16 +62,16 @@ class PlockrProfileEditComponent extends Component {
             reportId: this.props.data.id,
             reportName: this.props.data.fileName
         })
-        let specialities = JSON.parse(localStorage.getItem('specialities'))
-        let speciality = specialities.filter((s) => {
-            if (s.name === 'Radiologists' || s.name === 'Pathologists') {
-                return true
-            } else {
-                return false
-            }
-        })
+        // let specialities = JSON.parse(localStorage.getItem('specialities'))
+        // let speciality = specialities.filter((s) => {
+        //     if (s.name === 'Radiologists' || s.name === 'Pathologists') {
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+        // })
         this.setState({
-            specialities: speciality
+            specialities: []
         })
     }
 

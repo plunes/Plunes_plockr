@@ -380,9 +380,12 @@ class ContainerComponent extends React.PureComponent {
                                 this.state.showReceived ? this.props.businessReceivedReports.map((b, index) => (
                                 <ReportImage showShare={true} handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.openShareModal} />
                                 ))
-                                    : this.props.businessSentReports.map((b, index) => (
-                                 <ReportImage showShare={false} handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.openShareModal} />
-                                    ))
+                                    : this.props.businessSentReports.map((b, index) => {
+                                        console.log(b,"b Inside Send  Report ")
+                                        return (
+                                            <ReportImage showShare={false} handleClick={this.handleClick} b={b} index={index} showDetails={this.showDetails} handleDelete={this.openDeleteModal} handleShare={this.openShareModal} />
+                                               )
+                                    })
                             }
                         </ul>
                     </div> : ''

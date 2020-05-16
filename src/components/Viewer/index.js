@@ -34,9 +34,12 @@ cornerstoneTools.external.Hammer = Hammer;
   };
 
   const mobileDivStyle = {
-    width: "100%",
-    height: "100vh",
-    position: "relative"
+    backgroundColor: "black",
+    color:"green",
+     width: "100wh",
+     height: "80vh",
+    position: "relative",
+    margin:"20px"
   };
   
   const bottomLeftStyle = {
@@ -69,11 +72,13 @@ cornerstoneTools.external.Hammer = Hammer;
   } ;
 
 class CornerstoneElement extends React.Component {
+
+
   constructor(props) {
     super(props);
     this.state = {
      // stack:{StackElement},
-      viewport: cornerstone.getDefaultViewport(null, undefined),
+      viewport: cornerstone.getDefaultViewport(null,undefined),
       imageId: null,
       isEnableAnnotEvent:false,
       isEnablePanEvent:false,
@@ -191,6 +196,7 @@ class CornerstoneElement extends React.Component {
         laoding:false
       })
       cornerstone.displayImage(element, image);
+      
       let data  = this.props.stack
       let stackElements = []
       data.forEach(item=>{
@@ -204,9 +210,18 @@ class CornerstoneElement extends React.Component {
       cornerstoneTools.addToolState(element, 'stack', stack);
     });
     const WwwcTool = cornerstoneTools.WwwcTool;
-    const StackScrollTool = cornerstoneTools.StackScrollTool;
-    cornerstoneTools.addTool(WwwcTool);
-    cornerstoneTools.addTool(StackScrollTool);
+    const PanTool = cornerstoneTools.PanTool;
+    const PanMultiTouchTool = cornerstoneTools.PanMultiTouchTool;
+    const ZoomTool = cornerstoneTools.ZoomTool;
+    const ZoomTouchPinchTool = cornerstoneTools.ZoomTouchPinchTool;
+    const RotateTool = cornerstoneTools.RotateTool;
+    cornerstoneTools.addTool(PanTool);
+    cornerstoneTools.addTool(ZoomTool);
+    cornerstoneTools.addTool(PanMultiTouchTool);
+    cornerstoneTools.addTool(ZoomTouchPinchTool);
+    cornerstoneTools.addTool(RotateTool);
+    cornerstoneTools.setToolActive("PanMultiTouch", {});
+    cornerstoneTools.setToolActive("ZoomTouchPinch", {});
   }
 
 

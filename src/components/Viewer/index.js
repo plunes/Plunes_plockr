@@ -209,7 +209,6 @@ class CornerstoneElement extends React.Component {
       cornerstoneTools.addStackStateManager(element, ['stack']);
       cornerstoneTools.addToolState(element, 'stack', stack);
     });
-    const WwwcTool = cornerstoneTools.WwwcTool;
     const PanTool = cornerstoneTools.PanTool;
     const PanMultiTouchTool = cornerstoneTools.PanMultiTouchTool;
     const ZoomTool = cornerstoneTools.ZoomTool;

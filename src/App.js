@@ -70,6 +70,8 @@ import BlogPost from './components/blog/genericBlogComponent';
 import CovidComponent from './components/LandingComponent/CovidComponent';
 import ThankyouComponent from './components/LandingComponent/ThankyouComponent';
 import NotFoundPage from './components/LandingComponent/404';
+import DicomViewer from "./components/DicomViewer/index"
+
 import { ToastProvider } from 'react-toast-notifications'
 
 export default class App extends React.Component {
@@ -94,6 +96,7 @@ export default class App extends React.Component {
             <Route exact path='/profile' component={() => (<DermatologyComponent root={this.root} />)} />
             <Route exact path='/dentist' component={() => (<DentistComponent />)} />
             <Route exact path='/ent' component={() => (<ENTComponent />)} />
+            <Route exact path='/dicom_viewer' component={() => (<DicomViewer />)} />
             {/* <Route exact path='/ayurveda' component={() => (<AyurvedaComponent/>)}/> */}
             <Route exact path='/dermatology' component={() => (<DermatologyComponent />)} />
             <Route exact path='/ophthalmology' component={() => (<OphthalmologyComponent />)} />

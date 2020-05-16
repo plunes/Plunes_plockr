@@ -9,12 +9,9 @@ import * as dicomParser from "dicom-parser";
 // import StackElement from "./stackElement";
 import path from 'path';
 import rotate from "../../images/rotate.svg"
-import rectangle from "../../images/rectangle.svg"
-import annote from "../../images/annote.svg"
 import aero from "../../images/aero.svg"
 import search from "../../images/search.svg"
-import Loader from "react-loader-spinner"
-import share from "../../images/share.svg"
+import LoaderComponent from "../Functional/LoaderComponent"
 
 
 
@@ -34,6 +31,12 @@ cornerstoneTools.external.Hammer = Hammer;
     height: "100vh",
     position: "relative",
     margin:"20px"
+  };
+
+  const mobileDivStyle = {
+    width: "100%",
+    height: "100vh",
+    position: "relative"
   };
   
   const bottomLeftStyle = {
@@ -69,7 +72,6 @@ class CornerstoneElement extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
      // stack:{StackElement},
       viewport: cornerstone.getDefaultViewport(null, undefined),
       imageId: null,
@@ -84,33 +86,49 @@ class CornerstoneElement extends React.Component {
   }
 
   componentDidMount() {
+    if(!!!this.props.mobile_view){
       if(this.props.imageId){
         this.loadCornerstone(this.props.imageId)
       }
+    }else{
+      this.setState({
+        laoding:true
+      })
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('fileId')
+      if(id){
+        this.loadMobileCornerStone(id)
+      }else{
+        this.setState({
+          invalidImage:true
+        })
+      }
+    }
   }
 
-  
   componentWillReceiveProps(nextProps){
+   if(!this.props.mobile_view){
     if(nextProps.imageId !==this.props.imageId){
-        this.loadCornerstone(nextProps.imageId)
-    }
+      localStorage.setItem("dicomId",nextProps.imageId)
+      this.loadCornerstone(nextProps.imageId)
+  }
+   }
 }
 
   loadCornerstone = (imageUrl) =>{
-      console.log("Load Cornerstone gets Called")
+     
       
     const element = document.querySelector('.viewportElement');
     // Enable the DOM Element for use with Cornerstone
      cornerstone.enable(element);
     // Load the first image in the stack
     const ext = path.extname(imageUrl);
-    console.log('sss'+ ext);
     var url =imageUrl;
     if(ext.slice(0, 4) ==='.dcm'){
       url ='wadouri:'+imageUrl
     }
    // url ='wadouri:'+imageUrl;
-    console.log('file url is  '+ url);
+   
     cornerstone.loadImage(url).then(image => {
       // Display the first image
       cornerstone.displayImage(element, image);
@@ -160,6 +178,37 @@ class CornerstoneElement extends React.Component {
   }
 
 
+  loadMobileCornerStone = (imageUrl) =>{
+    const element = document.querySelector('.mobile_viewportElement');
+    cornerstone.enable(element);
+    const ext = path.extname(imageUrl);
+    var url =imageUrl;
+    if(ext.slice(0, 4) ==='.dcm'){
+      url ='wadouri:'+imageUrl
+    }
+    cornerstone.loadImage(url).then(image => {
+      this.setState({
+        laoding:false
+      })
+      cornerstone.displayImage(element, image);
+      let data  = this.props.stack
+      let stackElements = []
+      data.forEach(item=>{
+        stackElements.push(item.reportUrl)
+    })
+    let stack =  {
+            imageIds: [image],
+            currentImageIdIndex: 0
+    }
+      cornerstoneTools.addStackStateManager(element, ['stack']);
+      cornerstoneTools.addToolState(element, 'stack', stack);
+    });
+    const WwwcTool = cornerstoneTools.WwwcTool;
+    const StackScrollTool = cornerstoneTools.StackScrollTool;
+    cornerstoneTools.addTool(WwwcTool);
+    cornerstoneTools.addTool(StackScrollTool);
+  }
+
 
 
   switchAnnotationHandlar=()=>{
@@ -189,6 +238,22 @@ class CornerstoneElement extends React.Component {
   render() {
       console.log(this.props,"props in Viewer")
       console.log(this.state," this.state in Viewer")
+      if(!!this.props.mobile_view){
+        return (
+          <div>
+             <div className="mobile_viewportElement"  style={mobileDivStyle}>
+             {this.state.loading &&  <div style={{height:'100vh',width:'auto',position:'relative'}}>
+                  <LoaderComponent />
+          </div>}
+              <div style={bottomRightStyle}>Zoom: {this.state.viewport.scale}</div>
+              <div style={bottomLeftStyle}> 
+                WW/WC: {this.state.viewport.voi.windowWidth} /{" "}
+                {this.state.viewport.voi.windowCenter}
+              </div>
+              </div>
+          </div>
+        )
+      }
     return (
       <div>
 

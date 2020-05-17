@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.0b35a798.chunk.css",
-    "main.js": "/static/js/main.4d8de49c.chunk.js",
+    "main.js": "/static/js/main.cdf53989.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.549be430.js",
     "static/css/2.8977418c.chunk.css": "/static/css/2.8977418c.chunk.css",
-    "static/js/2.be77d590.chunk.js": "/static/js/2.be77d590.chunk.js",
+    "static/js/2.b8f3b2a6.chunk.js": "/static/js/2.b8f3b2a6.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.ce1b9c7849985b253101cec2bdbe64a0.js": "/precache-manifest.ce1b9c7849985b253101cec2bdbe64a0.js",
+    "precache-manifest.601b034b9b95760975de094aff681287.js": "/precache-manifest.601b034b9b95760975de094aff681287.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.be77d590.chunk.js.LICENSE.txt": "/static/js/2.be77d590.chunk.js.LICENSE.txt",
+    "static/js/2.b8f3b2a6.chunk.js.LICENSE.txt": "/static/js/2.b8f3b2a6.chunk.js.LICENSE.txt",
     "static/media/Consultations.png": "/static/media/Consultations.013fba67.png",
     "static/media/material-icons.css": "/static/media/MaterialIcons-Regular.e79bfd88.eot",
     "static/media/Solu.png": "/static/media/Solu.623ebd93.png",
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.549be430.js",
     "static/css/2.8977418c.chunk.css",
-    "static/js/2.be77d590.chunk.js",
+    "static/js/2.b8f3b2a6.chunk.js",
     "static/css/main.0b35a798.chunk.css",
-    "static/js/main.4d8de49c.chunk.js"
+    "static/js/main.cdf53989.chunk.js"
   ]
 }

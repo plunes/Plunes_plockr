@@ -230,14 +230,10 @@ class PlockrHeaderComponent extends Component {
                     <div className='col-md-4'>
                     </div>
                     <div className='col-md-2 text-right'>
-                        <button type="button" className="btn builder-button" onClick={this.openModal}>Upload Report</button>
+                        {/* <button type="button" className="btn builder-button" onClick={this.openModal}>Upload Report</button> */}
                     </div>
                     <div className='col-md-2'>
-                        <Link 
-                        to= "/prescription_builder"
-                        >
-                            <button type="button" className="btn builder-button">Create Prescription</button>
-                      </Link>
+                     <button type="button" className="btn builder-button" onClick={this.openModal}>Upload Report</button>
                     </div>
                     <div className='col-md-1'>
                         <button type="button" style={{ width: "100%!important" }} className="btn logout" onClick={this.handlelogout}>Logout</button>

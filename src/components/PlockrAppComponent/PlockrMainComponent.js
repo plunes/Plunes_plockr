@@ -218,12 +218,12 @@ class PlockrMainComponent extends Component {
                                     <div className='col-sm-8'>
                                         <button className="prescription-button2">
                                         <Link
-                                  to ="/prescription_builder">
-                                        Prescriptions</Link></button>
+                                  to ="/plockr-dashboard">
+                                         Diagnostic Reports</Link></button>
                                     </div>
                                     <div className='col-sm-2'></div>
                                 </div>
-                                <div className='row'>
+                                {/* <div className='row'>
                                     <div className='col-sm-2'></div>
                                     <div className='col-sm-8'>
                                         <button className="prescription-button">
@@ -232,7 +232,7 @@ class PlockrMainComponent extends Component {
                                     Diagnostic Reports</Link></button>
                                     </div>
                                     <div className='col-sm-2'></div>
-                                </div>
+                                </div> */}
                             </div>
                             <div className='col prescription-img'>
                                 <img className="prescription-img1" src="prescription.png" alt="prescription" />

@@ -20,7 +20,12 @@ class DicomViewer extends React.PureComponent {
                         stack={[]}
                     />
                 </div>
-
+            <style jsx>{`
+            .plockr_viewer_heading{
+                font-size: 40px;
+            }
+            `}
+                </style>
 
             </div>
         )

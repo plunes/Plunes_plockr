@@ -37,9 +37,9 @@ const mobileDivStyle = {
   backgroundColor: "black",
   color: "green",
   width: "100wh",
-  height: "80vh",
+  height: "85vh",
   position: "relative",
-  margin: "20px"
+  margin: "10px"
 };
 
 const bottomLeftStyle = {
@@ -99,11 +99,16 @@ class CornerstoneElement extends React.Component {
       this.setState({
         laoding: true
       })
+      const localhost = 'http://localhost:3000/'
+      const mob ='http://192.168.31.133:3000/'
+      const baseUrlpara = 'dicom_viewer?fileId=';
+      const moburl = mob.length+baseUrlpara.length;
+      const localUrl = localhost.length + baseUrlpara.length
       const baseUrl = 'https://www.plunes.com/dicom_viewer?fileId=';
       const urlParams = new URLSearchParams(window.location.search)
       var headUrl = window.location.href;
       const id = urlParams.get('fileId')
-      var imgUrl = headUrl.slice(baseUrl.length-1, headUrl.length);
+      var imgUrl = headUrl.slice(baseUrl.length, headUrl.length);
       console.log("file id " +imgUrl);
       if (id) {
         this.loadMobileCornerStone(imgUrl)

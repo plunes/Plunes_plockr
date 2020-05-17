@@ -2,24 +2,26 @@ import React from "react"
 import CornerstoneElement from "../Viewer/index"
 
 class DicomViewer extends React.PureComponent {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-            valid:true
+            valid: true
         }
     }
-    render (){
+    render() {
         return (
             <div className="dicom_viewer_wrapper">
-               <div className="text-center">
-                  <span className="plockr_viewer_heading">Plunes Plockr Viewer</span>
-               </div>
-               <div className="cornerstone_wrapper_mobile-view">
+                <div className="text-center">
+                    <span className="plockr_viewer_heading">Plunes Plockr Viewer</span>
+                </div>
+                <div className="cornerstone_wrapper_mobile-view">
                     <CornerstoneElement
-                        mobile_view = {true}
-                        stack = {[]}
+                        mobile_view={true}
+                        stack={[]}
                     />
-               </div>
+                </div>
+
+
             </div>
         )
     }

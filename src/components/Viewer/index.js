@@ -39,7 +39,6 @@ const mobileDivStyle = {
   width: "100wh",
   height: "85vh",
   position: "relative",
-  margin: "10px"
 };
 
 const bottomLeftStyle = {
@@ -108,7 +107,7 @@ class CornerstoneElement extends React.Component {
       const urlParams = new URLSearchParams(window.location.search)
       var headUrl = window.location.href;
       const id = urlParams.get('fileId')
-      var imgUrl = headUrl.slice(baseUrl.length, headUrl.length);
+      var imgUrl = headUrl.slice(moburl, headUrl.length);
       console.log("file id " +imgUrl);
       if (id) {
         this.loadMobileCornerStone(imgUrl)

@@ -39,7 +39,6 @@ const mobileDivStyle = {
   width: "100wh",
   height: "85vh",
   position: "relative",
-  margin: "10px"
 };
 
 const bottomLeftStyle = {

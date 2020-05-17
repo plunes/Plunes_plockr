@@ -11,9 +11,9 @@ class DicomViewer extends React.PureComponent {
     render() {
         return (
             <div className="dicom_viewer_wrapper">
-                <div className="text-center">
+                {/* <div className="text-center">
                     <span className="plockr_viewer_heading">Plunes Plockr Viewer</span>
-                </div>
+                </div> */}
                 <div className="cornerstone_wrapper_mobile-view">
                     <CornerstoneElement
                         mobile_view={true}

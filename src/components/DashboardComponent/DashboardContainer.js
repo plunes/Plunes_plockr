@@ -1,5 +1,5 @@
 import React from 'react';
-import SolutionSearchComponent from '../SolutionSearchComponent/SolutionSearchComponent'
+//import SolutionSearchComponent from '../SolutionSearchComponent/SolutionSearchComponent'
 import axios from 'axios';
 
 
@@ -13,7 +13,7 @@ class  DashboardComponent extends React.Component {
                      <div>
     
                     </div>
-                    <SolutionSearchComponent root = {this.root} />
+                    {/* <SolutionSearchComponent root = {this.root} /> */}
                 </div>       
     }
 }

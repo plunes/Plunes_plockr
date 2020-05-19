@@ -27,21 +27,9 @@ const ReportDetails = (props)=>{
        }
    }
     return(
+        <div>
         <form onSubmit={(e)=>formSubmit(e)}>
-            {/* <div className="form-group selectSpeciality">
-                <select className="form-control plockr-app-form" onChange={this.handleChange} name='speciality' required >
-                    <option value=''>Speciality</option>
-                    {
-                        this.state.specialities.map((speciality, index) => (
-                            <option value={speciality.id} key={index}>{speciality.name}</option>
-                        ))
-                    }
-                </select>
-            </div><br></br> */}
             <div className='row'>            
-                {/* <div className="form-group">
-                    <textarea className="form-control plockr-app-form" placeholder="Report Name" name='reportName' onChange={this.handleChange} value={this.state.reportName}></textarea>
-                 </div><br></br> */}
                     <div className="form-group col-lg-6 col-md-6">
                         <textarea className="form-control plockr-app-form" placeholder="Diagnosis" value={reasonDiagnosis} name='reasonDiagnosis' onChange={handleChange}></textarea>
                     </div><br />
@@ -51,27 +39,24 @@ const ReportDetails = (props)=>{
                     <div className="form-group col-lg-6 col-md-6">
                 <textarea className="form-control plockr-app-form" placeholder="Patient Mobile Number" rows="2" value={phone} name='phone' onChange={handlePhoneChange}></textarea>
                 </div><br></br>
-                    {/* <div className="form-group">
-                        <textarea className="form-control plockr-app-form" placeholder="Enter Patient's Mobile Number" name='patientMobileNumber' onChange={this.handleChange} required></textarea>
-                    </div><br></br> */}
-                    {/* <div className="form-group">
-                        <textarea className="form-control plockr-app-form" placeholder="Problem Area (Diagnosis)" name='problemAreaDiagnosis' onChange={this.handleChange} ></textarea>
-                    </div><br></br> */}
-                    {/* <div className="form-group">
-                        <textarea className="form-control plockr-app-form" placeholder="Precautions" name='precautions' onChange={this.handleChange}></textarea>
-                    </div><br></br> */}
                     <div className='col-md-6'>
                     <button type="submit" className="btn profile-button pstion_sb">Submit</button>
                     </div>
                     <div className='col-md-6'>
-                    <Link to="/plockr-dashboard"
-                    className="btn profile-button2 display-inline"
-                    >
-                Cancel
-                    </Link>
+                    <button  className="btn profile-button2 display-inline">
+                    <Link to="/plockr-dashboard">Cancel</Link></button>
                </div>    
             </div>
          </form>
+         <style jsx>{`
+         .sendReport{
+             margin:"10px";
+         }
+         form{
+             margin:2rem
+         }
+         `}</style>
+         </div>
     )
 }
 export default ReportDetails

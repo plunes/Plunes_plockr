@@ -151,7 +151,7 @@ class PlockrAppComponent extends React.PureComponent {
                         <div className="row">
                             <h6 className="hme">Home > <a className="plo" href="#">Plockr </a></h6>
                         </div>
-                        <div className='row background-black' style={{ width: '100vw' }}>
+                        <div className='row background-black' style={{ width: '100%' }}>
                             <div className='col-md-9 viewFile'>
                                 {
                                     !this.state.showFile ?

@@ -5,6 +5,7 @@ import { Redirect } from 'react-router'
 import { withRouter, Link } from 'react-router-dom'
 import Modal from 'react-modal';
 import { Form, Button, Spinner } from 'react-bootstrap'
+import { ExploreBtn} from '../Layouts/Styles/styles'
 
 const customStyles = {
     content: {
@@ -173,6 +174,7 @@ class PlockrHeaderComponent extends Component {
         }
 
         return (
+        
             <div className='container-fluid'>
                 <Modal
                     isOpen={this.state.modalIsOpen}
@@ -192,18 +194,6 @@ class PlockrHeaderComponent extends Component {
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Control type="text" name="reportDisplayName" placeholder="Enter report name" onChange={this.handleInput} value={this.state.reportDisplayName} />
                             </Form.Group>
-                            {/* <Form.Group controlId="formBasicPassword">
-                                <Form.Control type="number" placeholder="Patient's phone number" name="mobileNumber" onChange={this.handleInput} value={this.state.mobileNumber} />
-                            </Form.Group>
-                            <Form.Group controlId="formBasicPassword">
-                                <Form.Control type="text" placeholder="Problem Area Diagnosis" name="problemAreaDiagnosis" onChange={this.handleInput} value={this.state.problemAreaDiagnosis} />
-                            </Form.Group>
-                            <Form.Group controlId="formBasicPassword">
-                                <Form.Control type="text" placeholder="Precautions" name="precautions" onChange={this.handleInput} value={this.state.precautions} />
-                            </Form.Group>
-                            <Form.Group controlId="formBasicPassword">
-                                <Form.Control type="text" placeholder="Remarks" name="remarks" onChange={this.handleInput} value={this.state.remarks} />
-                            </Form.Group> */}
                         </Form>
                         {this.state.uploading ?
                             <Spinner animation="grow" variant="success" /> : ''
@@ -228,6 +218,7 @@ class PlockrHeaderComponent extends Component {
                      <img className="logo-img-sizeing" src="/logo.png" alt=".." /></Link>
                     </div>
                     <div className='col-md-4'>
+                    
                     </div>
                     <div className='col-md-2 text-right'>
                         {/* <button type="button" className="btn builder-button" onClick={this.openModal}>Upload Report</button> */}
@@ -235,13 +226,18 @@ class PlockrHeaderComponent extends Component {
                     <div className='col-md-2'>
                      <button type="button" className="btn builder-button" onClick={this.openModal}>Upload Report</button>
                     </div>
-                    <div className='col-md-1'>
-                        <button type="button" style={{ width: "100%!important" }} className="btn logout" onClick={this.handlelogout}>Logout</button>
+                    
+                    <div className='col-md-1 logbtn'>
+                    <ExploreBtn type='button' bgClr = '#fff' cWidth='5.5rem' Color='#000' borderClr='#DFDFDF' onClick={this.handlelogout} >
+                        <p>Logout</p>
+                    </ExploreBtn>
                     </div>
                 </div>
             </div>
            
+        
         );
+    
     }
 }
 

@@ -5,7 +5,7 @@ import { Redirect } from 'react-router'
 import { withRouter, Link } from 'react-router-dom'
 import Modal from 'react-modal';
 import { Form, Button, Spinner } from 'react-bootstrap'
-import { ExploreBtn} from '../Layouts/Styles/styles'
+import { PlunesBtn } from '../Layouts/Styles/styles'
 
 const customStyles = {
     content: {
@@ -169,12 +169,12 @@ class PlockrHeaderComponent extends Component {
         const { navigate } = this.state
         if (navigate) {
             return <Redirect to={{
-                pathname: '/plockrapp',
+                pathname: '/',
             }} />
         }
 
         return (
-        
+
             <div className='container-fluid'>
                 <Modal
                     isOpen={this.state.modalIsOpen}
@@ -209,35 +209,51 @@ class PlockrHeaderComponent extends Component {
                         </div>
                     </form>
                 </Modal>
-             
+
                 <div className="navbar navbar-expand-lg navbar-light row plock_shdo">
-                    <div className='col-md-3'>
-                    <Link 
-                    to="/plockrapp"
-                    >
-                     <img className="logo-img-sizeing" src="/logo.png" alt=".." /></Link>
+                    <div >
+                        <Link to="/">
+                            <img className="logo-img-sizeing" src="/logo.png" alt=".." /></Link>
                     </div>
-                    <div className='col-md-4'>
-                    
-                    </div>
-                    <div className='col-md-2 text-right'>
-                        {/* <button type="button" className="btn builder-button" onClick={this.openModal}>Upload Report</button> */}
-                    </div>
-                    <div className='col-md-2'>
+
+                    {/* <div>
                      <button type="button" className="btn builder-button" onClick={this.openModal}>Upload Report</button>
-                    </div>
-                    
-                    <div className='col-md-1 logbtn'>
-                    <ExploreBtn type='button' bgClr = '#fff' cWidth='5.5rem' Color='#000' borderClr='#DFDFDF' onClick={this.handlelogout} >
-                        <p>Logout</p>
-                    </ExploreBtn>
+                    </div> */}
+
+                    <div className="header-btn">
+                        <div className='upload-btn'>
+                            <PlunesBtn type='button' bgClr='#01D35A' mbgClr='#01D35A' cWidth='135px' Color='#fff' mcolor='#fff' borderClr='#DFDFDF' onClick={this.openModal} >
+                                <p>Upload Report</p>
+                            </PlunesBtn>
+                        </div>
+                        <div className='logout-btn'>
+                            <PlunesBtn type='button' bgClr='#fff' cWidth='80px' Color='#000' borderClr='#DFDFDF' mborderClr='#DFDFDF' onClick={this.handlelogout} >
+                                <p>Logout</p>
+                            </PlunesBtn>
+                        </div>
                     </div>
                 </div>
+                <style jsx>{`
+                .header-btn{
+                    float:right;
+                    margin-left:auto;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-right:4rem
+                }
+
+                .logout-btn{
+                    margin-left:2rem
+                }
+                p{
+                align-item
+                }
+                }`}
+                </style>
             </div>
-           
-        
+
         );
-    
+
     }
 }
 

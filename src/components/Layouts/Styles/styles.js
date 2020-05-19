@@ -13,31 +13,29 @@ export const Container = styled.div`
   }
 `;
 
-export const ExploreBtn = styled.div`
+export const PlunesBtn = styled.div`
   border-radius: ${props => (props.brdRadius ? props.brdRadius : '50px')};
   box-shadow: ${props =>(props.brdShadow ? props.brdShadow :'none')};
   background-color: ${props => (props.mbgClr ? props.mbgClr : '#ffff')};
   width: ${props => (props.mcWidth ? props.mcWidth : '6rem')};
   display: flex;
   color: ${props => (props.mcolor ? props.mcolor : '#000')};
-  border: solid 2px
+  border: solid 1px
   ${props => (props.mborderClr ? props.mborderClr : '#ffff')};
   justify-content: space-between;
   align-items: center;
-  padding: inherit;
-  padding-top: 10px;
+  padding: 15px 15px 0px;
   height: ${props => (props.mcHeight ? props.mcHeight : '40px')};
   p {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
    
   }
   p {
-    font-size: 20px;
+    font-size: 15px;
   }
-
   @media (min-width: 576px) {
     height: 40px;
     width: ${props => (props.cWidth ? props.cWidth : '100%')};
@@ -52,7 +50,7 @@ export const ExploreBtn = styled.div`
   @media (min-width: 1200px) {
     height: 40px;
     p {
-      font-size: 18px;
+      font-size: 15px;
     }
   }
   @media (min-width: 1400px) {
@@ -61,7 +59,7 @@ export const ExploreBtn = styled.div`
   @media (min-width: 1900px) {
     height: 40px;
     p {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 `;

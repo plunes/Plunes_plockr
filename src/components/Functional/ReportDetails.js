@@ -38,17 +38,22 @@ const ReportDetails = (props)=>{
                         <textarea className="form-control plockr-app-form" placeholder="Remarks" name='remarks' value={remarks} onChange={handleChange}></textarea>
                     </div><br /> 
                     <div className="form-group col-lg-6 col-md-6">
-                <textarea className="form-control plockr-app-form" placeholder="Patient Mobile Number" rows="2" value={phone} name='phone' onChange={handlePhoneChange}></textarea>
+                 <textarea className="form-control plockr-app-form" placeholder="Patient Mobile Number" rows="2" value={phone} name='phone' onChange={handlePhoneChange}></textarea>
                 </div><br></br>
-                   
-                    <div className='col-md-6'>
-                    <button type="submit" className="btn profile-button pstion_sb">Submit</button>
-                    </div>
-                    <br></br>
-                    <div className='col-md-6'>
+                <div className="form-group col-lg-6 col-md-6">
+                 {/* <textarea className="form-control plockr-app-form" placeholder="Patient Mobile Number" rows="2" value={phone} name='phone' onChange={handlePhoneChange}></textarea> */}
+                </div><br></br>
+
+                <div className='form-group col-lg-6 col-md-6-md-6'>
                     <button  className="btn profile-button2 display-inline">
                     <Link to="/plockr-dashboard">Cancel</Link></button>
-                  </div> 
+                  </div> <br></br>
+                   
+                    <div className='form-group col-lg-6 col-md-6-6'>
+                    <button type="submit" className="btn profile-button">Submit</button>
+                    </div><br></br>
+                
+                   
                {/* <div className="rep-btn-group">
                         <div className='rep-cncl-btn'>
                             <PlunesBtn type='button' bgClr='#fff' cWidth='200px' Color='#000' borderClr='#DFDFDF' mborderClr='#DFDFDF' >

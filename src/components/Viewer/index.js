@@ -103,7 +103,8 @@ class CornerstoneElement extends React.Component {
       const baseUrlpara = 'dicom_viewer?fileId=';
       const moburl = mob.length+baseUrlpara.length;
       const localUrl = localhost.length + baseUrlpara.length
-      const baseUrl = 'https://www.plunes.com/dicom_viewer?fileId=';
+      
+      const baseUrl = 'https://plockr.plunes.com/dicom_viewer?fileId=';
       const urlParams = new URLSearchParams(window.location.search)
       var headUrl = window.location.href;
       const id = urlParams.get('fileId')

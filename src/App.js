@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Redirect } from 'react-router'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+
 
 import DashboardComponent from './components/DashboardComponent/DashboardComponent';
 import LoginComponent from './components/LoginComponent/LoginComponent'
@@ -30,6 +30,7 @@ export default class App extends React.Component {
         <ToastProvider>
         <BrowserRouter>
           <Switch>
+            <Redirect exact from="/" to="/auth" />
             <Route exact path='/auth/:auth?' component={PlockrMainComponent} />
             <Route exact path='/login' component={() => (<LoginComponent root={this.root} />)} />
             <Route exact path='/forgot_password' component={() => (<ForgotPasswordComponent root={this.root} />)} />

@@ -30,7 +30,7 @@ export default class App extends React.Component {
         <ToastProvider>
         <BrowserRouter>
           <Switch>
-            <Route exact path=':auth?' component={PlockrMainComponent} />
+            <Route exact path='/auth/:auth?' component={PlockrMainComponent} />
             <Route exact path='/login' component={() => (<LoginComponent root={this.root} />)} />
             <Route exact path='/forgot_password' component={() => (<ForgotPasswordComponent root={this.root} />)} />
             <Route exact path='/dashboard' component={() => (<DashboardComponent root={this.root} />)} />

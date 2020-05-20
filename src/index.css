@@ -681,3 +681,10 @@ p.covidPara {
       transform: rotate(360deg);
   }
   }
+  .img-loading_rish {
+    background: transparent url('images/loading-spinner.gif') center no-repeat;
+  }
+  
+  .img-loading-small_rish {
+    background: transparent url('images/loading-spinner-small.gif') center no-repeat;
+  }

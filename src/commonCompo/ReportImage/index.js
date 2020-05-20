@@ -16,7 +16,7 @@ const ReportImage = React.memo((props) => {
         <div  className='fileList ' key={Math.random().toString()}>
             <div className='headTab trendingBox' key={Math.random().toString()} data-url={props.b.reportUrl} data-filename={props.b.reportName} data-id={props._id} onClick={(e) => props.handleClick(e, props.b)}>
                 <img
-                 className={props.index / 2 == 0 ? 'file-report-img img_change' : 'file-report-img '} 
+                 className={props.index / 2 == 0 ? 'file-report-img img_change img-loading-small_rish' : 'file-report-img img-loading-small_rish'} 
                  src={props.b.reportThumbnail}  width='100%' 
                  onError={(e) => { e.target.onerror = null; e.target.src = "/screenshot.svg" }}
                  style={{height:'10rem'}}

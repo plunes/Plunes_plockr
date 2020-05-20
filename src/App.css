@@ -32,6 +32,7 @@
 }
 .background-black {
   background-color: #000;
+  min-height: 30rem;
 }
 .mr-5 {
   margin-right: 5px;;

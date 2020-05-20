@@ -195,7 +195,7 @@ class PlockrMainComponent extends Component {
                             <div className="navbar navbar-expand-md navbar-light row back_shado ">
                                 <div className='col-md-3'>
                                 <Link
-                                  to ="/plockrapp">
+                                  to ="/">
                                 <img className="logo-img-sizeing" src="/logo.png" alt=".." />
                                 </Link>
                                 </div>

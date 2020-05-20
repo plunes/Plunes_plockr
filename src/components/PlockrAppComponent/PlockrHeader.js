@@ -14,7 +14,7 @@ class PlockrHeader extends Component {
             <div className="navbar navbar-expand-md navbar-light row">
                 <div className='col-md-3'>
                     <Link 
-                    to="/plockapp">
+                    to="/">
                   <img className="logo-img-sizeing" src="/logo.png" alt=".." />
                    </Link>
                 </div>

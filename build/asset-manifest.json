@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.6827829d.chunk.css",
-    "main.js": "/static/js/main.e863ea78.chunk.js",
+    "main.css": "/static/css/main.56e9ae36.chunk.css",
+    "main.js": "/static/js/main.d3fe186b.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.549be430.js",
     "static/css/2.8977418c.chunk.css": "/static/css/2.8977418c.chunk.css",
     "static/js/2.b4de226f.chunk.js": "/static/js/2.b4de226f.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.d62ca8c2a94cb2e9df506eaf29ea2e7c.js": "/precache-manifest.d62ca8c2a94cb2e9df506eaf29ea2e7c.js",
+    "precache-manifest.209c53864a9e09c0264cf99465d3f4ae.js": "/precache-manifest.209c53864a9e09c0264cf99465d3f4ae.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.b4de226f.chunk.js.LICENSE.txt": "/static/js/2.b4de226f.chunk.js.LICENSE.txt",
     "static/media/material-icons.css": "/static/media/MaterialIcons-Regular.e79bfd88.eot",
     "static/media/aero.svg": "/static/media/aero.0dd91517.svg",
+    "static/media/index.css": "/static/media/loading-spinner.40a317fd.gif",
     "static/media/proxima.otf": "/static/media/proxima.410504d4.otf",
     "static/media/rotate.svg": "/static/media/rotate.735d6963.svg",
     "static/media/search.svg": "/static/media/search.47c9a228.svg",
@@ -20,7 +21,7 @@
     "static/js/runtime-main.549be430.js",
     "static/css/2.8977418c.chunk.css",
     "static/js/2.b4de226f.chunk.js",
-    "static/css/main.6827829d.chunk.css",
-    "static/js/main.e863ea78.chunk.js"
+    "static/css/main.56e9ae36.chunk.css",
+    "static/js/main.d3fe186b.chunk.js"
   ]
 }

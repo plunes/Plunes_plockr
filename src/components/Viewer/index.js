@@ -108,7 +108,7 @@ class CornerstoneElement extends React.Component {
       const urlParams = new URLSearchParams(window.location.search)
       var headUrl = window.location.href
       var index = headUrl.indexOf("fieldId")
-      var imgUrl = headUrl.slice(index+7, headUrl.length)
+      var imgUrl = headUrl.slice(index+8, headUrl.length)
       console.log("file id " +imgUrl)
       if (imgUrl) {
         this.loadMobileCornerStone(imgUrl)

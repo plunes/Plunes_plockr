@@ -106,11 +106,11 @@ class CornerstoneElement extends React.Component {
       
       const baseUrl = 'https://plockr.plunes.com/dicom_viewer?fileId=';
       const urlParams = new URLSearchParams(window.location.search)
-      var headUrl = window.location.href;
-      const id = urlParams.get('fileId')
-      var imgUrl = headUrl.slice(baseUrl.length, headUrl.length);
-      console.log("file id " +imgUrl);
-      if (id) {
+      var headUrl = window.location.href
+      var index = headUrl.indexOf("fieldId")
+      var imgUrl = headUrl.slice(index+7, headUrl.length)
+      console.log("file id " +imgUrl)
+      if (imgUrl) {
         this.loadMobileCornerStone(imgUrl)
       } else {
         this.setState({
@@ -130,8 +130,6 @@ class CornerstoneElement extends React.Component {
   }
 
   loadCornerstone = (imageUrl) => {
-
-
     const element = document.querySelector('.viewportElement');
     // Enable the DOM Element for use with Cornerstone
     cornerstone.enable(element);
@@ -141,57 +139,55 @@ class CornerstoneElement extends React.Component {
     if (ext.slice(0, 4) === '.dcm') {
       url = 'wadouri:' + imageUrl
     }
-
-    console.log("file url is "+ url);
-    // url ='wadouri:'+imageUrl;
-
-    cornerstone.loadImage(url).then(image => {
-      // Display the first image
-      cornerstone.displayImage(element, image);
-      let data = this.props.stack
-      let stackElements = []
-      data.forEach(item => {
-        stackElements.push(item.reportUrl)
-      })
-      let stack = {
-        imageIds: stackElements,
-        currentImageIdIndex: 0
-      }
-
-      //   const stack = {StackElement};
-      cornerstoneTools.addStackStateManager(element, ['stack']);
-      cornerstoneTools.addToolState(element, 'stack', stack);
-    });
-    const WwwcTool = cornerstoneTools.WwwcTool;
-    const PanTool = cornerstoneTools.PanTool;
-    const PanMultiTouchTool = cornerstoneTools.PanMultiTouchTool;
-    const ZoomTool = cornerstoneTools.ZoomTool;
-    const ZoomTouchPinchTool = cornerstoneTools.ZoomTouchPinchTool;
-    const ZoomMouseWheelTool = cornerstoneTools.ZoomMouseWheelTool;
-    const ArrowAnnotateTool = cornerstoneTools.ArrowAnnotateTool;
-    const RotateTool = cornerstoneTools.RotateTool;
-    const MagnifyTool = cornerstoneTools.MagnifyTool;
-    const RectangleRoiTool = cornerstoneTools.RectangleRoiTool;
-    const StackScrollTool = cornerstoneTools.StackScrollTool;
-    // Add them
-
-    cornerstoneTools.addTool(PanTool);
-    cornerstoneTools.addTool(ZoomTool);
-    cornerstoneTools.addTool(WwwcTool);
-    cornerstoneTools.addTool(PanMultiTouchTool);
-    cornerstoneTools.addTool(ZoomTouchPinchTool);
-    cornerstoneTools.addTool(ZoomMouseWheelTool);
-    cornerstoneTools.addTool(ArrowAnnotateTool);
-    cornerstoneTools.addTool(RotateTool);
-    cornerstoneTools.addTool(MagnifyTool);
-    cornerstoneTools.addTool(RectangleRoiTool);
-    cornerstoneTools.addTool(StackScrollTool);
-    cornerstoneTools.setToolActive("Zoom", { mouseButtonMask: 1 }); // Right
-    cornerstoneTools.setToolActive("Wwwc", { mouseButtonMask: 4 }); // Left & Touch
-    cornerstoneTools.setToolActive("PanMultiTouch", {});
-    //cornerstoneTools.setToolActive("ZoomMouseWheel", {});
-    cornerstoneTools.setToolActive("ZoomTouchPinch", {});
-  }
+    try{
+      cornerstone.loadImage(url).then(image => {
+        // Display the first image
+        cornerstone.displayImage(element, image);
+        let data = this.props.stack
+        let stackElements = []
+        data.forEach(item => {
+          stackElements.push(item.reportUrl)
+        })
+        let stack = {
+          imageIds: stackElements,
+          currentImageIdIndex: 0
+        }
+        //   const stack = {StackElement};
+        cornerstoneTools.addStackStateManager(element, ['stack']);
+        cornerstoneTools.addToolState(element, 'stack', stack);
+      });
+      const WwwcTool = cornerstoneTools.WwwcTool;
+      const PanTool = cornerstoneTools.PanTool;
+      const PanMultiTouchTool = cornerstoneTools.PanMultiTouchTool;
+      const ZoomTool = cornerstoneTools.ZoomTool;
+      const ZoomTouchPinchTool = cornerstoneTools.ZoomTouchPinchTool;
+      const ZoomMouseWheelTool = cornerstoneTools.ZoomMouseWheelTool;
+      const ArrowAnnotateTool = cornerstoneTools.ArrowAnnotateTool;
+      const RotateTool = cornerstoneTools.RotateTool;
+      const MagnifyTool = cornerstoneTools.MagnifyTool;
+      const RectangleRoiTool = cornerstoneTools.RectangleRoiTool;
+      const StackScrollTool = cornerstoneTools.StackScrollTool;
+      // Add them
+      cornerstoneTools.addTool(PanTool);
+      cornerstoneTools.addTool(ZoomTool);
+      cornerstoneTools.addTool(WwwcTool);
+      cornerstoneTools.addTool(PanMultiTouchTool);
+      cornerstoneTools.addTool(ZoomTouchPinchTool);
+      cornerstoneTools.addTool(ZoomMouseWheelTool);
+      cornerstoneTools.addTool(ArrowAnnotateTool);
+      cornerstoneTools.addTool(RotateTool);
+      cornerstoneTools.addTool(MagnifyTool);
+      cornerstoneTools.addTool(RectangleRoiTool);
+      cornerstoneTools.addTool(StackScrollTool);
+      cornerstoneTools.setToolActive("Zoom", { mouseButtonMask: 1 }); // Right
+      cornerstoneTools.setToolActive("Wwwc", { mouseButtonMask: 4 }); // Left & Touch
+      cornerstoneTools.setToolActive("PanMultiTouch", {});
+      //cornerstoneTools.setToolActive("ZoomMouseWheel", {});
+      cornerstoneTools.setToolActive("ZoomTouchPinch", {});
+    }catch (e) {
+        console.log("Error while Loading Images =>>>>>>>>>>", e)
+    }
+    }
 
 
   loadMobileCornerStone = (imageUrl) => {
@@ -203,36 +199,47 @@ class CornerstoneElement extends React.Component {
       url = 'wadouri:' + imageUrl
     }
     console.log("file url is "+ url)
-    cornerstone.loadImage(url).then(image => {
-      this.setState({
-        laoding: false
-      })
-      cornerstone.displayImage(element, image);
+    try{
+      cornerstone.loadImage(url).then(image => {
+        this.setState({
+          laoding: false
+        })
+        cornerstone.displayImage(element, image);
 
-      let data = this.props.stack
-      let stackElements = []
-      data.forEach(item => {
-        stackElements.push(item.reportUrl)
-      })
-      let stack = {
-        imageIds: [image],
-        currentImageIdIndex: 0
-      }
-      cornerstoneTools.addStackStateManager(element, ['stack']);
-      cornerstoneTools.addToolState(element, 'stack', stack);
-    });
-    const PanTool = cornerstoneTools.PanTool;
-    const PanMultiTouchTool = cornerstoneTools.PanMultiTouchTool;
-    const ZoomTool = cornerstoneTools.ZoomTool;
-    const ZoomTouchPinchTool = cornerstoneTools.ZoomTouchPinchTool;
-    const RotateTool = cornerstoneTools.RotateTool;
-    cornerstoneTools.addTool(PanTool);
-    cornerstoneTools.addTool(ZoomTool);
-    cornerstoneTools.addTool(PanMultiTouchTool);
-    cornerstoneTools.addTool(ZoomTouchPinchTool);
-    cornerstoneTools.addTool(RotateTool);
-    cornerstoneTools.setToolActive("PanMultiTouch", {});
-    cornerstoneTools.setToolActive("ZoomTouchPinch", {});
+        let data = this.props.stack
+        let stackElements = []
+        data.forEach(item => {
+          stackElements.push(item.reportUrl)
+        })
+        let stack = {
+          imageIds: [image],
+          currentImageIdIndex: 0
+        }
+        cornerstoneTools.addStackStateManager(element, ['stack']);
+        cornerstoneTools.addToolState(element, 'stack', stack);
+      });
+      const PanTool = cornerstoneTools.PanTool;
+      const PanMultiTouchTool = cornerstoneTools.PanMultiTouchTool;
+      const ZoomTool = cornerstoneTools.ZoomTool;
+      const ZoomTouchPinchTool = cornerstoneTools.ZoomTouchPinchTool;
+      const RotateTool = cornerstoneTools.RotateTool;
+      cornerstoneTools.addTool(PanTool);
+      cornerstoneTools.addTool(ZoomTool);
+      cornerstoneTools.addTool(PanMultiTouchTool);
+      cornerstoneTools.addTool(ZoomTouchPinchTool);
+      cornerstoneTools.addTool(RotateTool);
+      cornerstoneTools.setToolActive("PanMultiTouch", {});
+      cornerstoneTools.setToolActive("ZoomTouchPinch", {});
+    }catch (e) {
+        console.log(e,"e in LodMobileCornderstorne")
+        this.setState({
+          loading:false,
+          error:true
+        })
+    }
+    
+
+    
   }
 
 

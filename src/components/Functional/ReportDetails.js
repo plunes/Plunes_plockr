@@ -29,7 +29,7 @@ const ReportDetails = (props)=>{
    }
     return(
         <div>
-        <form onSubmit={(e)=>formSubmit(e)}>
+        <form onSubmit={(e)=>{e.preventDefault()}}>
             <div className='row'>            
                     <div className="form-group col-lg-6 col-md-6">
                         <textarea className="form-control plockr-app-form" placeholder="Diagnosis" value={reasonDiagnosis} name='reasonDiagnosis' onChange={handleChange}></textarea>
@@ -46,11 +46,11 @@ const ReportDetails = (props)=>{
 
                 <div className='form-group col-lg-6 col-md-6-md-6'>
                     <button  className="btn profile-button2 display-inline">
-                    <Link to="/plockr-dashboard">Cancel</Link></button>
+                    <Link to="/auth">Cancel</Link></button>
                   </div> <br></br>
                    
                     <div className='form-group col-lg-6 col-md-6-6'>
-                    <button type="submit" className="btn profile-button">Submit</button>
+                    <button type="submit" onClick= {(e)=>formSubmit(e)} className="btn profile-button">Submit</button>
                     </div><br></br>
                 
                    

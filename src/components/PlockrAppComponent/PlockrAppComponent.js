@@ -7,6 +7,7 @@ import PlockrHeaderComponent from './PlockrHeaderComponent'
 import PDFViewer from 'pdf-viewer-reactjs'
 import Downloader from 'js-file-downloader';
 import Loader from "react-loader-spinner"
+import { Redirect } from "react-router-dom";
 import CornerstoneElement from '../Viewer'
 // import dummySvg from "../../images/dummy.svg"
 
@@ -89,6 +90,19 @@ class PlockrAppComponent extends React.PureComponent {
                         businessSentReports: sharedReports
                     })
                 }
+            }).catch((e)=>{
+                if(!!e.response){
+                    if(e.response.status === 401)
+                    console.log("Call me")
+                    localStorage.removeItem('auth')
+                    localStorage.removeItem('isAuth')
+                    localStorage.removeItem('uploaderUserId')
+                    localStorage.removeItem('docDetails')
+                    // window.location.reload()
+                    // this.setState({
+                    //     showLogin:true
+                    // })
+                }
             })
         // this.props.toggleLoading()
     }
@@ -128,7 +142,9 @@ class PlockrAppComponent extends React.PureComponent {
 
 
     render() {
-
+        if(!!!localStorage.getItem('auth')){
+          return  <Redirect to = "/auth"  />
+        }
         if (this.state.loading) {
             return (
                 <div className="loader-wrapper">

@@ -356,7 +356,7 @@ class ContainerComponent extends React.PureComponent {
                     </Modal>
                     : ''}
 
-                {(this.props.businessReceivedReports.length > 0 || this.props.businessSentReports.length > 0) ?
+                {(this.props.businessReceivedReports.length >= 0 || this.props.businessSentReports.length >= 0) ?
                     <div>
                         {/* <div className='text-center row'>
                         <h5 className="text-center color-white">Report List</h5>

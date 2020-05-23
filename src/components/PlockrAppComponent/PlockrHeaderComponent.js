@@ -133,7 +133,7 @@ class PlockrHeaderComponent extends Component {
                     })
                 })
                 .catch((e) => {
-                    console.log({ e })
+                    console.log({ e },"PikaBooo")
                     if (typeof e.response.data == 'string') {
                         this.setState({
                             showError: true,

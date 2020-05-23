@@ -37,6 +37,9 @@ class DashboardHeader extends React.Component {
                   <button class="btn dropdown-toggle dropdown-align" type="button" data-toggle="dropdown">
                     <img className="sol-img2" src="/image.png"  alt='No image available'/> john doe</button>
                   <ul class="dropdown-menu profile-font">
+
+
+                    
                     <li><span><img className="dash-dropdown" src="/d1.png"/><a href="#">View profile</a> </span></li><hr width="80%"/>
                     <li><span><img className="dash-dropdown" src="/dasAppo.png"/><a href="#">Appointments</a></span></li><hr width="80%"/>
                     <li><span><img className="dash-dropdown" src="/Settings.png"/><a href="#">Settings</a></span></li><hr width="80%"/>

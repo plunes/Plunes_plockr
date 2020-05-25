@@ -156,6 +156,7 @@ class ContainerComponent extends Component {
             })
     }
     render() {
+        console.log(this.state,"state in UploaderComponent")
         const greenStyle = {
             background: "#01D35A 0% 0% no-repeat padding-box",
             opacity: 1,

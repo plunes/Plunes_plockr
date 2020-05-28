@@ -96,7 +96,7 @@ class ContainerComponent extends React.PureComponent {
 
     deleteReport = (e) => {
         console.log("Delete report")
-        axios.delete('https://devapi.plunes.com/v5/report/' + this.state.deleteReportId, { 'headers': { 'Authorization': localStorage.getItem('auth') } }).then(res => {
+        axios.delete('https://api.plunes.com/v5/report/' + this.state.deleteReportId, { 'headers': { 'Authorization': localStorage.getItem('auth') } }).then(res => {
             console.log("Deleted report")
             this.setState({
                 showDeleteModal: false,
@@ -134,7 +134,7 @@ class ContainerComponent extends React.PureComponent {
                     precautions: this.state.precautions,
                     remarks: this.state.remarks
                 }
-                await axios.post('https://devapi.plunes.com/v5/report/sendReport', data, { 'headers': { 'Authorization': localStorage.getItem('auth') } })
+                await axios.post('https://api.plunes.com/v5/report/sendReport', data, { 'headers': { 'Authorization': localStorage.getItem('auth') } })
                 this.setState({
                     showShareError: false,
                     errorShareText: '',

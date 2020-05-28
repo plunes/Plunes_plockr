@@ -53,7 +53,7 @@ class PlockrHeaderComponent extends Component {
     handlelogout(e) {
         e.preventDefault();
         let token = localStorage.getItem('auth');
-        axios.post('https://plunes.co/v4/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.post('https://api.plunes.com/v5/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then((response) => {
                 localStorage.removeItem('auth')
                 localStorage.removeItem('isAuth')
@@ -116,7 +116,7 @@ class PlockrHeaderComponent extends Component {
             // data.append('precautions', this.state.precautions)
 
             console.log(data, 'data')
-            await axios.post('https://devapi.plunes.com/v5/report/', data, { headers: { 'Content-Type': 'multipart/form-data', "Authorization": `Bearer ${token}` } })
+            await axios.post('https://api.plunes.com/v5/report/', data, { headers: { 'Content-Type': 'multipart/form-data', "Authorization": `Bearer ${token}` } })
                 .then((res) => {
                     console.log("Report uploaded")
                     this.setState({
@@ -134,10 +134,10 @@ class PlockrHeaderComponent extends Component {
                 })
                 .catch((e) => {
                     console.log({ e },"PikaBooo")
-                    if (typeof e.response.data == 'string') {
+                    if ( true) {
                         this.setState({
                             showError: true,
-                            errorText: e.response.data,
+                            errorText: "Error uploading file",
                             uploading: false,
                             disabled: false
                         })

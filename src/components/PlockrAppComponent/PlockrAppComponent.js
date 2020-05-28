@@ -39,7 +39,7 @@ class PlockrAppComponent extends React.PureComponent {
         this.handleDownload = this.handleDownload.bind(this);
     }
     async handleDownload() {
-        const res = await axios.get('https://plunes.co/v4/installer/' + localStorage.getItem('uploaderUserId'));
+        const res = await axios.get('https://api.plunes.com/v5/installer/' + localStorage.getItem('uploaderUserId'));
         if (res.status === 201) {
             new Downloader({
                 url: res.data.downloadUrl
@@ -48,6 +48,7 @@ class PlockrAppComponent extends React.PureComponent {
                     // Called when download ended
                 })
                 .catch(function (error) {
+                    console.log(error)
                     // Called when an error occurred
                 });
         }
@@ -65,7 +66,7 @@ class PlockrAppComponent extends React.PureComponent {
     async getReports() {
         let token = localStorage.getItem('auth')
         // this.props.toggleLoading()
-        await axios.get('https://devapi.plunes.com/v5/report/', { 'headers': { 'Authorization': token } })
+        await axios.get('https://api.plunes.com/v5/report/', { 'headers': { 'Authorization': token } })
             .then(res => {
                 if (res.status === 201) {
                     let sharedReports = res.data.sharedReports

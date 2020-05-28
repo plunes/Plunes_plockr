@@ -50,7 +50,7 @@ class PrescriptionListComponent extends Component {
     getSentPrescription() {
         let auth = localStorage.getItem('auth')
         return new Promise(async function (resolve, reject) {
-            await axios.get('https://plunes.co/v4/prescription/', { headers: { "Authorization": `Bearer ${auth}` } })
+            await axios.get('https://api.plunes.com/v5/prescription/', { headers: { "Authorization": `Bearer ${auth}` } })
                 .then((res) => {
                     let presList = res.data.prescriptions.businessPrescriptions;
                     let listArray = [];
@@ -82,7 +82,7 @@ class PrescriptionListComponent extends Component {
     getDoctors() {
         let auth = localStorage.getItem('auth')
         return new Promise(async function (resolve, reject) {
-            await axios.get('https://plunes.co/v4/user/whoami', { headers: { "Authorization": `Bearer ${auth}` } })
+            await axios.get('https://api.plunes.com/v5/user/whoami', { headers: { "Authorization": `Bearer ${auth}` } })
                 .then((res) => {
                     resolve(res.data)
                 })

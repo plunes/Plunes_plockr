@@ -10,7 +10,7 @@ class LoginContainer extends Component {
             password: '',
             phone_number: '',
     }
-    this.baseUrl ='http://13.233.151.26:8000/';
+    this.baseUrl ='https://api.plunes.com/v5/';
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }

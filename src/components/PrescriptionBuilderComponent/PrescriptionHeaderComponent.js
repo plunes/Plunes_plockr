@@ -18,7 +18,7 @@ class PrescriptionHeaderComponent extends Component {
     handlelogout(e) {
         e.preventDefault();
         let token = localStorage.getItem('auth');
-        axios.post('https://plunes.co/v4/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.post('https://api.plunes.com/v5/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then((response) => {
                 localStorage.removeItem('auth')
                 localStorage.removeItem('isAuth')
@@ -42,7 +42,7 @@ class PrescriptionHeaderComponent extends Component {
     }
 
     async handleDownload() {
-        const res = await axios.get('https://plunes.co/v4/installer/' + localStorage.getItem('uploaderUserId'));
+        const res = await axios.get('https://api.plunes.com/v5/installer/' + localStorage.getItem('uploaderUserId'));
         if (res.status === 201) {
             new Downloader({
                 url: res.data.downloadUrl

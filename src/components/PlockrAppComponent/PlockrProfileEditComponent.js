@@ -78,7 +78,7 @@ class PlockrProfileEditComponent extends Component {
     handleLogout(e) {
         e.preventDefault();
         let token = localStorage.getItem('auth');
-        axios.post('https://devapi.plunes.com/v5/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.post('https://api.plunes.com/v5/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then((response) => {
                 localStorage.removeItem('auth');
                 localStorage.removeItem('isAuth');
@@ -115,7 +115,7 @@ class PlockrProfileEditComponent extends Component {
         }
         console.log(body, 'body before Submit')
         let token = localStorage.getItem('auth')
-        axios.post('https://devapi.plunes.com/v5/report/sendReport', body, { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.post('https://api.plunes.com/v5/report/sendReport', body, { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then(res => {
                 console.log(res)
                 this.setState({

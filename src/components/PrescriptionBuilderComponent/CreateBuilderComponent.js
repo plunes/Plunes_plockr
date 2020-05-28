@@ -91,14 +91,14 @@ class CreateBuilderComponent extends Component {
         }, () => {
             const data = new FormData();
             data.append('file', this.state.file)
-            axios.post("https://plunes.co/v4/upload", data, {
+            axios.post("https://api.plunes.com/v5/upload", data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             }).then(res => {
                 if (res.status === 200) {
                     this.setState({
-                        logoUrl: "https://plunes.co/v4/" + res.data.path
+                        logoUrl: "https://api.plunes.com/v5/" + res.data.path
                     })
                 }
             });
@@ -114,14 +114,14 @@ class CreateBuilderComponent extends Component {
         }, () => {
             const data = new FormData();
             data.append('file', this.state.signatureFile)
-            axios.post("https://plunes.co/v4/upload", data, {
+            axios.post("https://api.plunes.com/v5/upload", data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             }).then(res => {
                 if (res.status === 200) {
                     this.setState({
-                        signatureUrl: "https://plunes.co/v4/" + res.data.path,
+                        signatureUrl: "https://api.plunes.com/v5/" + res.data.path,
 
                     })
                 }
@@ -167,7 +167,7 @@ class CreateBuilderComponent extends Component {
             }
         }
         let token = localStorage.getItem('auth')
-        axios.put('https://plunes.co/v4/user', data, { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.put('https://api.plunes.com/v5/user', data, { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then((res) => {
                 if (res.status === 201 && res.data.success === true) {
                     this.setState({
@@ -219,7 +219,7 @@ class CreateBuilderComponent extends Component {
     getHospitalDetails() {
         let auth = localStorage.getItem('auth')
         return new Promise(async function (resolve, reject) {
-            await axios.get('https://plunes.co/v4/user/whoami', { headers: {"Authorization" : `Bearer ${auth}`} })
+            await axios.get('https://api.plunes.com/v5/user/whoami', { headers: {"Authorization" : `Bearer ${auth}`} })
                     .then((res) => {
                         resolve(res.data)
                     })

@@ -49,7 +49,7 @@ class ContainerComponent extends Component {
             userId: user._id,
             self: false
         }
-        await axios.post('https://plunes.co/v4/report', data, { headers: { "Authorization": `Bearer ${token}` } })
+        await axios.post('https://api.plunes.com/v5/report', data, { headers: { "Authorization": `Bearer ${token}` } })
             .then((res) => {
                 console.log(res.data)
                 // const file = document.querySelector('.file');
@@ -67,14 +67,14 @@ class ContainerComponent extends Component {
         }, () => {
             const data = new FormData();
             data.append('file', this.state.file)
-            axios.post("https://plunes.co/v4/upload", data, {
+            axios.post("https://api.plunes.com/v5/upload", data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
               }).then(res => {
                 if (res.status === 200) {
                     this.setState({
-                    reportUrl: "https://plunes.co/v4/" + res.data.path
+                    reportUrl: "https://api.plunes.com/v5/" + res.data.path
                 })
                 }
             });
@@ -130,7 +130,7 @@ class ContainerComponent extends Component {
     }
     async getReports() {
         let token = localStorage.getItem('auth')
-        await axios.get('https://plunes.co/v4/report/', { 'headers': { 'Authorization': token } })
+        await axios.get('https://api.plunes.com/v5/report/', { 'headers': { 'Authorization': token } })
             .then(res => {
                 if (res.status === 201) {
                     let reports = res.data.businessReports;

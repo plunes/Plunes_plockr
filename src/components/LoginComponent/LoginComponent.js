@@ -16,7 +16,7 @@ export default class LoginComponent extends Component {
             redirect: false
         }
         // this.baseUrl = 'https://plunes.co/v3/';
-        this.baseUrl = 'http://10.34.18.136:8000/'
+        this.baseUrl = 'https://api.plunes.com/v5'
     }
 
     

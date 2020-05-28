@@ -47,7 +47,7 @@ class SendReportsComponent extends Component {
 
     async getReports() {
         let token = localStorage.getItem('auth')
-        await axios.get('https://plunes.co/v4/report/', { 'headers': { 'Authorization': token } })
+        await axios.get('https://api.plunes.com/v5/report/', { 'headers': { 'Authorization': token } })
             .then(res => {
                 if (res.status === 201) {
                     console.log('a')
@@ -89,7 +89,7 @@ class SendReportsComponent extends Component {
     }
 
     async handleDownload() {
-        const res = await axios.get('https://plunes.co/v4/installer/' + this.state.userId);
+        const res = await axios.get('https://api.plunes.com/v5/installer/' + this.state.userId);
         if (res.status === 201) {
             // console.log(res.data);
             new Downloader({
@@ -107,7 +107,7 @@ class SendReportsComponent extends Component {
     handlelogout(e) {
         e.preventDefault();
         let token = localStorage.getItem('auth');
-        axios.post('https://plunes.co/v4/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.post('https://api.plunes.com/v5/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then((response) => {
                 localStorage.removeItem('auth')
                 localStorage.removeItem('isAuth')

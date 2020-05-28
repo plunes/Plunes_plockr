@@ -47,7 +47,7 @@ class PlockrProfileComponent extends Component {
     handleLogout(e) {
         e.preventDefault();
         let token = localStorage.getItem('auth');
-        axios.post('https://plunes.co/v4/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+        axios.post('https://api.plunes.com/v5/user/logout', "", { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
             .then((response) => {
                 localStorage.removeItem('auth');
                 localStorage.removeItem('isAuth');
@@ -65,7 +65,7 @@ class PlockrProfileComponent extends Component {
         e.preventDefault();
         const data = new FormData();
         data.append('file', this.state.file)
-        axios.post("https://plunes.co/v4/upload", data, {
+        axios.post("https://api.plunes.com/v5/upload", data, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -86,10 +86,10 @@ class PlockrProfileComponent extends Component {
                         remarks: this.state.remarks,
                         reportName: this.state.reportName,
                         test: this.state.test,
-                        reportUrl: "https://plunes.co/v4/" + res.data.path
+                        reportUrl: "https://api.plunes.com/v5/" + res.data.path
                     }
                     let token = localStorage.getItem('auth')
-                    axios.post('https://plunes.co/v4/report', body, { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
+                    axios.post('https://api.plunes.com/v5/report', body, { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } })
                         .then(res => {
                             this.setState({
                                 modalIsOpen: true

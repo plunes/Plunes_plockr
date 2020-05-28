@@ -85,7 +85,7 @@ class SendPrescriptionComponent extends Component {
             }
         }
         let token = localStorage.getItem('auth')
-        axios.post('https://plunes.co/v4/prescription/test', data, { headers: { "Authorization": `Bearer ${token}` } })
+        axios.post('https://api.plunes.com/v5/prescription/test', data, { headers: { "Authorization": `Bearer ${token}` } })
             .then((res) => {
                 if(res.data.success){
                     this.props.handleSentPrescription(true)
@@ -116,7 +116,7 @@ class SendPrescriptionComponent extends Component {
 
     handleNumberSubmit(e) {
         e.preventDefault();
-        axios.get('https://plunes.co/v4/user?mobileNumber=' + this.state.patientMobileNumber)
+        axios.get('https://api.plunes.com/v5/user?mobileNumber=' + this.state.patientMobileNumber)
             .then(res => {
                 if (res.status === 201) {
                     if(res.data.user.birthDate){

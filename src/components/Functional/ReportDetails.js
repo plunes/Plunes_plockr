@@ -8,7 +8,6 @@ import {
 // import validator from 'validator'
 const ReportDetails = (props)=>{
     const  { remarks, reasonDiagnosis, phone, handleChange, handleSubmit, handlePhoneChange, reportId } = props
-      console.log(reportId,'reportId in ReportDetails')
     const { addToast } = useToasts()
    const formSubmit =(e) =>{
        e.preventDefault()
